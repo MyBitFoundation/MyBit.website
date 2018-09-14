@@ -2,8 +2,9 @@
 
  .Menu {
   display: flex;
-  height: 17px;
   z-index:2;
+  text-align: center;
+  //padding-top: 74px;
   &__hamburger-button{
     display: none;
     @include media("<tablet") {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import Logo from '../static/svgs/icons/mybit-color.svg'
+import Logo from '../static/svgs/icons/mybit-full-white.svg'
 import {Menu} from './menu'
 import stylesheet from './header.scss'
 

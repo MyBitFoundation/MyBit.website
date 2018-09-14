@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import HamburgerButton from '../static/svgs/icons/menu-icon.svg'
-import { mobileMenu, headerMenu } from './constants/menu'
+import { mobileMenu, headerMenu, headerMenuDropDown, resourcesDropDown } from './constants/menu'
 import { testAlphaUrl } from './constants'
 import {Link} from './link';
 import stylesheet from './menu.scss'
 import { Button } from './button'
 import { IconListMobileMenu } from './icon'
+import { DropdownCustom } from './dropdown'
+import { Locale } from './locale'
 
 export class Menu extends React.Component {
   constructor(props){
@@ -37,6 +39,28 @@ export class Menu extends React.Component {
         />
       )
     })
+
+    const toRenderDropdowns = headerMenuDropDown.map((option) => {
+      return(
+        <DropdownCustom
+          key={option.name}
+          name={option.name}
+          list={option.list}
+        />
+      )
+    })
+    
+    toRender.push(toRenderDropdowns);
+    toRender.push(<Locale />);
+    toRender.push(<Button 
+      label={"Contribute"}
+      url={"/investor"}
+      isSecondary
+      isLight
+      isLink
+      isCentered
+    />);
+
     const toRenderMobile = mobileMenu.map((option) => {
       return(
         <a
@@ -56,20 +80,7 @@ export class Menu extends React.Component {
         </a>
       )
     })
-      
-    toRenderMobile.push(
-      <Button 
-        label={"Test Alpha"}
-        url={testAlphaUrl}
-        className={
-          classNames({
-            'SidebarMobile__btn-test-alpha': true,
-            'SidebarMobile__btn-test-alpha--is-visible' : this.state.popup
-          })
-        }
-        isLink
-        newTab
-      />)
+
     toRenderMobile.push(<IconListMobileMenu />)
 
     return (
