@@ -4,9 +4,24 @@
   display: flex;
   z-index:2;
   text-align: center;
-  //padding-top: 74px;
+  padding-top: 80px;
+  
+  &__btn{
+    margin-top: -6px;
+    @include media("<desktop") {
+      display: none;
+    }
+  }
+
   &__hamburger-button{
+    filter: invert(1) contrast(200%) brightness(250%);
+    color: white;
     display: none;
+    @include media("<desktop") {
+      display: block;
+      cursor: pointer;
+    }
+
     @include media("<tablet") {
       display: block;
       cursor: pointer;

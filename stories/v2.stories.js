@@ -111,6 +111,15 @@ const team = [
   }
 ]
 
+storiesOf('Button', module)
+  .add('Button', () => (
+    <Button label="Learn more" onClick={action('button-click')} />
+  ))
+  .addDecorator(darkDecorator)
+  .add('Light Button', () => (
+    <Button isLight label="Sign up" onClick={action('button-click')} />
+  ))
+
 storiesOf('Locale', module)
   .addWithJSX(
     'Initial locale',
@@ -202,15 +211,6 @@ storiesOf('Highlights (v2)', module)
       isDiamond
       startsFromLight={false}
     />
-  ))
-
-storiesOf('Button (v2)', module)
-  .add('Button', () => (
-    <Button label="Learn more" onClick={action('button-click')} />
-  ))
-  .addDecorator(darkDecorator)
-  .add('Light Button', () => (
-    <Button isLight label="Sign up" onClick={action('button-click')} />
   ))
 
 storiesOf('Icon (v2)', module)

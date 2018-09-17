@@ -22,7 +22,7 @@
     transition: all 0s;
 
     @include media("<desktop") {
-      color: #273469;
+      display: none;
     }
 
     @include media("<tablet") {

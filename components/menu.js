@@ -40,6 +40,7 @@ export class Menu extends React.Component {
       )
     })
 
+    
     const toRenderDropdowns = headerMenuDropDown.map((option) => {
       return(
         <DropdownCustom
@@ -59,8 +60,14 @@ export class Menu extends React.Component {
       isLight
       isLink
       isCentered
+      isRounded
+      className={
+        classNames({
+          'Menu__btn': true
+        })
+      }
     />);
-
+    
     const toRenderMobile = mobileMenu.map((option) => {
       return(
         <a

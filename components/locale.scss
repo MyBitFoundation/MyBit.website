@@ -1,36 +1,41 @@
 @import 'include-media/dist/_include-media.scss';
 @import './dropdown.scss';
-
-$DROPDOWN_CONTENT_MIN_WIDTH: 66px;
+@import 'include-media/dist/_include-media.scss';
 
 .Locale{
-  width: 66px;
+  width: 70px;
+  padding-left: 8.9px;
+  padding-right: 41.5px;
 
   &__item{
     background-color:transparent;
     display: flex;
     justify-content: flex-start;
-  }
-
-  &__btn{
-    text-align: left;
-    padding: 0;
-    margin: 0;
+   
   }
 
   &__icon{
     width: 25px;
     height: 25px;
     filter: invert(1) contrast(200%) brightness(250%);
+    color: white;
   }
 
   &__content{
-    max-width: 66px;
+    max-width: 80px;
  }
 
   &__link{
     margin-left: 0;
     padding: 5px;
     text-align: left;
+  }
+
+  &__btn{
+    padding: 0;
+  }
+
+  @include media("<desktop") {
+    display: none;
   }
 }

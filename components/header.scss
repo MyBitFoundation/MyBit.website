@@ -1,8 +1,8 @@
 @import 'include-media/dist/_include-media.scss';
 
 $HEADER_PADDING_RESPONSIVE: 2%;
-$LOGO_WIDTH: 57px;//57 - 152
-$LOGO_HEIGHT: 49px;//49 - 105
+$LOGO_WIDTH: 102.6px;
+$LOGO_HEIGHT: 104.5px;
 $HEADER_HEIGHT: $LOGO_HEIGHT;
 
 
@@ -15,25 +15,27 @@ $HEADER_HEIGHT: $LOGO_HEIGHT;
 .Header {
   display: flex;
   width: 100%;
-  height: 177px;
-  //padding: $HEADER_PADDING_RESPONSIVE;
+  padding: $HEADER_PADDING_RESPONSIVE;
   padding-left: 10%;
   padding-right: 10%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   box-sizing: border-box;
   z-index: 10;
   background-image:  linear-gradient(to top, #001358, #125ac4);
+  background-color:transparent;
   
   &--is-home {
     $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
     @include header_spacing($header_height: $HEADER_HEIGHT);
   }
+
   &__logo {
     width: $LOGO_WIDTH;
     height: $LOGO_HEIGHT;
-    margin-top: 36px;
-    margin-bottom: 36.5px;
+    padding-top: 36px;
+    padding-bottom: 36.5px;
+    margin: 0;
 
     @include media(">=tablet") {
       width: $LOGO_WIDTH * 2;

@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './button.scss'
 
-export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink, url, newTab, isCentered, className }) => {
+export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink, isRounded, url, newTab, isCentered, className }) => {
   const ButtonClass = classNames({
     'Button': true,
     'Button--is-light': isLight,
     'Button--is-secondary': isSecondary,
     'Button--is-disabled': disabled,
+    'Button--is-rounded': isRounded
   })
 
   const LinkClass = classNames({
@@ -52,6 +53,7 @@ Button.propTypes = {
   isLight: PropTypes.bool,
   isSecondary: PropTypes.bool,
   isLink: PropTypes.bool,
+  isRounded: PropTypes.bool,
   url: PropTypes.string,
   newTab: PropTypes.bool,
   className: PropTypes.string,
@@ -63,6 +65,7 @@ Button.defaultProps = {
   isLight: false,
   isSecondary: false,
   isLink: true,
+  isRounded: true,
   url: "",
   newTab: false,
   className: "",

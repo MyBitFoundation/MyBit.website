@@ -56,6 +56,10 @@ $buttonDarkFocus: #125ac4;
     }
   }
 
+  &--is-rounded{
+    border-radius: 8px;
+  }
+
   &__wrapper{
     &:hover,
     &:focus {

@@ -13,10 +13,19 @@ export const Locale = () => {
         </Menu.Item>
       )
     })
-  
+  //className={classNames({'Locale__icon':true})}
     const localeIcon = <div>
         <img src={LocaleIcon} className={classNames({'Locale__icon':true})}/>
     </div>;
+
+    const icon = <div className={
+          classNames({
+            'DropdownCustom__icon': true
+          })
+        }>
+       <Icon type="down" theme="outlined"/>
+    </div>;
+
 
     return(
      <div className={
@@ -34,9 +43,11 @@ export const Locale = () => {
         {localeIcon}    
         <button className={
               classNames({
-                'DropdownCustom__btn Locale__btn': true
+                'DropdownCustom__btn': true,
+                'Locale__btn': true
               })
-            }>Eng<Icon type="down" theme="outlined" /></button>
+            }>Eng</button>
+        {icon}
       </div>
       <div className={
               classNames({

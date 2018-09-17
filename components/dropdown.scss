@@ -1,7 +1,5 @@
-@import '~antd/dist/antd.css';
-
-$DROPDOWN_CONTENT_MIN_WIDTH: 124.6px;
-
+@import '~antd/dist/antd';
+@import 'include-media/dist/_include-media.scss';
 
 .DropdownCustom{
  position: relative;
@@ -16,7 +14,16 @@ $DROPDOWN_CONTENT_MIN_WIDTH: 124.6px;
  &__item{
     background-color:transparent;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+ }
+
+ &__icon{
+    width: 9px;
+    height: 5px;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-bottom: 30px;
+    color: white;
  }
 
  &__btn{
@@ -42,9 +49,8 @@ $DROPDOWN_CONTENT_MIN_WIDTH: 124.6px;
     z-index: 1;
  }
 
- &__icon{
-     width: 5px;
-     height: 5px;
- }
+ @include media("<desktop") {
+    display: none;
+  }
 }
 

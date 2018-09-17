@@ -12,14 +12,13 @@ export const DropdownCustom = ({name, list}) => {
     )
   })
 
-  /*
   const icon = <div className={
-                    classNames({
-                      'DropdownCustom__icon': true
-                    })
-                  }><Icon type="down" theme="outlined" /></div>
-*/
-  const icon = <Icon type="down" theme="outlined" />;
+                      classNames({
+                        'DropdownCustom__icon': true
+                      })
+                    }>
+                <Icon type="down" theme="outlined"/>
+              </div>;
 
   return(
     <div className={
@@ -37,8 +36,8 @@ export const DropdownCustom = ({name, list}) => {
               classNames({
                 'DropdownCustom__btn': true
               })
-            }>{name}{icon}</button>
-        
+            }>{name}</button>
+        {icon}
       </div>
       <div className={
               classNames({
