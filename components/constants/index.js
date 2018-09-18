@@ -17,6 +17,12 @@ import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
 
+export const countdownInfo = {
+  finalDate: new Date(2019, 0, 1, 0, 0, 0, 0),//month starts with 0
+  title: 'Tokensale phase 2 begins January 1, 2019',
+  parts: {day:'Days', hour: 'Hours', minut: 'Minutes', second: 'Seconds'}
+}
+
 export const testAlphaUrl = 'https://alpha.mybit.io/';
 
 export const youtubeVideoId = "SGFGfpKn1dg";

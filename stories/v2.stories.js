@@ -40,6 +40,7 @@ import { SliderMediaList } from '../components/slider';
 
 import { DropdownCustom } from '../components/dropdown';
 import { Locale } from '../components/locale';
+import { Countdown } from '../components/countdown';
 
 
 const [ diamondHighlight ] = diamondHighlights;
@@ -111,6 +112,12 @@ const team = [
     linkedin: 'https://linkedin.com/in/'
   }
 ]
+
+storiesOf('Countdown', module)
+  .addWithJSX(
+    'Initial countdown',
+    () => <div  style={{backgroundColor:"#001358"}}><Countdown /></div>
+  )
 
 storiesOf('Button', module)
   .add('Button', () => (
