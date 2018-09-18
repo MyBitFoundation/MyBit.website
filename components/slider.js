@@ -20,15 +20,16 @@ export class Slider extends React.Component {
     };
   }
 
-  scroll(offset){
+  scroll(direction){
     const element = this.list;
     const width = element.offsetWidth;
+    const iconWidth = 200;
     const scrollWidth = element.scrollWidth;
+    const offset = iconWidth * (parseInt(width/iconWidth) * direction);
     const toScroll = scrollWidth - width;
     const futurePosition = this.state.currentScroll + offset;
     const offSetToMin = 0 + futurePosition;
     const offSetToMax = toScroll - futurePosition;
-
     // case where we are going to be resetting scroll, which does it as well if there are only 100px left or less
     if(futurePosition <= 0 || offSetToMin <= 100){
       animateScrollTo(0, {minDuration: 500, element, horizontal: true});
@@ -54,17 +55,17 @@ export class Slider extends React.Component {
     })
 
     return (
-      <div className={sliderWrapperClass}>
+      <div className={sliderWrapperClass} >
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        {<ArrowButton onClick={() => this.scroll(-500)} disabled={this.state.isBeginning} isBig={this.props.bigArrows}/>}
+        {<ArrowButton onClick={() => this.scroll(-1)} disabled={this.state.isBeginning} isBig={this.props.bigArrows} type={this.props.type}/>}
         {React.cloneElement(this.props.children, { setRef: this.setListRef })}
-        {<ArrowButton onClick={() => this.scroll(500)} disabled={this.state.isEnd} rotate isBig={this.props.bigArrows}/>}
+        {<ArrowButton onClick={() => this.scroll(1)} disabled={this.state.isEnd} rotate isBig={this.props.bigArrows} type={this.props.type}/>}
       </div>
     );
   }
 }
 
-export const SliderMediaList = () => {
+export const SliderMediaList = ({type}) => {
   return(
     <Highlight
       title={'Media'}
@@ -78,7 +79,8 @@ export const SliderMediaList = () => {
         <Slider
           isAlwaysRow={false}
           bigArrows={false}
-          hasArrowsTablet={false}
+          hasArrowsTablet={true}
+          type={type}
         >
           <MediaList />
         </Slider>}
@@ -102,4 +104,8 @@ Slider.propTypes = {
   hasArrowsTablet: PropTypes.bool.isRequired,
   listRef: PropTypes.func.isRequired,
   children: PropTypes.element.isRequired,
+}
+
+SliderMediaList.propTypes = {
+  type: PropTypes.string
 }

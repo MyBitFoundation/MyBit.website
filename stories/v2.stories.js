@@ -36,6 +36,7 @@ import { Subscribe } from '../components/subscribe';
 import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
 import { EventCard, EventCards } from '../components/event-cards';
+import { SliderMediaList } from '../components/slider';
 
 import { DropdownCustom } from '../components/dropdown';
 import { Locale } from '../components/locale';
@@ -154,6 +155,12 @@ storiesOf('Link', module)
     'Default',
     () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" path="#" /> </div>
   );
+
+  storiesOf('Media', module)
+  .add(
+    'Media carousel',
+    () => <SliderMediaList type="chevron"/>
+  )
 
 storiesOf('Team Members (v2)', module)
   .add('Default', () => (

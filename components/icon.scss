@@ -1,4 +1,5 @@
 @import 'include-media/dist/_include-media.scss';
+@import 'include-media/dist/_include-media.scss';
 
 //temporary fix to preload images
 a:nth-child(1) { background: url("/static/svgs/social/discord-hover.svg") no-repeat -9999px -9999px; }
@@ -86,6 +87,15 @@ p:nth-child(1) { background: url("/static/svgs/social/linkedin-hover.svg") no-re
         @if $media-icon == wsj {
           width: 100px;
         }
+        @include media("<tablet") {
+          width: 150px;
+          @if $media-icon == wsj {
+            width: 75px;
+          }
+          @if $media-icon == everipedia {
+            width: 75px;
+          }
+        }
       }
     }
 
@@ -128,14 +138,12 @@ p:nth-child(1) { background: url("/static/svgs/social/linkedin-hover.svg") no-re
 
 
 .MediaList{
-    @include media(">desktop") {
-      flex-wrap: nowrap;
-      overflow: hidden;
-      margin: 0 auto;
-      width: calc(100% - 150px);
-      justify-content: start;
-      height: 110px;
-      flex-direction: row;
-      display: flex;
-    }
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  width: calc(100% - 150px);
+  justify-content: start;
+  height: 110px;
+  flex-direction: row;
+  display: flex;
 }

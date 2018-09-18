@@ -19,12 +19,6 @@
       justify-content: space-between;
     }
 
-    @include media("<desktop") {
-      .ArrowButton{
-        display: none;
-      }
-    }
-
     &--has-arrows-tablet{
       @include media(">phone", "<desktop") {
         display: flex;
@@ -34,12 +28,6 @@
         & .ArrowButton{
           display: flex;
         }
-      }
-    }
-
-    @include media("<tablet") {
-      .ArrowButton{
-        display: none;
       }
     }
 }

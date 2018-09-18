@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './arrow-button.scss'
 
-export const ArrowButton = ({rotate, onClick, disabled, fullOpacity, isBig}) => (
+export const ArrowButton = ({rotate, onClick, disabled, fullOpacity, isBig, type}) => (
   <button
     onClick={disabled ? () => {} : onClick}
     className={
         classNames({
           "ArrowButton": true,
+          [type]: true,
           "ArrowButton--is-disabled": disabled,
           "ArrowButton--is-full-opacity": fullOpacity,
           "ArrowButton--is-big": isBig,
@@ -16,7 +17,7 @@ export const ArrowButton = ({rotate, onClick, disabled, fullOpacity, isBig}) => 
     style={{transform: rotate ? "rotate(180deg)" : "rotate(0deg)"}}
   >
     <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <div className="ArrowButton__arrow"/>
+    <div className={classNames({"ArrowButton__arrow": type === 'default'})}/>
   </button>
 )
 
@@ -24,7 +25,8 @@ ArrowButton.defaultProps = {
   rotate: false,
   fullOpacity: false,
   disabled: false,
-  isBig: false
+  isBig: false,
+  type: 'default'
 }
 
 
@@ -33,5 +35,6 @@ ArrowButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   fullOpacity: PropTypes.bool,
-  isBig: PropTypes.bool
+  isBig: PropTypes.bool,
+  type: PropTypes.string
 }
