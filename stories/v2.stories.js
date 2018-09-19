@@ -37,6 +37,7 @@ import { ColumnList } from '../components/column-list';
 import { Event, Events } from '../components/events';
 import { EventCard, EventCards } from '../components/event-cards';
 import { SliderMediaList } from '../components/slider';
+import { MyBitAppLications } from '../components/myBitAplications/my-bit-applications';
 
 import { DropdownCustom } from '../components/dropdown';
 import { Locale } from '../components/locale';
@@ -163,10 +164,16 @@ storiesOf('Link', module)
     () => <div style={{paddingTop: "25px", width:"max-content", margin: "0px auto"}}> <Link name="Explore" path="#" /> </div>
   );
 
-  storiesOf('Media', module)
+storiesOf('Media', module)
   .add(
     'Media carousel',
     () => <SliderMediaList type="chevron"/>
+  )
+
+  storiesOf('My Bit Aplications Grid', module)
+  .add(
+    'Aplications Grid',
+    () => <MyBitAppLications/>
   )
 
 storiesOf('Team Members (v2)', module)

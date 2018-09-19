@@ -104,6 +104,11 @@
 
   &__card {
 
+    & .noBit {
+      &:after {
+        display: none;
+      }
+    }
     &-title {
       @include cardTitle();
       &:after {
@@ -249,6 +254,12 @@
       .Highlight__card p {
         margin-bottom: 32px;
       }
+    }
+    & .flexContainer {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
 
     &--is-centered {

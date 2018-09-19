@@ -16,6 +16,7 @@ import mitchellImg from '../../static/team/mitchell.png'
 import oliverImg from '../../static/team/oliver.png'
 import blankImg from '../../static/team/blank.png'
 import joostImg from '../../static/team/joost.png'
+import MyBitVentures from '../../static/svgs/my-bit-apps/venture.svg'
 
 export const countdownInfo = {
   finalDate: new Date(2019, 0, 1, 0, 0, 0, 0),//month starts with 0
@@ -193,6 +194,72 @@ export const mediaHighlights = [{
   title: 'MYDAX',
   content: '<p>The MyBit Decentralized Asset Exchange (MYDAX) is a revolutionary technology, providing liquidity to a historically illiquid market for the first time ever. It is the first Decentralized IoT Asset Exchange in the world and has ambitions to be the backbone of the new machine economy.</p>'
 }];
+
+export const myBitAppsHighlights = [{
+  id: 1,
+  title: <div className="appLogo"><MyBitVentures/></div>,
+  content:
+  <div className="contentWrapper">
+    <p>Smart contract-based</p>
+    <Button
+      className="myBitAppBtn"
+      label={"Try Now"}
+      url={testAlphaUrl}
+      isLink
+      isCentered
+      newTab
+    />
+  </div>
+},
+{
+  id: 2,
+  title: <div className="appLogo"><MyBitVentures/></div>,
+  content:
+    <div className="contentWrapper">
+      <p>Smart contract-based payroll automation</p>
+      <Button
+        className="myBitAppBtn"
+        label={"Try Now"}
+        url={testAlphaUrl}
+        isLink
+        isCentered
+        newTab
+      />
+    </div>
+},
+{
+  id: 3,
+  title: <div className="appLogo"><MyBitVentures/></div>,
+  content:
+    <div className="contentWrapper">
+      <p>Smart contract-based payroll automation</p>
+      <Button
+        className="myBitAppBtn"
+        label={"Try Now"}
+        url={testAlphaUrl}
+        isLink
+        isCentered
+        newTab
+      />
+    </div>
+},
+{
+  id: 4,
+  title: <div className="appLogo"><MyBitVentures/></div>,
+  content:
+    <div className="contentWrapper">
+      <p>Smart contract-based payroll automation</p>
+      <Button
+        className="myBitAppBtn"
+        label={"Coming Soon"}
+        url={testAlphaUrl}
+        isLink
+        isCentered
+        newTab
+      />
+    </div>
+}
+];
 
 export const highlights = [
   {

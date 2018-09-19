@@ -80,6 +80,7 @@ export const Highlight = ({
   content,
   icon = null,
   link = null,
+  noBit = false,
   style,
   isDiamond = false,
   isRectangle = false,
@@ -91,6 +92,7 @@ export const Highlight = ({
   isMedium = false,
   isFullWidth = false,
   hasHoverEffect = false,
+  flex = false
 }) => {
   const highlightWrapperClass = classNames({
     'Highlight__wrapper': true,
@@ -115,11 +117,13 @@ export const Highlight = ({
     'Highlight__card--is-big': isBig,
     'Highlight__card--is-medium': isMedium,
     'Highlight__card--is-full-width': isFullWidth,
-    'Highlight__card--is-transparent': isTransparent
+    'Highlight__card--is-transparent': isTransparent,
+    'flexContainer': flex,
   })
 
   const highlightTitleClass = classNames({
     'Highlight__card-title': true,
+    'noBit': noBit,
     [icon]: icon
   })
 
@@ -201,13 +205,14 @@ InvestorHighlight.propTypes = {
 }
 
 Highlight.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   icon: PropTypes.string,
   link: PropTypes.string,
   isRectangle: PropTypes.bool,
   isDiamond: PropTypes.bool,
   isLight: PropTypes.bool,
+  noBit: PropTypes.bool,
   isCentered: PropTypes.bool,
   isTransparent: PropTypes.bool,
   isThin: PropTypes.bool,

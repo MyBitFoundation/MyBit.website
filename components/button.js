@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './button.scss'
 
-export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink, isRounded, url, newTab, isCentered, className }) => {
+export const Button = ({ disabled, label, onClick, isLight, isSecondary, isLink, isRounded, url, newTab, isCentered, className, isDark }) => {
   const ButtonClass = classNames({
     'Button': true,
     'Button--is-light': isLight,
+    'Button--is-dark': isDark,
     'Button--is-secondary': isSecondary,
     'Button--is-disabled': disabled,
     'Button--is-rounded': isRounded
@@ -64,6 +65,7 @@ Button.defaultProps = {
   onClick: () => {},
   isLight: false,
   isSecondary: false,
+  isDark: false,
   isLink: true,
   isRounded: true,
   url: "",
