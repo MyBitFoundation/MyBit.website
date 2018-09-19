@@ -12,8 +12,7 @@ export class MyBitAppLications extends React.Component {
     return (
       <section id="my-bit-apps-grid">
         <div className="grid-container">
-          { myBitAppsHighlights.map((highlight) => {
-            return (
+          { myBitAppsHighlights.map((highlight) => (
                 <Col xs={12} md={6} key={highlight.id} style={{'padding': 0, marginBottom: '16px'}}>
                 <Highlight
                   noBit
@@ -25,7 +24,7 @@ export class MyBitAppLications extends React.Component {
                 />
                 </Col>
             )
-          })}
+          )}
         </div> 
       </section>
     );
