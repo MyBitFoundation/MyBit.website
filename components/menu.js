@@ -29,30 +29,42 @@ export class Menu extends React.Component {
     const toRender = headerMenu.map((option) => {
       return(
         <Link
-          key={option.name}
+          key={option.path}
           path={option.path}
           isInHomePage={isInHomePage}
           isLight={isLight}
           name={option.name}
           external={Boolean(option.external)}
-          className={option.className}
+          className={
+            classNames({
+              'Menu__item': true
+            })
+          }
         />
       )
     })
 
-    
     const toRenderDropdowns = headerMenuDropDown.map((option) => {
       return(
         <DropdownCustom
-          key={option.name}
+          key={option.path}
           name={option.name}
           list={option.list}
+          className={
+            classNames({
+              'Menu__item': true
+            })
+          }
         />
       )
     })
     
     toRender.push(toRenderDropdowns);
-    toRender.push(<Locale />);
+    toRender.push(<Locale className={
+                            classNames({
+                              'Menu__item': true
+                            })
+                          }/>);
     toRender.push(<Button 
       label={"Contribute"}
       url={"/investor"}
@@ -63,6 +75,7 @@ export class Menu extends React.Component {
       isRounded
       className={
         classNames({
+          'Menu__item': true,
           'Menu__btn': true
         })
       }

@@ -21,13 +21,6 @@
     cursor: pointer;
     transition: all 0s;
 
-    @include media("<desktop") {
-      display: none;
-    }
-
-    @include media("<tablet") {
-      display: none;
-    }
 
     &:hover{
       color: #ffffff;

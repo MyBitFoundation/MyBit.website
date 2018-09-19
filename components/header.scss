@@ -5,41 +5,47 @@ $LOGO_WIDTH: 102.6px;
 $LOGO_HEIGHT: 104.5px;
 $HEADER_HEIGHT: $LOGO_HEIGHT;
 
-
-@mixin header_spacing($header_height) {
-  $OFFSET_BOTTOM: (-2 * ( #{$HEADER_PADDING_RESPONSIVE} )) - $header_height;
-  margin-bottom: calc( #{$OFFSET_BOTTOM} );
-}
-
-
 .Header {
   display: flex;
   width: 100%;
-  padding: $HEADER_PADDING_RESPONSIVE;
-  padding-left: 10%;
-  padding-right: 10%;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
   z-index: 10;
   background-image:  linear-gradient(to top, #001358, #125ac4);
   background-color:transparent;
-  
-  &--is-home {
-    $HEADER_HEIGHT: $LOGO_HEIGHT * 2;
-    @include header_spacing($header_height: $HEADER_HEIGHT);
+
+  &__header-content{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    @include media("<980px") {
+      margin-right: 1.9%;
+      margin-left: 4.3%;
+    }
+  }
+
+  &__logo-container{
+      padding-top: 36px;
+      padding-bottom: 36.5px;
+
+      @include media("<980px") {
+        padding-top: 1.4%;
+        padding-bottom: 2.9%;
+        padding-right: 1.9%;
+      }
   }
 
   &__logo {
     width: $LOGO_WIDTH;
     height: $LOGO_HEIGHT;
-    padding-top: 36px;
-    padding-bottom: 36.5px;
-    margin: 0;
 
-    @include media(">=tablet") {
-      width: $LOGO_WIDTH * 2;
-      height: $HEADER_HEIGHT * 2;
+    @include media("<980px") {
+      width: 40px;
+      height: 35px;
     }
 
     &--is-video-open{

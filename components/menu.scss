@@ -2,27 +2,49 @@
 
  .Menu {
   display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   z-index:2;
   text-align: center;
   padding-top: 80px;
+  padding-bottom: 72px;
+  width: 76.7%;
+  max-width: 873px;
   
+  @include media("<980px") {
+    padding-top: 2.7%;
+    padding-bottom: 3.8%;
+    padding-right: 4.3%;
+  }
+
+  &__item{
+    padding-right: 5px;
+    padding-top: 5px;
+
+    @include media("<980px") {
+      display: none;
+    }
+  }
+
   &__btn{
+    display: flex;
     margin-top: -6px;
-    @include media("<desktop") {
+
+    @include media("<980px") {
       display: none;
     }
   }
 
   &__hamburger-button{
+    display: flex;
+    justify-content: flex-end;
     filter: invert(1) contrast(200%) brightness(250%);
     color: white;
     display: none;
-    @include media("<desktop") {
-      display: block;
-      cursor: pointer;
-    }
+    padding: 0;
+    width: 20px;
 
-    @include media("<tablet") {
+    @include media("<980px") {
       display: block;
       cursor: pointer;
     }

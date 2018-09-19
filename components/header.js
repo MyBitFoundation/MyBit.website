@@ -17,18 +17,29 @@ export const Header = ({setMobileMenuState, isInHomePage = false, isLight = fals
           })
         }
       >
-        <a href='/'>
-          <Logo
-            className={
-              classNames({
-                'Header__logo': true,
-                'Header__logo--is-home': isInHomePage,
-                'Header__logo--is-video-open': videoOpen
-              })
-            }
-          />
-        </a>
-        <Menu setMobileMenuState={setMobileMenuState} isLight={isLight} isInHomePage={isInHomePage} videoOpen={videoOpen} />
+        <div className={
+                  classNames({
+                    'Header__header-content': true
+                  })
+                }>
+          <div  className={
+                  classNames({
+                    'Header__logo-container': true
+                  })
+                }>
+            <a href='/'>
+              <Logo
+                className={
+                  classNames({
+                    'Header__logo': true,
+                    'Header__logo--is-home': isInHomePage
+                  })
+                }
+              />
+            </a>
+          </div>
+          <Menu setMobileMenuState={setMobileMenuState} isLight={isLight} isInHomePage={isInHomePage} videoOpen={videoOpen} />
+        </div>
       </header>
     </React.Fragment>
   )

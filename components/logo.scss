@@ -3,10 +3,4 @@
 .Logo {
   width: 114px;
   height: 50px;
-
-
-  @include media('<desktop') {
-    width: 75px;
-    height: 32px;
-  }
 }

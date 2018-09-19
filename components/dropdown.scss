@@ -2,10 +2,11 @@
 @import 'include-media/dist/_include-media.scss';
 
 .DropdownCustom{
- position: relative;
- display: inline-block;
- margin-left: 15.2px;
- margin-right: 25.1px;
+  position: relative;
+  display: inline-block;
+  margin-left: 15.2px;
+  margin-right: 25.1px;
+  text-align: center;
 
  &:hover &__content{
     display: block;
@@ -40,7 +41,6 @@
     margin: 0;
  }
 
-
  &__content{
     display: none;
     position: absolute;
@@ -49,7 +49,7 @@
     z-index: 1;
  }
 
- @include media("<desktop") {
+  @include media("<980px") {
     display: none;
   }
 }
