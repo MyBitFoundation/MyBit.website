@@ -1,0 +1,126 @@
+@import '~antd/dist/antd';
+@import 'include-media/dist/_include-media.scss';
+
+$TIME_UNIT_VALUE_COLOR:  #4a4a4a;
+$TIME_UNIT_HEADER_COLOR: #1890ff;
+$COUNTDOWN_BACKGROUND: #ffffff;
+
+
+.Timer{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+    min-width: 250px;
+    max-width: 440px;
+    padding-bottom: 19px;
+
+    &__time-unit{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin-right: 5%;
+        width: 25%;
+    }
+
+    &__item:last-child{
+        margin-right: 0;
+    }
+
+    &__value{    
+        font-family: Gilroy;    
+        font-size: 3.12rem; 
+        font-weight: 800;
+        color: $TIME_UNIT_VALUE_COLOR;
+
+        @include media("<=375px") {
+            font-size: 1.25rem;
+            padding-top: 16px;        
+        }
+        
+        @include media(">375px", "<=tablet") {
+            font-size: 1.88rem; 
+            padding-top: 10px;
+        }
+
+        @include media(">tablet", "<desktop") {
+            font-size: 2.5rem;
+        }
+
+        @include media(">=desktop"){
+            font-size: 3.12rem;
+        }
+    }
+
+    &__header{
+        font-family: Roboto;
+        font-size: 25px;
+        font-weight: 500; 
+        color: $TIME_UNIT_HEADER_COLOR;
+
+        @include media("<=375px") {
+            font-size: 0.75rem;     
+        }
+        
+        @include media(">375px", "<=tablet") {
+            font-size: 1.06rem;
+        }
+
+        @include media(">tablet", "<desktop") {
+            font-size: 1.25rem;
+        }
+
+        @include media(">=desktop"){
+            font-size: 1.56rem;
+        }
+
+    }
+}
+
+.Countdown{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 79.2%;
+    min-width: 276px;
+    max-width: 1140px;
+    border-radius: 4px;
+    background-color: $COUNTDOWN_BACKGROUND;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+
+
+    &__title{
+        display: flex;
+        text-align: center;
+        
+        font-family: Gilroy;  
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #4a4a4a;
+
+        padding-top: 26px;
+        padding-right: 14%;
+        padding-left: 14%;
+        padding-bottom: 22px;
+
+        @include media("<=375px") {
+            font-size: 0.88rem;
+            padding-top: 16px;
+            padding-bottom: 9px;
+        }
+        
+        @include media(">375px", "<=tablet") {
+            font-size: 1.38rem;
+        }
+
+        @include media(">tablet", "<desktop") {
+            font-size: 1.58rem;
+        }
+
+        @include media(">=desktop"){
+            font-size: 2.5rem;
+
+        }
+    }
+}
