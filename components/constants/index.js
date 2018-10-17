@@ -166,8 +166,8 @@ export const developersData = {
 }
 
 export const myBitAppsHighlights = {
-title: 'Applications powered by MyBit',
-description: 'MyBit’s applications offer a new way of owning and distributing wealth. Our applications include everything from investment platforms to payrolls, wills and trusts. They’re secure, efficient and cost-effective, letting you avoid middlemen and third party fees.',
+title: 'Applications Powered by MyBit',
+description: 'MyBit’s applications offer a new way of owning and distributing wealth. Our applications include everything from investment platforms to payrolls, wills, trusts, and much more. They’re secure, efficient and cost-effective, letting users avoid middlemen and third party fees.',
 button: {text: 'View More', url: links.applications},
 applications:[{
   id: 1,

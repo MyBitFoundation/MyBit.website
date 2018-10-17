@@ -20,8 +20,7 @@ export const waysToContributeData = [
     <p>
       If you have an idea related to wealth management and distribution,
       MyBit provides the tools and resources for the rapid testing, development,
-      and deployment of dApps. This consists of various SDKs, robust
-      documentation, and a UI Kit.
+      and deployment of dApps.
     </p>,
     button: {text: 'Get Started', url: 'http://developer.mybit.io/'}
   },
