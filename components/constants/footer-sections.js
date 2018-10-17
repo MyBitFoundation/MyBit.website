@@ -33,7 +33,7 @@ export const footerSections = [
     isContentNode: true,
     links: [
       {
-        title: 'Tokensale',
+        title: 'Token Distribution',
         url: links.tokenSale,
         newTab: true,
       },

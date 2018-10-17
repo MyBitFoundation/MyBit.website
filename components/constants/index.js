@@ -2,7 +2,7 @@ import { links } from './links'
 
 export const countdownInfo = {
   finalDate: new Date("Jan 01 2019 12:00:00 GMT-0"),
-  title: 'Token Distribution phase 2 begins Jan 1, 2019',
+  title: 'Token Distribution Phase 2 Begins Jan 1, 2019',
   parts: {day:'Days', hour: 'Hours', minut: 'Minutes', second: 'Seconds'}
 }
 
@@ -138,7 +138,7 @@ export const teamDesc = [
 ]
 
 export const teamsData = {
-  title: 'Empowering Disruptive teams',
+  title: 'Empowering Disruptive Teams',
   button: {text: 'Learn More', url: links.fund},
   image: '../../static/svgs/mybit_ventures.svg',
   content: `Whether you want to build a project from scratch, contribute to an existing project,
@@ -147,13 +147,13 @@ export const teamsData = {
 }
 
 export const eventsData = {
-  title: 'Upcoming events',
+  title: 'Upcoming Events',
   button: {text: 'Find an Event', url: links.events, external: true},
   imageUrl: '/static/assets/event-graphic2.png'
 }
 
 export const newsData = {
-  title: 'Latest news',
+  title: 'Latest News',
   button: {text: 'Read More', url: links.medium, external: true},
   imageUrl: '/static/assets/TokenDistribution.png'
 }
@@ -162,7 +162,7 @@ export const developersData = {
   title: 'Developers',
   button: {text: 'Get Started', url: links.devs, external: true},
   image: {url: null, alt: 'Code image' },
-  content: `We believe in making development effective, efficient and fun. This is why we have designed a concrete foundation which provides tools and resources to streamline development including various SDKs, a UI Kit, and white-labeled (out of the box) solutions. So engineers can focus on building the future and not worry about trivial components.`,
+  content: `We believe in making development effective, efficient and fun. This is why we have designed the MyBit Software Development Kit (SDK) to streamline development. It enables engineers to quickly get concepts off the ground and focus on building the future.`,
 }
 
 export const myBitAppsHighlights = {
@@ -335,13 +335,13 @@ export const achievements = [{
 }];
 
 export const joinCommunityData = {
-  title: 'Join the community',
+  title: 'Join the Community',
   subheader: 'get involved and get rewarded',
   url: links.telegram
 }
 
 export const signUpForUpdatesData = {
-  title: 'Sign up for updates',
+  title: 'Sign up for Updates',
   subtitle: 'and be the first to get the news',
 }
 
