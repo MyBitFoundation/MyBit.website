@@ -1,0 +1,153 @@
+@import '../select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+@mixin beforeNumber ($bottom, $fontSize){
+  content: counter(my-colored-counter) ". ";
+  font-family: 'Gilroy', sans-serif;
+  font-size: $fontSize;
+  font-weight: 800;
+  text-align: right;
+  color: #1890ff;
+  margin-right: 22px;
+  position: relative;
+  bottom: $bottom;
+}
+
+.howToUse{
+  color: white;
+  background-image: linear-gradient(238deg, #001358, #125ac4);
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 700px;
+  @include media ("<=tablet") {
+    background: #fff;
+    height: auto;
+  }
+
+  &-contentWrapper{
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    max-width: 514px;
+    padding: 0 16px;
+    @include media ("<=tablet") {
+      margin: 0 auto;
+      max-width: initial;
+    }
+    @include media ("<=375px") {
+      font-size: 12px;
+    }
+    &--first{
+      text-align: left;
+      @include media ("<=tablet") {
+        margin: 0 auto;
+        background-image: linear-gradient(238deg, #001358, #125ac4);
+        padding: 1px 6%;
+        width: 100%;
+      }
+    }
+    &--second{
+      @include media ("<=tablet") {
+        padding: 1px 6%;
+        color: #4a4a4a;
+      }
+    }
+    .textCard-header{
+      @include headerDesctop();
+      font-family: 'Gilroy', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      @include media ("<=375px") {
+        @include headerMobile();
+      }
+      &--header-top-left{
+        padding-left: 72px;
+        padding-right: 0;
+        @include media ("<=tablet") {
+          padding-right: 20px;
+          padding-left: 0;
+          color: #4a4a4a;
+        }
+      }
+    }
+    ol {
+      list-style: none;
+      counter-reset: my-colored-counter;
+      list-style-position: inside;
+      margin-bottom: 0;
+      @include media ("<=tablet") {
+        padding: 0;
+      }
+    }
+
+    ol li {
+      counter-increment: my-colored-counter;
+      margin-bottom: 5%;
+      display: flex;
+      padding-left: 0px;
+      @include media ("<=1000px") {
+        margin-bottom: 3%;
+      }
+      @include media ("<=850px") {
+        margin-bottom: 1%;
+        line-height: 25px;
+      }
+      @include media ("<=tablet") {
+        margin-bottom: 0.8%;
+      }
+    }
+    ol li::before {
+      @include beforeNumber(1px, 24px);
+      @include media ("<=tablet") {
+        @include beforeNumber(3px, 16px);
+      }
+    }
+    &--second{
+      @include media(">=tablet") {
+        max-width: 485px;
+      }
+      @include media ("<tablet") {
+        padding: 1px 6%;
+      }
+    }
+  }
+  .graphicCard {
+    width: 100%;
+    height: 100%;
+    max-width: 960px;
+    max-height: 330px;
+    position: relative;
+    background: transparent;
+    &-placeholderText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: left;
+      width: 100%;
+      font-family: 'Gilroy', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      color: #fff;
+    }
+    &-imageContainer {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+        top: -60px;
+        left: 6vw;
+        height: auto;
+
+        @include media("<=1000px") {
+          top: -30px;
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,128 @@
+@import '../select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+@import 'variables.scss';
+.Roadmap {
+  padding: 0 0 20px;
+  @include media('<=tablet') {
+    padding: 0 0 10px;
+  }
+  &__header {
+    @include headerDesctop();
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    color: #4a4a4a;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    @include media('<=375px') {
+      @include headerMobile();
+    }
+    @include media('<=tablet') {
+      margin-bottom:0;
+    }
+  }
+  &__wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__timeline {
+    background-color: $RoadmapColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__dot {
+    position: relative;
+    height: $DotDiameter;
+    width: $DotDiameter;
+    border: 4px solid $RoadmapColor;
+    border-radius: 50%;
+    background-color: #fff;
+
+    &--is-active {
+      background-color: $RoadmapColor;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $DesctopLabelWidth;
+    text-align: center;
+
+    &-title {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      color: $RoadmapColor;
+    }
+
+    &-description {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: $RoadmapDescriptionColor;
+    }
+  }
+
+  @include media (">=tablet") {
+    &__wrapper {
+      flex-direction: column;
+      height: $RoadmapThickness;
+    }
+
+    &__timeline {
+      height: 5px;
+      margin-right: calc(#{$DesctopLabelWidth} / 2);
+      margin-left: calc(#{$DesctopLabelWidth} / 2);
+    }
+
+    &__label {
+      justify-content: flex-end;
+      left: calc((#{$DesctopLabelWidth} - #{$DotDiameter}) / (-2));
+      font-size: 18px;
+
+      &--is-even {
+        bottom: $DesctopLabelMargin;
+      }
+
+      &--is-odd {
+        top: $DesctopLabelMargin;
+      }
+    }
+  }
+
+  @include media("<tablet") {
+    &__wrapper {
+      flex-direction: row;
+      height: 800px;
+      margin-right: 0px;
+    }
+
+    &__timeline {
+      width: 5px;
+      margin-top: calc(#{$MobileLabelWidth} / 2);
+      margin-bottom: calc(#{$MobileLabelWidth} / 2);
+      flex-direction: column;
+    }
+
+    &__label {
+      justify-content: center;
+      height: calc(#{$MobileLabelWidth} / 2);
+      top: calc((#{$MobileLabelWidth} - #{$DotDiameter}) / (-4));
+      font-size: 14px;
+
+      &--is-even {
+        right: $MobileLabelMargin;
+      }
+
+      &--is-odd {
+        left: $MobileLabelMargin;
+      }
+    }
+  }
+}

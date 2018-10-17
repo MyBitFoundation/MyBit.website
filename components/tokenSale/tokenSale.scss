@@ -1,0 +1,189 @@
+@import '../select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+.token-sale {
+  text-align: center;
+  background-color: rgba(216, 216, 216, 0.2);
+  padding: 0;
+  .ant-card-body {
+    padding: 0;
+    height: 440px;
+    @include media ("<=tablet") {
+      height: 540px;
+    }
+    @include media("<=375px") {
+      height: 440px;
+      padding: 0 5%;
+    }
+  }
+  .communityInitiatives {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: transparent;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &-header {
+      @include headerDesctop();
+      font-family: 'Gilroy', sans-serif;
+      color:inherit;
+      font-weight: 800;
+      line-height: 0.75;
+      margin-bottom: 20px;
+      @include media("<=tablet") {
+        margin-bottom: 10px;
+      }
+      @include media ("<=375px") {
+        font-size: 25px;
+        line-height: 1.2;
+      }
+    }
+    &-text {
+      font-family: 'Roboto', sans-serif;
+      color:#4a4a4a;
+      font-size: 18px;
+      line-height: 1.56;
+      max-width: 992px;
+      height: 134px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 50px;
+      margin: 0 auto;
+      @include media("<=375px") {
+        height: 120px;
+        a {
+          text-align: center;
+          bottom: 13px;
+          button {
+            width: 100px;
+            height: 24px;
+            span {
+              font-size: 12px;
+              font-weight: 500;
+              letter-spacing: 0.6px;
+            }
+          }
+        }
+      }
+
+      &-link {
+        &-more{
+          position: relative;
+          bottom: -10px;
+        }
+      }
+      @include media("<=tablet") {
+        height: 50px;
+        font-size: 14px;
+      }
+      @include media("<=375px") {
+        height: 80px;
+        font-size: 12px;
+        line-height: 1.42;
+        text-align: left;
+      }
+    }
+    &-formWrapper {
+      max-width: 550px;
+      margin: 0 auto;
+      padding-top: 40px;
+      height: 120px;
+
+      @include media("<=tablet") {
+        padding-top: 30px;
+      }
+
+      @include media("<=375px") {
+        height: 80px;
+        padding-top: 10px;
+        width: 305px;
+        .ant-form-item-control-wrapper {
+          .Signup__email-input {
+            min-width: 120px;
+          }
+          .Signup__button {
+            width: 88px;
+            min-width: 88px;
+          }
+        }
+      }
+    }
+    &-link{
+      position: relative;
+      bottom: -10px;
+      button{
+        @include buttonDefault();
+        width: 186px;
+        height: 52px;
+        border-radius: 4px;
+        background-color: #1890ff;
+        span{
+          font-size: 20px;
+          line-height: 1.1;
+        }
+      }
+    }
+    &-cards{
+      margin-bottom: 22px;
+      max-width: 1075px;
+      @include media("<=tablet") {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+      @include media("<=375px") {
+        margin: 0;
+      }
+      &-card{
+        height: 120px;
+        border-radius: 4px;
+        background-image: linear-gradient(to right, #001358, #125ac4);
+        padding: 13px 0;
+        margin-right: 10px;
+        @include media("<=tablet") {
+          width: 100%;
+        }
+        @include media("<=375px") {
+          height: 78px;
+          margin: 0;
+          padding: 9px 0 8px 16px;
+        }
+        p{
+          font-family: 'Roboto';
+          font-size: 18px;
+          line-height: 1.56;
+          color: #ffffff;
+          margin-bottom: 0;
+          text-align: left;
+          width: 88%;
+          padding: 0px 12px;
+          @include media("<=375px") {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 0;
+          }
+        }
+      }
+      &-card.first{
+        @include media("<=tablet") {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    &-Sign-up-for-latest{
+      font-family: 'Roboto', sans-serif;
+      font-size: 18px;
+      line-height: 1.67;
+      text-align: center;
+      color: #4a4a4a;
+      @include media("<=375px") {
+        position: relative;
+        top: -5px;
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

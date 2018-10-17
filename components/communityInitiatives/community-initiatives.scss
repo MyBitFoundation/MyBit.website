@@ -1,0 +1,67 @@
+@import '../select/mixins.scss';
+@import 'include-media/dist/_include-media.scss';
+
+.communityInitiatives {
+  text-align: center;
+  background-color: rgba(216, 216, 216, 0.2);
+  padding: 0 5%;
+  max-width: 1440px;
+  height: 300px;
+  margin: 0 auto;
+
+  @include media ("<=375px") {
+    height: 200px;
+  }
+  &-card {
+    &.ant-card {
+      background: transparent;
+    }
+    max-width: 856px;
+    .ant-card-body {
+      padding:0;
+    }
+    max-width: 850px;
+    margin:0 auto;
+    background-color: transparent;
+    color: #4a4a4a;
+  }
+  &-header {
+    @include headerDesctop();
+    font-family: 'Gilroy', sans-serif;
+    color:inherit;
+    font-weight: 800;
+    @include media ("<=tablet") {
+      margin-bottom: 10px;
+    }
+    @include media("<=375px") {
+      @include headerMobile();
+    }
+  }
+  &-text {
+    font-family: 'Roboto', sans-serif;
+    color:inherit;
+    font-size: 18px;
+    line-height: 1.67;
+    @include media ("<=tablet") {
+      font-size: 14px;
+    }
+    @include media("<=375px") {
+      font-size: 12px;
+      line-height: 1.42;
+    }
+  }
+  &-formWrapper {
+    @include media("<=375px") {
+      .ant-form-item-control-wrapper {
+        .Signup__email-input {
+          min-width: 120px;
+        }
+        .Signup__button {
+          min-width: 95px;
+        }
+      }
+    }
+    max-width: 550px;
+    margin: 0 auto;
+  }
+}
