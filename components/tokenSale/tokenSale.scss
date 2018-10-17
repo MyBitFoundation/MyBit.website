@@ -158,11 +158,17 @@
           text-align: left;
           width: 88%;
           padding: 0px 12px;
+          text-align: center;
+          width: 100%;
           @include media("<=375px") {
             font-size: 12px;
             font-weight: 500;
             padding: 0;
           }
+        }
+
+        & p:nth-child(1){
+          font-weight: 500;
         }
       }
       &-card.first{
