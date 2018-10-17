@@ -223,7 +223,7 @@ applications:[{
   name: 'myBitMydax',
   imageUrl: '/static/svgs/my-bit-apps/mydax.svg',
   button: {text: 'Coming Soon', url: links.mydax, type: 'bordered', disabled:true},
-  content:'Decentralized IoT asset exchange'
+  content:'Decentralised IoT asset exchange'
 },
 {
   id: 9,
@@ -392,7 +392,7 @@ export const wallets = [{
 
   export const media = [{
     title: 'MyBit Mobile DApp',
-    content: '<p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
+    content: '<p>The MyBit Decentralised Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
   }, {
     title: 'IoT Asset Tracker',
     content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
@@ -411,7 +411,7 @@ export const wallets = [{
   <p>Although we all come from different countries, cultures and (professional) backgrounds there is one thing that connects us. We all share a common vision; to improve the life of everyone.</p>
   <p>While we see the vast potential of IoT and automation, we are aware that it will have major repercussions for the role humans play in the future economy. Instead of fighting this development we have chosen to embrace it.
   </p>
-  <p>By utilising our shared resources we are building the first decentralized ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
+  <p>By utilising our shared resources we are building the first decentralised ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
   <p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important.</p>`
     }
   ];

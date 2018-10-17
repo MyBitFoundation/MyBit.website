@@ -16,7 +16,7 @@ export const roadmapEvents = [
   },
   {
     title: 'Q4 2018',
-    description: 'Decentralized Development fund and SDK',
+    description: 'Decentralised Development Fund and SDK',
     active: true
   },
   {
