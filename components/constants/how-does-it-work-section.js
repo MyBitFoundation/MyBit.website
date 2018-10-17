@@ -25,7 +25,7 @@ export const howDoesItWorkDataFirstRow = [
       </div>
     },
     {
-      title: 'How does it work?',
+      title: 'How does it Work?',
       color: 'light-right',
       transform: 'right-top',
       type: 'light-list',
@@ -68,7 +68,7 @@ export const howDoesItWorkDataSecondRow = [
       button: {text: 'View Tasks', url: 'https://ddf.mybit.io', external:true}
     },
     {
-      title: 'How does it work?',
+      title: 'How does it Work?',
       color: 'dark-right',
       type: 'dark-list',
       paragraph: <p>Once governance is added in 2019 it will look like this.</p>,
