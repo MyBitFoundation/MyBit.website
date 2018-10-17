@@ -14,7 +14,7 @@ export class CommunityInitiatives extends React.Component {
       <section className="communityInitiatives">
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <Card bordered={false} className="communityInitiatives-card" >
-          <h2 className="communityInitiatives-header">Community initiatives</h2>
+          <h2 className="communityInitiatives-header">Community Initiatives</h2>
           <p className="communityInitiatives-text">
             In addition to organised funds, MyBit Ventures strives to support the community.
             We host a range of events and hackathons worldwide to promote user engagement and

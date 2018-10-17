@@ -37,10 +37,8 @@ export const howDoesItWorkDataFirstRow = [
             <li>Development teams follow the application process with their idea.</li>
             <li>Investors of the fund vote to accept or reject a proposal using Blockchain governance protocols.</li>
             <li>If accepted, MYB is escrowed in a smart contract and released to the development team in increments after set milestones are achieved.</li>
-            <li>Upon approval funds are distributed from the smart contract to the contributor.</li>
+            <li>Upon approval funds are distributed from the smart contract.</li>
         </ol>
-
-
     }
   ]
 
@@ -48,17 +46,16 @@ export const howDoesItWorkDataFirstRow = [
 export const howDoesItWorkDataSecondRow = [
     {
       title: 'Decentralised'+ '\n'
-      +' Development fund',
+      +' Development Fund',
       color: 'light-left',
       transform: 'right-top',
       content:
       <div>
         <p>
-        The DDF is designed to advance existing projects
-        built on top of MyBit through a series of micro
-        tasks which can consists of new functionality
-        development, security, design, marketing, or
-        anything else that adds value to a specific
+        The DDF is designed to advance existing projects built on top of MyBit
+        by paying people to complete specific microtasks.
+        These tasks can consist of new functionality development, security,
+        design, marketing or anything else that adds value to a specific
         application built on the MyBit Network.
         </p>
         <p>
@@ -78,11 +75,11 @@ export const howDoesItWorkDataSecondRow = [
       content:
       <div>
         <ol>
-            <li>Propose feature or task</li>
-            <li>Community votes on feature and allocates funds (in MYB or ETH)</li>
-            <li>Task published on the DDF portal and available to contributors</li>
-            <li>Once completed it is reviewed and voted on by community</li>
-            <li>Upon approval, if task is merged with codebase and funds are distributed to contributor</li>
+            <li>Propose feature or task.</li>
+            <li>Community votes on feature and allocates funds (in MYB or ETH).</li>
+            <li>Task published on the DDF portal and available to contributors.</li>
+            <li>Once completed it is reviewed and voted on by community.</li>
+            <li>Upon approval, funds are distributed to the contributor.</li>
         </ol>
       </div>
     }
