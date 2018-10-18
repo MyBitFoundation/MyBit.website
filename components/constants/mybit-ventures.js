@@ -13,7 +13,7 @@ export const venturesInfo = {
     With that in mind, we want to reward anyone who contributes
     to the growth of the MyBit Network around the world.</p>
     <p>Whether it's developing your own use case, supporting existing projects like MyBitGo or
-    hunting bugs through the DDF (Decentralised Development Fund),
+    hunting for bugs through the DDF (Decentralised Development Fund),
     you’ll be rewarded.</p>
   </Fragment>
 }

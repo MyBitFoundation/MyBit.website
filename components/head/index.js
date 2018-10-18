@@ -82,7 +82,7 @@ export default () => (
       <link rel="manifest" href="/static/favicons/manifest.json" />
       <meta
         name="description"
-        content="The world’s most advanced IoT investment ecosystem. Powered by Ethereum."
+        content="MyBit enables the rapid building, testing, and deployment of wealth management applications on the Ethereum Blockchain."
       />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta

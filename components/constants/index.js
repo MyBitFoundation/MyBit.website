@@ -177,6 +177,13 @@ applications:[{
   content:'IoT investment platform '
 },
 {
+  id: 10,
+  name: 'myBitMobileIOs',
+  imageUrl: '/static/svgs/my-bit-apps/my-bit-mobile.svg',
+  button: {text: 'Try Now', url: links.iosMobileWallet},
+  content:'iOS mobile wallet'
+},
+{
   id: 2,
   name: 'myBitMobileAndroid',
   imageUrl: '/static/svgs/my-bit-apps/my-bit-mobile.svg',
@@ -232,14 +239,6 @@ applications:[{
   imageUrl: '/static/svgs/my-bit-apps/payroll-01.svg',
   button: {text: 'Coming Soon', url: links.mybitPayroll, type: 'bordered', disabled:true},
   content: 'Smart contract-based payroll automation'
-},
-{
-  id: 10,
-  name: 'myBitMobileIOs',
-  displayPage: 'aplications',
-  imageUrl: '/static/svgs/my-bit-apps/my-bit-mobile.svg',
-  button: {text: 'Coming Soon', url: '#', type: 'bordered', disabled:true},
-  content:'iOS mobile wallet'
 },
 {
   id: 11,

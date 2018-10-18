@@ -6,7 +6,7 @@ export const links = {
   blog: 'https://medium.com/mybit-dapp',
   events: 'https://www.facebook.com/pg/MyBitDApp/events/',
   //Resources (Header) dropdown
-  tokenSale: '/static/files/MYB_Token_Information.pdf', //(no link yet)
+  tokenSale: 'https://medium.com/mybit-dapp/mybit-token-distribution-phase-2-b938ee231496', //(no link yet)
   whitepaper: 'http://mybit.io/whitepaperv2.0',
   github: 'https://github.com/MyBitFoundation',
   devs: 'http://developer.mybit.io/',
@@ -64,5 +64,6 @@ export const links = {
   mybitOptions: 'https://options.mybit.io',
   mybitGo: 'https://go.mybit.io/',
   androidMobileWallet: 'https://play.google.com/store/apps/details?id=io.mybit.app',
+  iosMobileWallet: 'https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1439307856&mt=8',
   mydax: '#' //(no link yet)
 }
