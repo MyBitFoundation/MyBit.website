@@ -12,7 +12,7 @@ export const howToUseFirst =
 
 export const howToUseSecond =
   {
-    title: 'Token utility',
+    title: 'Token Utility',
     type: 'second',
     content:
     <div>

@@ -15,9 +15,6 @@
       }
     ],
     [ "inline-react-svg" ],
-    [ "import", {
-      "libraryName": "antd"
-    }],
     [
       "transform-assets-import-to-string",
       {
