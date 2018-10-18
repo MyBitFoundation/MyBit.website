@@ -10,7 +10,7 @@
   padding-bottom: 72px;
   width: 76.7%;
   max-width: 873px;
-  
+
   @include media("<980px") {
     padding-top: 2.7%;
     padding-bottom: 3.8%;
@@ -21,7 +21,7 @@
     padding-right: 5px;
     padding-top: 5px;
     color: #fff;
-    
+
     @include media("<980px") {
       display: none;
     }
@@ -70,6 +70,52 @@
   visibility: visible;
   opacity: 1;
   transition: height 0.35s ease-in 200ms;
+  overflow: hidden;
+
+  .MobileMenu{
+    text-align: left;
+    width: max-content;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-left: 15px;
+
+    & a{
+      color: #ffffff;
+      font-size: 20px;
+
+      &:hover{
+        color: #1890ff;
+      }
+    }
+
+    &__arrow{
+      margin-left: 10px;
+    }
+
+    .ant-menu-submenu-title{
+      font-size: 20px;
+    }
+
+    .ant-menu-sub{
+      background-color: transparent;
+    }
+
+    .ant-menu-submenu ul a{
+      font-size: 17px;
+    }
+
+    .ant-menu-submenu-arrow{
+      display: none;
+    }
+
+    .ant-menu-item-selected{
+      background-color: transparent;
+
+      &:after{
+        display: none;
+      }
+    }
+  }
 
   &:before{
     position: absolute;
@@ -92,6 +138,11 @@
 
   &--is-visible{
     height: 100vh;
+
+    body{
+      height: 100vh;
+      overflow: hidden;
+    }
 
     &:before{
       height: 101vh;
@@ -142,7 +193,7 @@
     text-align: left;
     padding-left: 40px;
     visibility: hidden;
-    opacity: 0; 
+    opacity: 0;
     transition-delay: 600ms;
 
     &--is-visible{

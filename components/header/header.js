@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import Logo from '../../static/svgs/icons/mybit-full-white.svg'
 import {Menu} from '../menu/menu'
 import stylesheet from './header.scss'
+import AppInfoContext from '../context/AppInfoContext';
 
 export const Header = ({isDark}) => {
   return (
@@ -38,7 +39,17 @@ export const Header = ({isDark}) => {
               />
             </Link>
           </div>
-          <Menu />
+        <AppInfoContext.Consumer>
+          {({
+            mobileMenu,
+            handleClickMobileMenu
+          }) => (
+            <Menu
+              mobileMenu={mobileMenu}
+              handleClick={handleClickMobileMenu}
+            />
+          )}
+        </AppInfoContext.Consumer>
         </div>
       </header>
     </div>
