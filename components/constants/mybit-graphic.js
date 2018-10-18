@@ -8,8 +8,9 @@ export const graphicInfo = {
       The MyBit Network is powered by the MyBit Token (MYB).
       MYB is used for everything from executing specific functions with our SDKs
       to accessing features of applications. Basically, all apps built on MyBit
-      (including MyBitGO) use MYB to function. The token is also used to fund
-      the growth of the network through MyBit Ventures and other developer reward programmes.
+      (including MyBitGO) use MYB to function. MYB acts as the fuel for
+      the network and is used to execute functions within the MyBit SDK and to
+      access features of applications.
       </p>
     </Fragment>,
   graphic:
