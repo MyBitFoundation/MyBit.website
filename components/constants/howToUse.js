@@ -23,7 +23,7 @@ export const howToUseSecond =
           on the network. The key difference is tokens are burnt instead of going to miners.
         </li>
         <li>
-          Stake tokens for asset collateral
+          Stake tokens for asset collateral.
           Users can lock their MYB, adding a layer of security for
           investors on the MyBitGo investment platform.
         </li>
