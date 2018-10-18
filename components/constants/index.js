@@ -179,7 +179,6 @@ applications:[{
 {
   id: 10,
   name: 'myBitMobileIOs',
-  displayPage: 'aplications',
   imageUrl: '/static/svgs/my-bit-apps/my-bit-mobile.svg',
   button: {text: 'Try Now', url: links.iosMobileWallet},
   content:'iOS mobile wallet'
