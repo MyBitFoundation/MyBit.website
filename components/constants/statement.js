@@ -17,7 +17,7 @@ export const community = {
 export const products = {
   title: 'Products',
   paragraph: `
-   Smart investing paired with a decentralized IoT exchange.
+   Smart investing paired with a decentralised IoT exchange.
   `,
   icon: 'products',
   link: 'products',

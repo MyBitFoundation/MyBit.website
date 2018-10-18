@@ -9,7 +9,7 @@ export class TeamSection extends Component {
       <Fragment>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <section className="TeamSection">
-          <h2 className="TeamSection__header">Meet the team</h2>
+          <h2 className="TeamSection__header">Meet the Team</h2>
           <TeamMembers team={teamDesc} linkedin={false}/>
         </section>
       </Fragment>
