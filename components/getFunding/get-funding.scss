@@ -55,9 +55,6 @@
   }
 
   @include media("<tablet") {
-    &__wrapper {
-      height: 200px;
-    }
 
     &__text {
       font-size: 12px;

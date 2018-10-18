@@ -64,5 +64,6 @@ export const links = {
   mybitOptions: 'https://options.mybit.io',
   mybitGo: 'https://go.mybit.io/',
   androidMobileWallet: 'https://play.google.com/store/apps/details?id=io.mybit.app',
+  iosMobileWallet: 'https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1439307856&mt=8',
   mydax: '#' //(no link yet)
 }
