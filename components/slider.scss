@@ -28,7 +28,6 @@
     }
 
     &--has-arrows-tablet{
-      @include media(">phone", "<desktop") {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -36,6 +35,5 @@
         & .ArrowButton{
           display: flex;
         }
-      }
     }
 }
