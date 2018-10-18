@@ -16,12 +16,12 @@ export class TokenSale extends React.Component {
       <section className="token-sale">
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <Card bordered={false} className="communityInitiatives" >
-          <h2 className="communityInitiatives-header">Tokensale</h2>
+          <h2 className="communityInitiatives-header">Token Distribution</h2>
           <Row className='communityInitiatives-cards'>
             <Col  xs={24} sm={24} md={12}>
             <div className = 'communityInitiatives-cards-card first'>
               <p>
-                Phases one:
+                Phase one
               </p>
               <p>
                 Tokensale (seed round equivalent) was completed on August 17, 2017 with 10,044 ETH contributed.
@@ -31,7 +31,7 @@ export class TokenSale extends React.Component {
             <Col xs={24} sm={24} md={12}>
             <div className = 'communityInitiatives-cards-card first'>
               <p>
-                Phase two:
+                Phase two
               </p>
               <p>
                 Tokensale (series A equivalent) will begin on January 1, 2019.

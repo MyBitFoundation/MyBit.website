@@ -47,7 +47,7 @@ export const mediaHighlights = [{
   title: 'MyBit DApp',
   content:
   <div>
-    <p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>
+    <p>The MyBit Decentralised Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>
     <Button
       label={"Test Alpha"}
       url={testAlphaUrl}
@@ -60,7 +60,7 @@ export const mediaHighlights = [{
 }, {
   icon: 'mydax-white',
   title: 'MYDAX',
-  content: '<p>The MyBit Decentralized Asset Exchange (MYDAX) is a revolutionary technology, providing liquidity to a historically illiquid market for the first time ever. It is the first Decentralized IoT Asset Exchange in the world and has ambitions to be the backbone of the new machine economy.</p>'
+  content: '<p>The MyBit Decentralised Asset Exchange (MYDAX) is a revolutionary technology, providing liquidity to a historically illiquid market for the first time ever. It is the first Decentralised IoT Asset Exchange in the world and has ambitions to be the backbone of the new machine economy.</p>'
 }];
 
 export const diamondHighlights = [{
