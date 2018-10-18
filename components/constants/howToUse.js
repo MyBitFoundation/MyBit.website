@@ -5,29 +5,25 @@ export const howToUseFirst =
     type: 'first',
     content:
     <p>
-      The MyBit Network is powered by the MyBit Token (MYB).
-      It’s used for everything from executing specific functions
-      with our SDKs to accessing features of applications. Basically,
-      all apps built on MyBit (including MyBitGO) use MYB to function.
-      The token’s also used to fund the growth of the network through
-      MyBit Ventures and other developer reward programmes.
+      MYB is the fuel of the MyBit Network. It is used for
+      interacting with applications, asset collateral, and staking.
     </p>
 }
 
 export const howToUseSecond =
   {
-    title: 'Token utility',
+    title: 'Token Utility',
     type: 'second',
-    content: 
+    content:
     <div>
       <ol>
         <li>
-          Burn tokens to use SDKs and applications
-          Developers burn MYB tokens to use applications within the
-          Network, like gas on the Ethereum network.
+          Burn tokens to use the MyBit SDK and applications. Much like
+          gas on the Ethereum network, MyBit Tokens power all applications
+          on the network. The key difference is tokens are burnt instead of going to miners.
         </li>
         <li>
-          Lock tokens for asset collateral
+          Stake tokens for asset collateral
           Users can lock their MYB, adding a layer of security for
           investors on the MyBitGo investment platform.
         </li>
@@ -46,6 +42,6 @@ export const howToUseSecond =
           Users can lock MYB tokens to help fund promising dApps through MyBit Ventures.
           Successful applications can then join the DDF to rapidly scale development.
         </li>
-      </ol>      
+      </ol>
     </div>
   }

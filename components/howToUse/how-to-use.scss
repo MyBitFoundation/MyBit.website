@@ -18,7 +18,6 @@
   background-image: linear-gradient(238deg, #001358, #125ac4);
   max-width: 1440px;
   margin: 0 auto;
-  height: 700px;
   @include media ("<=tablet") {
     background: #fff;
     height: auto;
@@ -138,7 +137,6 @@
 
       img {
         position: absolute;
-        top: -60px;
         left: 6vw;
         height: auto;
 

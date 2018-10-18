@@ -15,7 +15,7 @@ export const aboutUsData = [{
     <p>
       This is inefficient, unsafe, and expensive. Our vision is to utilise
       smart contract technology to eliminate the need for these centralised
-      sources and creating a more efficient, secure, and cost-effective wealth
+      sources and create a more efficient, secure, and cost-effective wealth
       management environment.
     </p>
   </Fragment>,
@@ -27,9 +27,9 @@ export const aboutUsData = [{
   className: 'last',
   content:
     <p>
-      MyBit provides robust developer tools such as SDKs and UI Kits to give
+      MyBit provides robust developer tools such as the MyBit SDK to give
       engineers the power to rapidly build, test and deploy wealth management
-      applications on the Ethereum blockchain as well as funding mechanisms to
+      applications on the Ethereum blockchain as well as funding mechanisms, such as the DDF, to
       support and scale disruptive projects.
     </p>,
   footer:

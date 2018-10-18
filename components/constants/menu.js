@@ -3,7 +3,8 @@ import { links } from '../constants/links';
 
 export const mobileMenu = [{
     name: "Developer",
-    path: { url: links.devs }
+    path: { url: links.devs },
+    external: true,
   },{
     name: "Fund",
     path: { url: links.fund }
@@ -37,7 +38,8 @@ export const mobileMenu = [{
 /*TODO: update path*/
 export const headerMenu = [{
     name: "Developer",
-    path: "http://developer.mybit.io/"
+    path: "http://developer.mybit.io/",
+    external: true,
   },{
     name: "Fund",
     path: links.fund

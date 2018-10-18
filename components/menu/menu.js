@@ -10,23 +10,20 @@ import { IconListMobileMenu } from '../icon'
 import { DropdownCustom } from '../dropdown'
 import { Locale } from '../locale'
 import { withRouter } from 'next/router'
-import { Icon } from 'antd';
+import { Icon, Menu as MenuAnt } from 'antd';
+
+const SubMenu = MenuAnt.SubMenu;
+const MenuItem = MenuAnt.Item;
 
 class CustomMenu extends React.Component {
   constructor(props){
    super(props);
-   this.state = {popup: false, lang: headerMenuLanguage["en"].name, dropdownItem: null}
-
-   this.handleClick = this.handleClick.bind(this);
+   this.state = {lang: headerMenuLanguage["en"].name, dropdownItem: null}
   }
 
   toggleMobileDropdown = (evt) => {
     const dropdownItem = this.state.dropdownItem !== evt.currentTarget.innerText ? evt.currentTarget.innerText : null;
     this.setState({dropdownItem})
-  }
-
-  handleClick(flag){
-    this.setState({popup: flag});
   }
 
   handleLocaleChange = (evt) => {
@@ -43,7 +40,7 @@ class CustomMenu extends React.Component {
           path={option.path}
           isLight
           name={option.name}
-          external={Boolean(option.external)}
+          external={option.external}
           className={
             classNames({
               'Menu__item': true,
@@ -70,12 +67,12 @@ class CustomMenu extends React.Component {
     })
 
     toRender.push(toRenderDropdowns);
-    toRender.push(<Locale key='locale' 
+    /*toRender.push(<Locale key='locale'
                           className={classNames({'Menu__item': true})}
                           langMenu={headerMenuLanguage}
                           lang={lang}
                           onLocaleChanged={this.handleLocaleChange}
-                          />);
+                          />);*/
     toRender.push(<Button
       key='button'
       label={headerMenuButton.name}
@@ -94,61 +91,42 @@ class CustomMenu extends React.Component {
       }
     />);
 
-    const toRenderMobile = mobileMenu.map((option) => {
-      return (
-        <Fragment key={option.name}>
-          {!option.dropdown && <a
-            onClick={this.toggleMobileDropdown}
-            href={option.path.url}
-
-            className={
-            classNames({
-              'SidebarMobile__overlay-link': true,
-              'SidebarMobile__overlay-link--is-visible' : this.state.popup,
-              'SidebarMobile__menuButton': option.button,
-              'SidebarMobile__currentPage': this.props.router.pathname.indexOf(option.name.toLocaleLowerCase()) !== -1
-            })
-          }
-
-            target={option.path.external ? "_blank" : ""}
-            rel="noopener noreferrer"
+    const toRenderMobile = [];
+    const menuToRender =
+      (
+        <Fragment key="mobileMenu">
+           <MenuAnt
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
+            mode="inline"
+            className="MobileMenu"
           >
-            {option.name}
-          </a>}
-          {option.dropdown && <div
-            className={
-            classNames({
-              'SidebarMobile__overlay-link': true,
-              'SidebarMobile__dropdown': true,
-              'SidebarMobile__overlay-link--is-visible' : this.state.popup
-            })
-          }
-          >
-            <div onClick={this.toggleMobileDropdown}>
-              {option.name}
-              <span className={`SidebarMobile__chevron${this.state.dropdownItem == option.name ? '--active' : '' }`}>
-                <Icon type="down" theme="outlined"/>
-              </span>
-            </div>
-            {option.menuItems.map(mItem => (
-              <a
-                key={mItem.name}
-                href={mItem.url}
-                target={mItem.external ? "_blank" : ""}
-                rel="noopener noreferrer"
-                className={`SidebarMobile__menuItem${this.state.dropdownItem == option.name ? '--active' : '' }`}
+            {mobileMenu.map((option => {
+              if (option.dropdown) {
+                const menuItems = option.menuItems.map(item => (
+                  <MenuAnt.Item key={item.name}>
+                    <a href={item.url} target={item.external ? '_blank' : ''} rel={item.external ? 'noopener noreferrer' : ''}>{item.name}</a>
+                  </MenuAnt.Item>
+                ))
+                return(
+                  <SubMenu key={option.name} title={<span><span>{option.name}</span><Icon className="MobileMenu__arrow" type="down" /></span>}>
+                    {menuItems}
+                  </SubMenu>
+                )
+              } else {
+                return(
+                  <MenuItem key={option.name}>
+                    <a href={option.path.url} key={option.name} target={option.external ? '_blank' : ''} rel={option.external ? 'noopener noreferrer' : ''}>{option.name}</a>
+                  </MenuItem>
+                )
+              }
 
-                target={mItem.external ? "_blank" : ""}
-                rel="noopener noreferrer"
-              >
-              <span className="SidebarMobile__teamText">{mItem.name}</span>
-            </a>
-            ))}
-          </div>}
+            }))}
+          </MenuAnt>
         </Fragment>
       )
-    })
 
+    toRenderMobile.push(menuToRender);
     toRenderMobile.push(<IconListMobileMenu key='IconListMobileMenu'/>)
 
     return (
@@ -169,7 +147,7 @@ class CustomMenu extends React.Component {
             })
           }
         >
-          <a onClick={() => this.handleClick(true)}>
+          <a onClick={() => this.props.handleClick(true)}>
             <HamburgerButton />
           </a>
         </div>
@@ -177,7 +155,7 @@ class CustomMenu extends React.Component {
           className={
             classNames({
               'SidebarMobile': true,
-              'SidebarMobile--is-visible' : this.state.popup,
+              'SidebarMobile--is-visible' : this.props.mobileMenu,
             })
           }
         >
@@ -185,10 +163,10 @@ class CustomMenu extends React.Component {
             className={
               classNames({
                 'SidebarMobile__overlay-btn-close': true,
-                'SidebarMobile__overlay-btn-close--is-visible' : this.state.popup,
+                'SidebarMobile__overlay-btn-close--is-visible' : this.props.mobileMenu,
               })
             }
-            onClick={() => this.handleClick(false)}
+            onClick={() => this.props.handleClick(false)}
           >
             &times;
           </a>

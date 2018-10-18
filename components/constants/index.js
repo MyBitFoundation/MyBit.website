@@ -2,7 +2,7 @@ import { links } from './links'
 
 export const countdownInfo = {
   finalDate: new Date("Jan 01 2019 12:00:00 GMT-0"),
-  title: 'Token Distribution phase 2 begins Jan 1, 2019',
+  title: 'Token Distribution Phase 2 Begins Jan 1, 2019',
   parts: {day:'Days', hour: 'Hours', minut: 'Minutes', second: 'Seconds'}
 }
 
@@ -138,7 +138,7 @@ export const teamDesc = [
 ]
 
 export const teamsData = {
-  title: 'Empowering Disruptive teams',
+  title: 'Empowering Disruptive Teams',
   button: {text: 'Learn More', url: links.fund},
   image: '../../static/svgs/mybit_ventures.svg',
   content: `Whether you want to build a project from scratch, contribute to an existing project,
@@ -147,13 +147,13 @@ export const teamsData = {
 }
 
 export const eventsData = {
-  title: 'Upcoming events',
+  title: 'Upcoming Events',
   button: {text: 'Find an Event', url: links.events, external: true},
   imageUrl: '/static/assets/event-graphic2.png'
 }
 
 export const newsData = {
-  title: 'Latest news',
+  title: 'Latest News',
   button: {text: 'Read More', url: links.medium, external: true},
   imageUrl: '/static/assets/TokenDistribution.png'
 }
@@ -162,12 +162,12 @@ export const developersData = {
   title: 'Developers',
   button: {text: 'Get Started', url: links.devs, external: true},
   image: {url: null, alt: 'Code image' },
-  content: `We believe in making development effective, efficient and fun. This is why we have designed a concrete foundation which provides tools and resources to streamline development including various SDKs, a UI Kit, and white-labeled (out of the box) solutions. So engineers can focus on building the future and not worry about trivial components.`,
+  content: `We believe in making development effective, efficient and fun. This is why we have designed the MyBit Software Development Kit (SDK) to streamline development. It enables engineers to quickly get concepts off the ground and focus on building the future.`,
 }
 
 export const myBitAppsHighlights = {
-title: 'Applications powered by MyBit',
-description: 'MyBit’s applications offer a new way of owning and distributing wealth. Our applications include everything from investment platforms to payrolls, wills and trusts. They’re secure, efficient and cost-effective, letting you avoid middlemen and third party fees.',
+title: 'Applications Powered by MyBit',
+description: 'MyBit’s applications offer a new way of owning and distributing wealth. Our applications include everything from investment platforms to payrolls, wills, trusts, and much more. They’re secure, efficient and cost-effective, letting users avoid middlemen and third party fees.',
 button: {text: 'View More', url: links.applications},
 applications:[{
   id: 1,
@@ -223,7 +223,7 @@ applications:[{
   name: 'myBitMydax',
   imageUrl: '/static/svgs/my-bit-apps/mydax.svg',
   button: {text: 'Coming Soon', url: links.mydax, type: 'bordered', disabled:true},
-  content:'Decentralized IoT asset exchange'
+  content:'Decentralised IoT asset exchange'
 },
 {
   id: 9,
@@ -335,13 +335,13 @@ export const achievements = [{
 }];
 
 export const joinCommunityData = {
-  title: 'Join the community',
+  title: 'Join the Community',
   subheader: 'get involved and get rewarded',
   url: links.telegram
 }
 
 export const signUpForUpdatesData = {
-  title: 'Sign up for updates',
+  title: 'Sign up for Updates',
   subtitle: 'and be the first to get the news',
 }
 
@@ -392,7 +392,7 @@ export const wallets = [{
 
   export const media = [{
     title: 'MyBit Mobile DApp',
-    content: '<p>The MyBit Decentralized Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
+    content: '<p>The MyBit Decentralised Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
   }, {
     title: 'IoT Asset Tracker',
     content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
@@ -411,7 +411,7 @@ export const wallets = [{
   <p>Although we all come from different countries, cultures and (professional) backgrounds there is one thing that connects us. We all share a common vision; to improve the life of everyone.</p>
   <p>While we see the vast potential of IoT and automation, we are aware that it will have major repercussions for the role humans play in the future economy. Instead of fighting this development we have chosen to embrace it.
   </p>
-  <p>By utilising our shared resources we are building the first decentralized ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
+  <p>By utilising our shared resources we are building the first decentralised ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
   <p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important.</p>`
     }
   ];

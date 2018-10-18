@@ -8,7 +8,7 @@ export class GetFunding extends Component {
         <Fragment>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <div className="GetFunding__wrapper">
-            <div className="GetFunding__header">Get funding</div>
+            <div className="GetFunding__header">Get Funding</div>
             <div className="GetFunding__text">
               Apply for Funding. MyBit supports innovative and disruptive
               initiatives. Anyone with an idea and the capacity to develop a

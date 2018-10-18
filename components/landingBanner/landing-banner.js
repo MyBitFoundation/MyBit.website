@@ -16,7 +16,7 @@ const lendingBannerData = {
     </p>
     <p>
       Our vision is to distribute wealth using technology, not middlemen. Everything
-      from investments, payrolls, wills, trusts, and many more. All without lawyers,
+      from investments, payrolls, wills, trusts, and much more. All without lawyers,
       brokers and excessive third party fees. All powered by MyBit.
     </p>
   </Fragment>
