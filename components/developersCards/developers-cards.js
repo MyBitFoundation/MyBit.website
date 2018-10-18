@@ -32,11 +32,7 @@ export class DevelopersCards extends React.Component {
           <Col xs={0} md={12}>
             <Card bordered={false} className="imageCard">
               <div className="imageCard-imageContainer">
-                <p className="imageCard-placeholderText">Code image</p>
-                {
-                  developersData.image && developersData.image.url
-                  && <img src={developersData.image.url} alt={developersData.image.alt} className="imageCard-image"/>
-                }
+                <div className="imageCard-imagecoder" />
               </div>
             </Card>
           </Col>

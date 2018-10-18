@@ -80,6 +80,13 @@
       width:100%;
 
     }
+    &-imagecoder {
+      background-size: cover;
+      background-color: #125ac4;
+      background-position: bottom;
+      height: 314px;
+      background-image: url('/static/assets/coder-bg.jpeg')
+    }
   }
 
 
