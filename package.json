@@ -50,6 +50,7 @@
     "react-i18next": "7.13.0",
     "react-mailchimp-subscribe": "^2.0.2",
     "react-select": "^1.2.1",
+    "react-twitter-conversion-tracker": "^1.0.0",
     "react-waypoint": "^8.0.2",
     "react-youtube": "^7.6.0",
     "sass-loader": "^7.1.0",
