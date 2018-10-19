@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './input-form.scss'
@@ -12,7 +13,7 @@ class Signup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      confirmation: false
+      confirmation: false,
     };
   }
 
@@ -34,7 +35,7 @@ class Signup extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { getFieldError, getFieldValue } = this.props.form;
-    
+
     const email_address = getFieldValue('email');
     if (!email_address) {
       return
@@ -46,7 +47,7 @@ class Signup extends Component {
     }
 
     this.showConfirmationMessage();
-  
+
     axios.post(links.subscribeLink, {
       email_address
     })
@@ -63,49 +64,52 @@ class Signup extends Component {
     const { getFieldDecorator, getFieldProps, validateFields } = this.props.form;
     const { confirmation } = this.state;
     const label = this.props.btnTitle;
-
     return (
-      <Form layout="inline" onSubmit={this.handleSubmit} className={
-        classNames({
-          'Signup': true
-        })}>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-          <FormItem className={classNames({'Signup__email-container': true})}>
-          {getFieldDecorator('email', {
-            rules: [
-              {type: 'email', message: 'Please enter a valid e-mail address'}, 
-              {required: true, message: 'Please enter a valid e-mail address'},
-            ]})
-            (<Input
-              name="email_address"
-              className={
-              classNames({
-                'Signup__email-input': true
-              })}
-              onChange={this.onInputChange}
-              placeholder={this.props.placeholder}/>
-            )
-          }
-        </FormItem>
-        <FormItem className={
-                    classNames({
-                      'Signup__btn-container': true
-                  })}>
-          <Button type="primary" htmlType="submit" className={
-                                                        classNames({
-                                                          'Signup__button': true
-                                                        })} >
-              {label}</Button>
-        </FormItem>
-        <div className={
-                    classNames({
-                      'Signup__confirmation': confirmation,
-                      'Signup__display-none': !confirmation,
-                  })}>
-            Thank you for signing up!
-        </div>
-      </Form>
-
+      <MailchimpSubscribe
+        url="https://mybit.us15.list-manage.com/subscribe/post?u=af48b1fdb5278fd9884338f23&amp;id=dbcac41639"
+        render={({ subscribe, status, message }) => {
+          return (
+          <Form layout="inline" className={
+            classNames({
+              'Signup': true
+            })}>
+              <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+              <FormItem className={classNames({'Signup__email-container': true})}>
+              {getFieldDecorator('email', {
+                rules: [
+                  {type: 'email', message: 'Please enter a valid e-mail address'},
+                  {required: true, message: 'Please enter a valid e-mail address'},
+                ]})
+                (<Input
+                  name="email_address"
+                  className={
+                  classNames({
+                    'Signup__email-input': true
+                  })}
+                  onChange={this.onInputChange}
+                  placeholder={this.props.placeholder}/>
+                )
+              }
+            </FormItem>
+            <FormItem className={
+                        classNames({
+                          'Signup__btn-container': true
+                      })}>
+              <Button type="primary" onClick={() => subscribe({EMAIL: "cristiano.santos.martinss@gmail.com"})} className={
+                                                            classNames({
+                                                              'Signup__button': true
+                                                            })} >
+                  {label}</Button>
+            </FormItem>
+            <div className={
+                        classNames({
+                          'Signup__confirmation': true,
+                      })}>
+                {message ? message.indexOf("is already subscribed") ? "This email is already subscribed." : "Thank you for subscribing!" : ""}
+            </div>
+          </Form>
+        )}}
+      />
     );
   }
 }
