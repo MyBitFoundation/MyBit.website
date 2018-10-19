@@ -75,11 +75,7 @@ class Signup extends Component {
             })}>
               <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
               <FormItem className={classNames({'Signup__email-container': true})}>
-              {getFieldDecorator('email', {
-                rules: [
-                  {type: 'email', message: 'Please enter a valid e-mail address'},
-                  {required: true, message: 'Please enter a valid e-mail address'},
-                ]})
+              {getFieldDecorator('email')
                 (<Input
                   name="email_address"
                   className={
