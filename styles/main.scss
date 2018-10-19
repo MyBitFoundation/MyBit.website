@@ -35,14 +35,11 @@ html {
   font-family: $base-font-family;
   font-size: $base-font-size;
   overflow-x: hidden;
-  overflow-y: scroll;
-  overflow-y: overlay;
 }
 
 body {
   line-height: 1.2;
   color: $text-color;
-  overflow: scroll;
   -webkit-overflow-scrolling:touch;
 }
 
