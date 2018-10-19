@@ -17,10 +17,10 @@ export class DevelopersCards extends React.Component {
               </p>
               {
                 developersData.button &&
-                <Button 
-                  type="primary" 
-                  className="developersCard-btn" 
-                  href={developersData.button.url} 
+                <Button
+                  type="primary"
+                  className="developersCard-btn"
+                  href={developersData.button.url}
                   rel={developersData.button.external ? "noopener noreferrer" : null}
                   target={developersData.button.external ? "_blank" : null}
                 >
@@ -32,7 +32,10 @@ export class DevelopersCards extends React.Component {
           <Col xs={0} md={12}>
             <Card bordered={false} className="imageCard">
               <div className="imageCard-imageContainer">
-                <div className="imageCard-imagecoder" />
+                <p><span className="lighterGrey">// TODO: fix</span></p>
+                <p><span className="grey">me</span>{' '}<span className="darkerGrey">=</span>{' '}<span className="blue">Person()</span></p>
+                <p><span className="darkerBlue">while</span><span className="grey">(me</span><span className="blue">.</span><span className="blue">awake()</span><span className="grey">)</span></p>
+                <p><span className="grey">me</span><span className="blue">.</span><span className="blue">code()</span></p>
               </div>
             </Card>
           </Col>
