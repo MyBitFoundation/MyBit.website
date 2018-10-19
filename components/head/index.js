@@ -97,7 +97,7 @@ export default () => (
       <meta name="twitter:title" content="MyBit" />
       <meta
         name="twitter:description"
-        content="The world’s most advanced IoT investment ecosystem. Powered by Ethereum."
+        content="MyBit enables the rapid building, testing, and deployment of wealth management applications on the Ethereum Blockchain."
       />
       <meta name="twitter:creator" content="@MyBit_DApp" />
       <meta
