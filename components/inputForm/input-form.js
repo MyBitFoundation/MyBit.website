@@ -68,6 +68,17 @@ class Signup extends Component {
       <MailchimpSubscribe
         url="https://mybit.us15.list-manage.com/subscribe/post?u=af48b1fdb5278fd9884338f23&amp;id=dbcac41639"
         render={({ subscribe, status, message }) => {
+          let messageToRender = "";
+          if(!message){
+            messageToRender = "";
+          }
+          else if(message.indexOf("is already subscribed") !== -1){
+            messageToRender = "This email is already subscribed.";
+          } else if(message.indexOf("too many recent signup requests") !== -1){
+            messageToRender = "Error: too many recent signup requests.";
+          } else {
+            messageToRender = "Thank you for subscribing!";
+          }
           return (
           <Form layout="inline" className={
             classNames({
@@ -101,7 +112,7 @@ class Signup extends Component {
                         classNames({
                           'Signup__confirmation': true,
                       })}>
-                {message ? message.indexOf("is already subscribed") ? "This email is already subscribed." : "Thank you for subscribing!" : ""}
+                {messageToRender}
             </div>
           </Form>
         )}}
