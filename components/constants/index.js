@@ -130,7 +130,7 @@ export const teamDesc = [
     name: 'Valeriy Tverdohleb',
     job: 'Front End Engineer',
     bio:
-      'A front end end engineer with eleven years of experience developing a range of web software solutions. His specialisms include JavaScript libraries and tooling, especially React and Webpack.',
+      'A front end engineer with eleven years of experience developing a range of web software solutions. His specialisms include JavaScript libraries and tooling, especially React and Webpack.',
     linkedin: '',
     imageSrc: '/static/team/v2/placeholder.png',
     imageAlt: 'Front End Engineer',

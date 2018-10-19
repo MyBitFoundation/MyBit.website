@@ -9,7 +9,7 @@ export const howDoesItWorkDataFirstRow = [
       <div>
         <p>
         The goal of the ecosystem fund is to stimulate new
-        growth. It let’s anyone contribute (“lock”) MYB to the
+        growth. It lets anyone contribute (“lock”) MYB to the
         fund and award it to development teams which have
         been chosen to join the fund and have achieved
         certain milestones.
