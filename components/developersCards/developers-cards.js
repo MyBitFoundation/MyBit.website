@@ -32,10 +32,7 @@ export class DevelopersCards extends React.Component {
           <Col xs={0} md={12}>
             <Card bordered={false} className="imageCard">
               <div className="imageCard-imageContainer">
-                <p><span className="lighterGrey">// TODO: fix</span></p>
-                <p><span className="grey">me</span>{' '}<span className="darkerGrey">=</span>{' '}<span className="blue">Person()</span></p>
-                <p><span className="darkerBlue">while</span><span className="grey">(me</span><span className="blue">.</span><span className="blue">awake()</span><span className="grey">)</span></p>
-                <p><span className="grey">me</span><span className="blue">.</span><span className="blue">code()</span></p>
+                <div className="imageCard-imagecoder" />
               </div>
             </Card>
           </Col>
