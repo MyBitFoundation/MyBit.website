@@ -17,7 +17,7 @@ class HomePage extends Component {
   render() {
     return (
       <Layout>
-        <div>
+        <div className="LandingPage">
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
           <div className="headerWrapper">
             <div className="mainContainer">

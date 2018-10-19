@@ -12,7 +12,7 @@ export const howToUseFirst =
 
 export const howToUseSecond =
   {
-    title: 'Token utility',
+    title: 'Token Utility',
     type: 'second',
     content:
     <div>
@@ -23,22 +23,22 @@ export const howToUseSecond =
           on the network. The key difference is tokens are burnt instead of going to miners.
         </li>
         <li>
-          Stake tokens for asset collateral
+          Stake tokens for asset collateral.
           Users can lock their MYB, adding a layer of security for
           investors on the MyBitGo investment platform.
         </li>
         <li>
-          Stake tokens for DAX
+          Stake tokens for DAX.
           Users can stake their MYB tokens, in exchange for DAX tokens which offer a
           50% discount on trading fees when using the MYDAX exchange.
         </li>
         <li>
-          Access layers on dApps
+          Access layers on dApps.
           Many dApps built using MyBit’s technology stack require a one time burning of
           MYB to unlock the application.
         </li>
         <li>
-          Investing in funds
+          Investing in funds.
           Users can lock MYB tokens to help fund promising dApps through MyBit Ventures.
           Successful applications can then join the DDF to rapidly scale development.
         </li>

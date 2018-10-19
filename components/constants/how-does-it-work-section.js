@@ -9,7 +9,7 @@ export const howDoesItWorkDataFirstRow = [
       <div>
         <p>
         The goal of the ecosystem fund is to stimulate new
-        growth. It let’s anyone contribute (“lock”) MYB to the
+        growth. It lets anyone contribute (“lock”) MYB to the
         fund and award it to development teams which have
         been chosen to join the fund and have achieved
         certain milestones.
@@ -37,7 +37,7 @@ export const howDoesItWorkDataFirstRow = [
             <li>Development teams follow the application process with their idea.</li>
             <li>Investors of the fund vote to accept or reject a proposal using Blockchain governance protocols.</li>
             <li>If accepted, MYB is escrowed in a smart contract and released to the development team in increments after set milestones are achieved.</li>
-            <li>Upon approval funds are distributed from the smart contract.</li>
+            <li>Upon approval, funds are distributed from the smart contract.</li>
         </ol>
     }
   ]
