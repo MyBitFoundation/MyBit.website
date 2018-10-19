@@ -53,19 +53,45 @@
     max-width: 560px;
     max-height: 330px;
     border-radius: 4px;
-    background-color: #d9d9d9;
     position: relative;
-    &-placeholderText {
+
+    &-imageContainer{
+      background-size: cover;
+      background-position: bottom;
+      height: 314px;
+      background-repeat: no-repeat;
+      font-size: 27px;
       position: absolute;
-      top: 50%;
       left: 50%;
+      top: 50%;
       transform: translate(-50%, -50%);
-      text-align: center;
-      width: 100%;
-      font-family: 'Gilroy', sans-serif;
-      font-size: 40px;
-      font-weight: 800;
-      color: #4a4a4a;
+      margin-top: calc(10% + 10px);
+
+      p{
+        margin: 0px;
+      }
+
+      p:nth-child(4){
+        margin-left: 40px;
+      }
+
+      .blue{
+        color: #1890ff;
+      }
+
+      .darkerBlue{
+        color: #1890ff;
+      }
+      .grey{
+        color: grey;
+      }
+      .darkerGrey{
+        color: #4a4a4a;
+      }
+
+      .lighterGrey{
+        color: #c7c7c7;
+      }
     }
   }
   .ant-btn.developersCard-btn.ant-btn-primary {
