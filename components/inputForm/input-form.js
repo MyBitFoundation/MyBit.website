@@ -61,7 +61,7 @@ class Signup extends Component {
   }
 
   render() {
-    const { getFieldDecorator, getFieldProps, validateFields } = this.props.form;
+    const { getFieldDecorator, getFieldProps, validateFields, getFieldValue } = this.props.form;
     const { confirmation } = this.state;
     const label = this.props.btnTitle;
     return (
@@ -95,7 +95,7 @@ class Signup extends Component {
                         classNames({
                           'Signup__btn-container': true
                       })}>
-              <Button type="primary" onClick={() => subscribe({EMAIL: "cristiano.santos.martinss@gmail.com"})} className={
+              <Button type="primary" onClick={() => subscribe({EMAIL: getFieldValue('email')})} className={
                                                             classNames({
                                                               'Signup__button': true
                                                             })} >
