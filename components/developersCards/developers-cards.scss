@@ -58,39 +58,23 @@
     &-imageContainer{
       background-size: cover;
       background-position: bottom;
-      height: 314px;
+      height: 100%;
       background-repeat: no-repeat;
-      font-size: 27px;
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      margin-top: calc(10% + 10px);
-
-      p{
-        margin: 0px;
-      }
-
-      p:nth-child(4){
-        margin-left: 40px;
-      }
-
-      .blue{
-        color: #1890ff;
-      }
-      .darkerBlue{
-        color: #1890ff;
-      }
-      .grey{
-        color: grey;
-      }
-      .darkerGrey{
-        color: #4a4a4a;
-      }
-      .lighterGrey{
-        color: #c7c7c7;
-      }
+      margin: auto;
+      width: 100%;
     }
+    
+    &-imagecoder {
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      background-image: url('/static/assets/networkjs.png')
+    }
+    
   }
   .ant-btn.developersCard-btn.ant-btn-primary {
     @include buttonDefault();
