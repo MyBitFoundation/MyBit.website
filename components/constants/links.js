@@ -24,7 +24,7 @@ export const links = {
   facebook: 'https://www.facebook.com/MyBitDApp/',
   twitter: 'https://twitter.com/MyBit_DApp',
   medium: 'https://medium.com/mybit-dapp',
-  reddit: 'https://www.redit.com/user/MyBit_DApp/',
+  reddit: 'https://www.reddit.com/user/MyBit_DApp/',
   youTube: 'https://www.youtube.com/channel/UCtLn7Vi-3VbsY5F9uF1RJYg',
   linkedin: 'https://www.linkedin.com/company/mybit/',
 
