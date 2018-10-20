@@ -13,7 +13,7 @@ export class GetFunding extends Component {
               Apply for Funding. MyBit supports innovative and disruptive
               initiatives. Anyone with an idea and the capacity to develop a
               proof of concept is eligible to apply for funding which typically
-              will range from 25.000 to 50.000 but could be more or less
+              will range from $25.000 to $50.000 but could be more or less
               depending on the concept.
             </div>
             <div className="GetFunding__footer">Coming in 2019</div>
