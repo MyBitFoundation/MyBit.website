@@ -246,7 +246,7 @@ applications:[{
   displayPage: 'aplications',
   imageUrl: '/static/svgs/my-bit-apps/cheque.svg',
   button: {text: 'Coming Soon', url: '#', type: 'bordered', disabled:true},
-  content:'Request payments in criptocurrency'
+  content:'Request payments in cryptocurrency'
 },
 {
   id: 12,

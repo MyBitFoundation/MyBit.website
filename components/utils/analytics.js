@@ -1,5 +1,6 @@
 import ReactGA from 'react-ga'
 import TwitterConvTrkr from "react-twitter-conversion-tracker"
+import ReactPixel from 'react-facebook-pixel';
 
 export const initTwitterConvTrkr = () => {
   TwitterConvTrkr.init("o0chy");
@@ -7,6 +8,14 @@ export const initTwitterConvTrkr = () => {
 
 export const logTwitterPageView = () => {
   TwitterConvTrkr.pageView();
+}
+
+export const initPixelConvTrkr = () => {
+  ReactPixel.init("146019056346104");
+}
+
+export const logPixelPageView = () => {
+  ReactPixel.pageView();
 }
 
 export const initGA = () => {
