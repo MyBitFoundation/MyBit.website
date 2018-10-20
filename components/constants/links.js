@@ -5,6 +5,7 @@ export const links = {
   token: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616',//(links to token page)
   blog: 'https://medium.com/mybit-dapp',
   events: 'https://www.facebook.com/pg/MyBitDApp/events/',
+  ddf: 'https://ddf.mybit.io/',
   //Resources (Header) dropdown
   tokenSale: 'https://medium.com/mybit-dapp/mybit-token-distribution-phase-2-b938ee231496', //(no link yet)
   whitepaper: 'http://mybit.io/whitepaperv2.0',
