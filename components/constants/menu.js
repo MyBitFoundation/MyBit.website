@@ -31,7 +31,7 @@ export const mobileMenu = [{
   ,{
     name: "Contribute",
     button: true,
-    path: { url: links.github, external: true }
+    path: { url: links.ddf, external: true }
     }
 ];
 
