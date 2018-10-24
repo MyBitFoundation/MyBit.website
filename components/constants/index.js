@@ -154,8 +154,8 @@ export const eventsData = {
 
 export const newsData = {
   title: 'Latest News',
-  button: {text: 'Read More', url: links.medium, external: true},
-  imageUrl: '/static/assets/TokenDistribution.png'
+  button: {text: 'Read More', url: links.news, external: true},
+  imageUrl: '/static/assets/news-banner.png'
 }
 
 export const developersData = {
