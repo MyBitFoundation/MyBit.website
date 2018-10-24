@@ -20,6 +20,9 @@ export const links = {
   fund: 'fund#top',
   token: 'token#top',
 
+  // News
+  news: 'https://medium.com/mybit-dapp/introduction-a8275e6bcbec',
+
   //Social Links
   telegram: 'https://t.me/mybitio',
   facebook: 'https://www.facebook.com/MyBitDApp/',
