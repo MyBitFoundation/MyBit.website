@@ -68,6 +68,11 @@ export const footerSections = [
         title: 'Blog',
         url: links.medium,
         newTab: true,
+      },
+      {
+        title: 'Contact',
+        url: links.contact,
+        newTab: false,
       }]
   },
   {
