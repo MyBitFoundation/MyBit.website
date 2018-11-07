@@ -10,7 +10,7 @@
 .cookiesBanner__content {
     box-shadow: 1px 5px 20px 2px rgba(0,0,0,0.2);
     padding: 0px 20px;
-    height: 56px;
+    height: auto;
     background-color: #ffffff;
     width: 100%;
     max-width: 1191px;
@@ -52,4 +52,21 @@
     margin: 0px 5px 0px 50px;
     border: none;
     color: #4a4a4a;
+}
+
+@media only screen and (max-width: 768px) {
+    .cookiesBanner__content {
+        text-align: center;
+        line-height: 22px;
+        padding: 15px 5px;
+    }
+    .cookiesBanner__buttons {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+    .cookiesBanner__button-deny {
+        border: 1px solid #d9d9d9;
+        text-decoration: none;
+    }
 }
