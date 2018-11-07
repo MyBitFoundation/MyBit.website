@@ -4,6 +4,7 @@ export const links = {
   сompany: '#',
   token: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616',//(links to token page)
   blog: 'https://medium.com/mybit-dapp',
+  contact: 'mailto:info@mybit.io',
   events: 'https://www.facebook.com/pg/MyBitDApp/events/',
   ddf: 'https://ddf.mybit.io/',
   privacyPolicy: 'https://termsfeed.com/cookies-policy/5838e387cdfd377d2ed34891b7b9dd32',
@@ -20,6 +21,9 @@ export const links = {
   applications: 'applications#top',
   fund: 'fund#top',
   token: 'token#top',
+
+  // News
+  news: 'https://medium.com/mybit-dapp/introduction-a8275e6bcbec',
 
   //Social Links
   telegram: 'https://t.me/mybitio',

@@ -22,6 +22,6 @@ export const waysToContributeData = [
       MyBit provides the tools and resources for the rapid testing, development,
       and deployment of dApps.
     </p>,
-    button: {text: 'Get Started', url: 'http://developer.mybit.io/'}
+    button: {text: 'Get Started', url: 'http://developer.mybit.io/', external: true}
   },
 ]

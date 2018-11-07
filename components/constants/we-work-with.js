@@ -13,7 +13,6 @@ export const partners = [
   { name: 'slok_it', imageAlt: 'Slock It', imageName: 'slock_it_desctop.svg', url: 'https://slock.it/'},
   { name: 't_news', imageAlt: 'Token News', imageName: 'token_news.png', url: 'https://medium.com/token-news'},
   { name: 'git_coin', imageAlt: 'Git Coin', imageName: 'GitCoin.png', url: 'https://gitcoin.co/'},
-  { name: 'aragon', imageAlt: 'Aragon', imageName: 'Aragon.png', url: 'https://aragon.org/'},
   { name: 'bnc', imageAlt: 'BNC', imageName: 'BNC.png', url: 'https://bravenewcoin.com/'},
   { name: 'status', imageAlt: 'Status', imageName: 'status.png', url: 'https://status.im/'},
 ];
