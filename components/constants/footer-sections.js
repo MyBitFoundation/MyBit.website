@@ -73,6 +73,11 @@ export const footerSections = [
         title: 'Privacy Policy',
         url: links.privacyPolicy,
         newTab: true,
+      },
+      {
+        title: 'Contact',
+        url: links.contact,
+        newTab: false,
       }]
   },
   {
