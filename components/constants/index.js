@@ -124,7 +124,7 @@ export const teamDesc = [
     bio:
       'A front end engineer with over two years of software development experience. A recent graduate of Sheffield University, where he received a Google scholarship, he’s now applying his expertise to the MyBit UI.',
     linkedin: '',
-    imageSrc: '/static/team/v2/placeholder.png',
+    imageSrc: '/static/team/v2/dayan.jpg',
     imageAlt: 'Front End Engineer',
   },{
     name: 'Valeriy Tverdohleb',
@@ -132,7 +132,7 @@ export const teamDesc = [
     bio:
       'A front end engineer with eleven years of experience developing a range of web software solutions. His specialisms include JavaScript libraries and tooling, especially React and Webpack.',
     linkedin: '',
-    imageSrc: '/static/team/v2/placeholder.png',
+    imageSrc: '/static/team/v2/valeriy.jpg',
     imageAlt: 'Front End Engineer',
   }
 ]
