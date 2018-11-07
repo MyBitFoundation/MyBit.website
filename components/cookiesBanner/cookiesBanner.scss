@@ -1,10 +1,11 @@
 .cookiesBanner__wrapper {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
     z-index: 3;
+    margin-top: -56px;
 }
 
 .cookiesBanner__content {
