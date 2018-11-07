@@ -6,6 +6,7 @@ export const links = {
   blog: 'https://medium.com/mybit-dapp',
   events: 'https://www.facebook.com/pg/MyBitDApp/events/',
   ddf: 'https://ddf.mybit.io/',
+  privacyPolicy: 'https://termsfeed.com/cookies-policy/5838e387cdfd377d2ed34891b7b9dd32',
   //Resources (Header) dropdown
   tokenSale: 'https://medium.com/mybit-dapp/mybit-token-distribution-phase-2-b938ee231496', //(no link yet)
   whitepaper: 'http://mybit.io/whitepaperv2.0',

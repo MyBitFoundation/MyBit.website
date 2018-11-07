@@ -6,6 +6,7 @@ import AppInfo from '../components/context/AppInfo'
 import MainWrapper from '../components/mainWrapper'
 import AppInfoContext from '../components/context/AppInfoContext'
 import Head from '../components/head'
+import { CookiesBanner } from '../components/cookiesBanner/cookiesBanner'
 
 export default class MyApp extends App {
   render() {
@@ -29,6 +30,7 @@ export default class MyApp extends App {
                   </MainWrapper>
                 )}
               </AppInfoContext.Consumer>
+              <CookiesBanner />
             </AppInfo>
           </React.Fragment>
         </I18nextProvider>

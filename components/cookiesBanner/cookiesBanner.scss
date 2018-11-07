@@ -1,0 +1,55 @@
+.cookiesBanner__wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+.cookiesBanner__content {
+    box-shadow: 1px 5px 20px 2px rgba(0,0,0,0.2);
+    padding: 0px 20px;
+    height: 56px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1191px;
+    margin: 0px auto;
+    text-align: left;
+    color: #4a4a4a;
+    line-height: 56px;
+}
+
+.cookiesBanner__buttons {
+    float: right;
+}
+
+.cookiesBanner__link {
+    font-size: 12px;
+    color: #1890FF;
+    margin-left: 5px;
+    text-decoration: underline;
+}
+
+.cookiesBanner__button-accept {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px 5px;
+    width: 113px;
+}
+
+.cookiesBanner__button-deny {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px 5px;
+    width: 113px;
+    text-decoration: underline;
+    border: none;
+    color: #4a4a4a;
+}
+
+.cookiesBanner__button-close {
+    margin: 0px 5px 0px 50px;
+    border: none;
+    color: #4a4a4a;
+}
