@@ -397,7 +397,7 @@ storiesOf('Subscribe (v2)', module)
     () => <Subscribe errorMessage='Error subscribing' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
   ).add(
     'Subscription with success',
-    () => <Subscribe successMessage='Thank you for subscribing' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
+    () => <Subscribe successMessage='Please check your email to confirm the subscription. Thank you.' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
   ).add(
     'Subscription sending',
     () => <Subscribe sending errorMessage='' onSubmit={action('form-submit')} label='To our email list' buttonLabel='Send' placeholder='Enter email address' />
