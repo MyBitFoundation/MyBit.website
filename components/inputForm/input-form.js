@@ -93,7 +93,7 @@ class Signup extends Component {
           </Button>
         </FormItem>
         <div className={classNames({'Signup__confirmation': confirmation, 'Signup__display-none': !confirmation,})}>
-          Please check your email to confirm the subscription. Thank you.
+          Please check your email to confirm the subscription.
         </div>
       </Form>
 
