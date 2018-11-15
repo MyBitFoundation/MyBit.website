@@ -87,22 +87,13 @@ class Signup extends Component {
             )
           }
         </FormItem>
-        <FormItem className={
-                    classNames({
-                      'Signup__btn-container': true
-                  })}>
-          <Button type="primary" htmlType="submit" className={
-                                                        classNames({
-                                                          'Signup__button': true
-                                                        })} >
-              {label}</Button>
+        <FormItem className={classNames({'Signup__btn-container': true})}>
+          <Button type="primary" htmlType="submit" className={classNames({'Signup__button': true})}>
+            {label}
+          </Button>
         </FormItem>
-        <div className={
-                    classNames({
-                      'Signup__confirmation': confirmation,
-                      'Signup__display-none': !confirmation,
-                  })}>
-            Thank you for signing up!
+        <div className={classNames({'Signup__confirmation': confirmation, 'Signup__display-none': !confirmation,})}>
+          Please check your email to confirm the subscription. Thank you.
         </div>
       </Form>
 
