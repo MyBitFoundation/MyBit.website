@@ -11,7 +11,7 @@ export const links = {
   tokenSale: 'https://medium.com/mybit-dapp/mybit-token-distribution-phase-2-b938ee231496', //(no link yet)
   whitepaper: 'http://mybit.io/whitepaperv2.0',
   github: 'https://github.com/MyBitFoundation',
-  devs: 'http://developer.mybit.io/',
+  devs: 'https://developer.mybit.io/portal/',
 
   subscribeLink: 'https://chimpstatic.com/mcjs-connected/js/users/af48b1fdb5278fd9884338f23/50e4f28ebe0a2cd4dd5290132.js',
 
