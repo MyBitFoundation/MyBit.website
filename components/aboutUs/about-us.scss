@@ -22,11 +22,12 @@
   }
   &-header {
     @include headerDesctop();
+    margin-top: 0;
     position:absolute;
     top:0;
     font-family: 'Gilroy', sans-serif;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 2;
     color: #4a4a4a;
     @include media("<=tablet"){
       position:static;
@@ -37,11 +38,18 @@
       line-height: 1.16;
     }
   }
+
+  &-header:after {
+    @include bit();
+    left: 50%;
+  }
+
   &-content {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.56;
     color: #4a4a4a;
+    margin-top: 50px;
     p {
       margin-bottom: 30px;
     }
