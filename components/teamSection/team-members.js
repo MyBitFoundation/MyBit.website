@@ -30,7 +30,6 @@ class TeamMembers extends Component {
                 classNames({
                   "Team__members-card": true,
                   "Team__members-card--is-active": member.name === activeTeamMember,
-                  "Team__members-card--is-visible-mobile": (index + 1) % 3 === 0
                 })
               }
             >
