@@ -68,6 +68,9 @@
         font-size: 12px;
         line-height: 1.42;
       }
+    & > p {
+        margin-bottom: 0;
+      }
     }
     &--dark {
       color: #fff;
@@ -78,7 +81,7 @@
     }
   }
   &-btnWrapper {
-    margin: auto 0 20px;
+    margin: auto; 
   }
   &-btn {
     &.ant-btn-primary {
