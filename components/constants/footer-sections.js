@@ -11,7 +11,7 @@ export const footerSections = [
     className: 'products',
     isContentNode: true,
     links:[{
-        title: 'SDKs',
+        title: 'SDK',
         url: links.devs,
         newTab: true,
       }, {
@@ -57,12 +57,12 @@ export const footerSections = [
       {
         title: 'Company',
         url: links.aboutPage,
-        newTab: true,
+        newTab: false,
       },
       {
         title: 'Token',
         url: links.token,
-        newTab: true,
+        newTab: false,
       },
       {
         title: 'Blog',
@@ -72,7 +72,7 @@ export const footerSections = [
       {
         title: 'Contact',
         url: links.contact,
-        newTab: false,
+        newTab: true,
       }]
   },
   {

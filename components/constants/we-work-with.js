@@ -1,7 +1,7 @@
 export const path = '../../static/assets/partners/';
 
 export const partners = [
-  { name: 'eea', imageAlt: 'EEA', imageName: 'eea.png', url: 'https://entethalliance.org/'},
+  { name: 'eea', imageAlt: 'EEA', imageName: 'eeea.png', url: 'https://entethalliance.org/'},
   { name: 'cv_lab', imageAlt: 'Cryptovalley Labs', imageName: 'CV_Labs_Logo.svg', url: 'https://cvvc.com/index.php/cv-labs'},
   { name: 'ability', imageAlt: 'Ability', imageName: 'ability.svg', url: 'https://www.abilityconcept.eu/'},
   { name: 'cv', imageAlt: 'Crypto Valley', imageName: 'crypto_valley.svg', url: 'https://cryptovalley.swiss/'},
