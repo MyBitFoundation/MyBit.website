@@ -15,4 +15,8 @@ export const partners = [
   { name: 'git_coin', imageAlt: 'Git Coin', imageName: 'GitCoin.png', url: 'https://gitcoin.co/'},
   { name: 'bnc', imageAlt: 'BNC', imageName: 'BNC.png', url: 'https://bravenewcoin.com/'},
   { name: 'status', imageAlt: 'Status', imageName: 'status.png', url: 'https://status.im/'},
+  { name: 'civic', imageAlt: 'Civic', imageName: 'civic.png', url: 'https://www.civic.com/'},
+  { name: 'enigma', imageAlt: 'Enigma', imageName: 'enigma.png', url: 'https://enigma.co/'},
+  { name: 'elkrem', imageAlt: 'Elkrem', imageName: 'elkrem.jpg', url: 'https://elkrem.io/'},
+  { name: 'bounties', imageAlt: 'The Bounties Network', imageName: 'bounties.png', url: 'https://bounties.network/'},
 ];
