@@ -201,8 +201,15 @@ applications:[{
   id: 4,
   name: 'myBitWill',
   imageUrl: '/static/svgs/my-bit-apps/will.svg',
-  button: {text: 'Coming Soon', url: links.mybitWill, type: 'bordered', disabled:true},
+  button: {text: 'Try Now', url: links.mybitWill},
   content:'Blockchain-based wills for distributing assets'
+},
+{
+  id: 7,
+  name: 'myBitDropzone',
+  imageUrl: '/static/svgs/my-bit-apps/drop-zone.svg',
+  button: {text: 'Try Now', url: links.dropzone},
+  content:'Simple and efficient crypto airdrops'
 },
 {
   id: 5,
@@ -217,13 +224,6 @@ applications:[{
   imageUrl: '/static/svgs/my-bit-apps/fork.svg',
   button: {text: 'Coming Soon', url: links.fork, type: 'bordered', disabled:true},
   content: 'Decentralised bill-splitting'
-},
-{
-  id: 7,
-  name: 'myBitDropzone',
-  imageUrl: '/static/svgs/my-bit-apps/drop-zone.svg',
-  button: {text: 'Coming Soon', url: links.dropzone, type: 'bordered', disabled:true},
-  content:'Simple and efficient crypto airdrops'
 },
 {
   id: 8,
