@@ -1,5 +1,15 @@
 import { links } from './links'
 
+export const dayInSeconds = 86400;
+
+export const getSecondsUntilNextPeriod = (timestampStartTokenSale) => {
+  const currentDay = ((Math.floor(Date.now() / 1000) - timestampStartTokenSale) / dayInSeconds) + 1;
+  const past = currentDay % 1;
+  const secondsUntilNextPeriod = ((1 - past) * dayInSeconds).toFixed(0);
+
+  return secondsUntilNextPeriod;
+}
+
 export const countdownInfo = {
   finalDate: new Date("Jan 01 2019 12:00:00 GMT-0"),
   title: 'Token Distribution Phase 2 Begins Jan 1, 2019',

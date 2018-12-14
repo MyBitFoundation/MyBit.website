@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import fetch from 'isomorphic-unfetch'
 import stylesheet from '../styles/main.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Header } from '../components/header/header'
@@ -12,9 +13,69 @@ import { NewsEventsSection } from '../components/newsEventsSection/news-events-s
 import { UpdateSection } from '../components/updateSection/update-section'
 import { MyBitFooter } from '../components/footer/footer'
 import { SliderMediaList } from '../components/slider'
+import Banner from '../components/banner'
+import { getSecondsUntilNextPeriod } from '../components/constants'
 
 class HomePage extends Component {
+  static async getInitialProps({ req, query }) {
+    if (req) {
+      const response = await fetch(`https://mybittech-hzsqrsctic.now.sh/home`)
+      const jsonResponse = await response.json()
+
+      return {
+        ...jsonResponse
+      }
+    }
+
+    return null
+  }
+
+  state = {
+    ...this.props
+  }
+
+  async pullDetailsFromServer() {
+    const response = await fetch(`https://mybittech-hzsqrsctic.now.sh/home`)
+    const jsonResponse = await response.json()
+
+    this.setState({
+      currentPeriodTotal: jsonResponse.currentPeriodTotal,
+      currentDay: jsonResponse.currentDayServer
+    })
+  }
+
+  componentDidMount() {
+    this.intervalPullFromServer = setInterval(
+      this.pullDetailsFromServer.bind(this),
+      10000
+    )
+    if (this.props.currentDayServer) {
+      const secondsUntilNextPeriod = getSecondsUntilNextPeriod(
+        this.props.timestampStartTokenSale
+      )
+      this.timeoutNextPeriod = setTimeout(
+        this.updateCurrentDay,
+        secondsUntilNextPeriod * 1000
+      )
+    }
+  }
+
+  updateCurrentDay() {
+    this.setState({
+      currentDay: this.state.currentDay + 1
+    })
+    this.setTimeOut(this.updateCurrentDay, 86400000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalPullFromServer)
+  }
+
   render() {
+    const { currentDayServer } = this.props
+
+    const { currentDay } = this.state
+
     return (
       <Layout>
         <div className="LandingPage">
@@ -26,7 +87,12 @@ class HomePage extends Component {
             </div>
           </div>
           <div className="countdownWrapper">
-            <Countdown />
+            <div className="mainContainer form-wrapper">
+              <Banner
+                {...this.props}
+                currentPeriod={currentDay ? currentDay : currentDayServer}
+              />
+            </div>
           </div>
           <DevelopersCards />
           <TeamCards />
