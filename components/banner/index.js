@@ -48,13 +48,13 @@ class Banner extends React.Component {
     return (
       <div className="Banner">
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <div className={`Banner__section ${ active == 2 ? 'Banner__section--is-active' : undefined}`}>
+        <div className={`Banner__section ${ active == TOKEN_SALE_DETAILS_BANNER ? 'Banner__section--is-active' : undefined}`}>
           <TokenSaleDetails
             {...this.props}
             secondsUntilNextPeriod={secondsUntilNextPeriod}
           />
         </div>
-        <div className={`Banner__section ${ active == 1 ? 'Banner__section--is-active' : undefined}`}>
+        <div className={`Banner__section ${ active == TOKEN_SALE_NOT_STARTED_BANNER ? 'Banner__section--is-active' : undefined}`}>
           <Countdown
             timestampStartTokenSale={timestampStartTokenSale}
           />
