@@ -1,5 +1,6 @@
 import { links } from './links'
 
+export const MybitTokenSaleAPIEndpoint = 'https://api.mybit.io';
 export const dayInSeconds = 86400;
 
 export const getSecondsUntilNextPeriod = (timestampStartTokenSale) => {

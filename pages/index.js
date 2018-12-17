@@ -14,12 +14,15 @@ import { UpdateSection } from '../components/updateSection/update-section'
 import { MyBitFooter } from '../components/footer/footer'
 import { SliderMediaList } from '../components/slider'
 import Banner from '../components/banner'
-import { getSecondsUntilNextPeriod } from '../components/constants'
+import {
+  getSecondsUntilNextPeriod,
+  MybitTokenSaleAPIEndpoint
+} from '../components/constants'
 
 class HomePage extends Component {
   static async getInitialProps({ req, query }) {
     if (req) {
-      const response = await fetch(`https://mybittech-hzsqrsctic.now.sh/home`)
+      const response = await fetch(`${MybitTokenSaleAPIEndpoint}/home`)
       const jsonResponse = await response.json()
 
       return {
@@ -35,19 +38,20 @@ class HomePage extends Component {
   }
 
   async pullDetailsFromServer() {
-    const response = await fetch(`https://mybittech-hzsqrsctic.now.sh/home`)
+    const response = await fetch(`${MybitTokenSaleAPIEndpoint}/home`)
     const jsonResponse = await response.json()
 
     this.setState({
       currentPeriodTotal: jsonResponse.currentPeriodTotal,
-      currentDay: jsonResponse.currentDayServer
+      currentDay: jsonResponse.currentDayServer,
+      exchangeRate: jsonResponse.exchangeRate
     })
   }
 
   componentDidMount() {
     this.intervalPullFromServer = setInterval(
       this.pullDetailsFromServer.bind(this),
-      10000
+      60000
     )
     if (this.props.currentDayServer) {
       const secondsUntilNextPeriod = getSecondsUntilNextPeriod(
@@ -57,6 +61,12 @@ class HomePage extends Component {
         this.updateCurrentDay,
         secondsUntilNextPeriod * 1000
       )
+    } else if (this.props.timestampStartTokenSale) {
+      const differenceToStart =
+        this.props.timestampStartTokenSale - Math.floor(Date.now() / 1000)
+      setTimeout(() => {
+        this.pullDetailsFromServer()
+      }, differenceToStart * 1000)
     }
   }
 
@@ -90,6 +100,7 @@ class HomePage extends Component {
             <div className="mainContainer form-wrapper">
               <Banner
                 {...this.props}
+                {...this.state}
                 currentPeriod={currentDay ? currentDay : currentDayServer}
               />
             </div>
