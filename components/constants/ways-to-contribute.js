@@ -1,4 +1,4 @@
-export const waysToContributeData = [
+export const WAYS_TO_CONTRIBUTE = [
   {
     title: 'Ways to contribute',
     className: 'first',

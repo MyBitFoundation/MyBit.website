@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-export const graphicInfo = {
+export const GRAPHIC_INFO = {
   title: 'Token Ecosystem',
   content:
     <Fragment>

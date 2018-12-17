@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { InputForm } from '../inputForm/input-form';
-import { signUpForUpdatesData } from '../constants'
+import { SIGN_UP_UPDATES_DATA } from '../constants'
 import stylesheet from './update-section.scss';
 
 export const UpdateSection = ({header, subheader}) => {
@@ -14,10 +14,10 @@ export const UpdateSection = ({header, subheader}) => {
             </div>
             <div className="UpdateSection__container">
                 <div className="UpdateSection__header">
-                  {signUpForUpdatesData.title}
+                  {SIGN_UP_UPDATES_DATA.title}
                 </div>
                 <div className="UpdateSection__subheader">
-                  {signUpForUpdatesData.subtitle}
+                  {SIGN_UP_UPDATES_DATA.subtitle}
                 </div>
                 <div className="UpdateSection__input-form">
                   <InputForm title="Sign Up" placeholder="Your email address"/>

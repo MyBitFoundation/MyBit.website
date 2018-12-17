@@ -7,7 +7,6 @@ import stylesheet from './slider.scss'
 import hlstyles from './highlights.scss'
 import { ArrowButton } from './arrow-button';
 import { MediaList } from './icon';
-import { IndustriesMain } from './industries-main';
 
 export class Slider extends React.Component {
   constructor(props) {
@@ -42,7 +41,7 @@ export class Slider extends React.Component {
     const futurePosition = this.state.currentScroll + offset;
     const offSetToMin = 0 + futurePosition;
     const offSetToMax = toScroll - futurePosition;
-    
+
     // case where we are going to be resetting scroll, which does it as well if there are only 100px left or less
     if(futurePosition <= 0 || offSetToMin <= 100 || this.state.isEnd){
       animateScrollTo(0, {minDuration: 5, maxDuration: 5, element, horizontal: true});
@@ -104,16 +103,6 @@ export const SliderMediaList = ({type}) => {
     </div>
   )
 }
-
-export const SliderIndustries = () => (
-  <Slider
-    isAlwaysRow
-    bigArrows
-    hasArrowsTablet
-  >
-    <IndustriesMain />
-  </Slider>
-)
 
 Slider.propTypes = {
   isAlwaysRow: PropTypes.bool.isRequired,

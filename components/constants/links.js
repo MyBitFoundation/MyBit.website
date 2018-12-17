@@ -1,6 +1,6 @@
 // Links and information
 // About (Header) Dropdown
-export const links = {
+export const LINKS = {
   сompany: '#',
   token: 'https://mybit.us15.list-manage.com/subscribe?u=af48b1fdb5278fd9884338f23&id=0f78f78616',//(links to token page)
   blog: 'https://medium.com/mybit-dapp',

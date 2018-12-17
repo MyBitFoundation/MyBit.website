@@ -4,7 +4,6 @@ import stylesheet from '../styles/main.scss'
 import { default as Layout } from '../components/layout/layout'
 import { Header } from '../components/header/header'
 import { LandingBanner } from '../components/landingBanner/landing-banner'
-import { Countdown } from '../components/Countdown/countdown'
 import { DevelopersCards } from '../components/developersCards/developers-cards'
 import { TeamCards } from '../components/teamCards/team-cards'
 import { MyBitApplications } from '../components/myBitAplications/my-bit-applications'
@@ -16,13 +15,15 @@ import { SliderMediaList } from '../components/slider'
 import Banner from '../components/banner'
 import {
   getSecondsUntilNextPeriod,
-  MybitTokenSaleAPIEndpoint
+  MYBIT_TOKEN_SALE_API_ENDPOINT,
+  MINUTE_IN_MILLISECONDS,
+  DAY_IN_MILLISECONDS
 } from '../components/constants'
 
 class HomePage extends Component {
   static async getInitialProps({ req, query }) {
     if (req) {
-      const response = await fetch(`${MybitTokenSaleAPIEndpoint}/home`)
+      const response = await fetch(`${MYBIT_TOKEN_SALE_API_ENDPOINT}/home`)
       const jsonResponse = await response.json()
 
       return {
@@ -38,7 +39,7 @@ class HomePage extends Component {
   }
 
   async pullDetailsFromServer() {
-    const response = await fetch(`${MybitTokenSaleAPIEndpoint}/home`)
+    const response = await fetch(`${MYBIT_TOKEN_SALE_API_ENDPOINT}/home`)
     const jsonResponse = await response.json()
 
     this.setState({
@@ -51,7 +52,7 @@ class HomePage extends Component {
   componentDidMount() {
     this.intervalPullFromServer = setInterval(
       this.pullDetailsFromServer.bind(this),
-      60000
+      MINUTE_IN_MILLISECONDS
     )
     if (this.props.currentDayServer) {
       const secondsUntilNextPeriod = getSecondsUntilNextPeriod(
@@ -74,7 +75,7 @@ class HomePage extends Component {
     this.setState({
       currentDay: this.state.currentDay + 1
     })
-    this.setTimeOut(this.updateCurrentDay, 86400000)
+    this.setTimeOut(this.updateCurrentDay, DAY_IN_MILLISECONDS)
   }
 
   componentWillUnmount() {

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Row, Col, Card, Button } from 'antd';
-import { teamsData } from '../constants';
+import { TEAMS_DATA } from '../constants';
 import stylesheet from './team-cards.scss'
 
 export class TeamCards extends React.Component {
@@ -12,22 +12,22 @@ export class TeamCards extends React.Component {
             <Col xs={0} md={12}>
               <Card bordered={false} className="imageCard imageCard--dark">
                 <div className="imageCard-imageContainer">
-                  <img src={teamsData.image}/>
+                  <img src={TEAMS_DATA.image}/>
                 </div>
               </Card>
             </Col>
             <Col xs={24} md={12}>
               <Card bordered={false} className="textCard textCard-text--right">
                 <div className="textCard-contentWrapper">
-                  <h2 className="textCard-header">{teamsData.title}</h2>
+                  <h2 className="textCard-header">{TEAMS_DATA.title}</h2>
                   <p className="textCard-content">
-                    {teamsData.content}
+                    {TEAMS_DATA.content}
                   </p>
                   {
-                  teamsData.button &&
-                  <Link href={teamsData.button.url}>
+                  TEAMS_DATA.button &&
+                  <Link href={TEAMS_DATA.button.url}>
                   <Button type="primary" className="developersCard-btn">
-                    {teamsData.button.text}
+                    {TEAMS_DATA.button.text}
                   </Button>
                   </Link>
                   }

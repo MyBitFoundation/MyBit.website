@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button, Icon } from 'antd';
 import TelegramSvg from '../../static/svgs/social/telegram-1.svg'
-import {joinCommunityData} from '../constants'
+import {JOIN_COMMUNITY_DATA} from '../constants'
 import stylesheet from './join-section.scss'
 
 export const JoinSection = ({header, subheader}) => {
@@ -15,9 +15,9 @@ export const JoinSection = ({header, subheader}) => {
             </div>
             <div className="JoinSection__container">
                 <div className="JoinSection__header">
-                  {joinCommunityData.title}
+                  {JOIN_COMMUNITY_DATA.title}
                 </div>
-                <Button type="primary" className="JoinSection__btn" target="_blank" href={joinCommunityData.url}>
+                <Button type="primary" className="JoinSection__btn" target="_blank" href={JOIN_COMMUNITY_DATA.url}>
                   <Icon component={TelegramSvg} className="JoinSection__icon" />
                     Telegram
                 </Button>

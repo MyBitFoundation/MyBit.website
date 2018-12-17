@@ -1,6 +1,7 @@
 import CountdownHours from '../countdownHours';
 import { Button } from 'antd';
 import Link from 'next/link'
+import { MYBIT_TOKEN_SALE_WEBSITE } from '../constants';
 
 const TokenSaleDetails = ({currentPeriod, secondsUntilNextPeriod, exchangeRate, currentPeriodTotal, active}) => {
   return (
@@ -25,7 +26,10 @@ const TokenSaleDetails = ({currentPeriod, secondsUntilNextPeriod, exchangeRate, 
           <p className="TokenSaleDetails__value">{`${currentPeriodTotal.toLocaleString('en-US')} ETH`}</p>
         </div>
       </div>
-      <a href="http://dev-td-mybit.now.sh">
+      <a
+        href={MYBIT_TOKEN_SALE_WEBSITE}
+        target="_blank"
+      >
        <Button
           type="primary"
           className="TokenSaleDetails-btn"

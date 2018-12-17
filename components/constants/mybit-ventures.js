@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-export const venturesInfo = {
+export const VENTURES_INFO = {
   title: 'MyBit Ventures',
   icon: <img src='/static/assets/ventures_logo.png' alt='MyBit Ventures'/>,
   image: {

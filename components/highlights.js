@@ -2,42 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './highlights.scss'
-import { IconList, PartnersList, MediaList } from './icon'
-import { industries } from './constants/industries'
-import { achievements } from './constants'
-import Achievements from './achievements'
-
-export const RoadmapHighlight = () => (
-  <Highlight
-    title={'Roadmap'}
-    isLight
-    isTransparent
-    isBig
-    isFullWidth
-    style={{ margin: 'auto' }}
-    content={<Achievements achievements={achievements} />}
-  />
-)
-
-export const CommunityHighlight = () => (
-  <Highlight
-    title={'Join our Community'}
-    isLight
-    isTransparent
-    isBig
-    isFullWidth
-    style={{ margin: 'auto' }}
-    content={<IconList />}
-  />
-)
-
-export const IndustriesHighlight = () => (
-  <Highlights
-    hasAlternateColors={false}
-    highlights={industries}
-    className={"Highlight__group--is-industries"}
-  />
-)
+import { IconList, MediaList } from './icon'
 
 export const MediaHighlight = ({mobile}) => (
     <Highlight
@@ -49,30 +14,6 @@ export const MediaHighlight = ({mobile}) => (
       style={{ margin: 'auto' }}
       content={<MediaList mobile={mobile}/>}
     />
-)
-
-export const PartnersHighlight = () => (
-  <Highlight
-    title={'Partners'}
-    isLight
-    isTransparent
-    isBig
-    isFullWidth
-    style={{ margin: 'auto' }}
-    content={<PartnersList />}
-  />
-)
-
-export const InvestorHighlight = ({content, title}) => (
-  <div className="InvestorHighlight">
-    <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-    <Highlight
-      title={title}
-      isCentered
-      content={content}
-      isLight={false}
-    />
-  </div>
 )
 
 export const Highlight = ({
@@ -199,11 +140,6 @@ MediaHighlight.propTypes = {
   mobile: PropTypes.bool.isRequired,
 }
 
-InvestorHighlight.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired
-}
-
 Highlight.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
@@ -247,8 +183,3 @@ Highlights.propTypes = {
 }
 
 Highlights.defaultProps = []
-
-InvestorHighlight.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-}

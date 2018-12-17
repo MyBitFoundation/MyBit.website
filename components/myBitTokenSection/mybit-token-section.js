@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'antd';
-import { myBitToken } from '../constants/mybit-token'
+import { MYBIT_TOKEN } from '../constants/mybit-token'
 import stylesheet from './mybit-token-section.scss'
 
 
@@ -10,14 +10,14 @@ export class MyBitTokenSection extends React.Component {
       <section className="Token">
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <Card bordered={false} className="Token-card" >
-          <h2 className="Token-header">{myBitToken.title}</h2>
+          <h2 className="Token-header">{MYBIT_TOKEN.title}</h2>
           <div className="Token-text">
-            {myBitToken.content}
+            {MYBIT_TOKEN.content}
           </div>
           {
-            myBitToken.button &&
-            <Button type="primary" className="Token-btn" href={myBitToken.button.url}>
-              { myBitToken.button.text }
+            MYBIT_TOKEN.button &&
+            <Button type="primary" className="Token-btn" href={MYBIT_TOKEN.button.url}>
+              { MYBIT_TOKEN.button.text }
             </Button>
           }
         </Card>

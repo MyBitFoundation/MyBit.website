@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import stylesheet from './input-form.scss'
 import axios from 'axios';
-import { links } from '../constants/links';
+import { LINKS } from '../constants/links';
 import { Form, Input, Button } from 'antd';
 
 const FormItem = Form.Item;
@@ -48,7 +48,7 @@ class Signup extends Component {
 
     this.showConfirmationMessage();
 
-    axios.post(links.subscribeLink, {
+    axios.post(LINKS.subscribeLink, {
       email_address
     })
     .then(function (response) {

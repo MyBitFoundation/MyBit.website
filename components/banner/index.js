@@ -4,18 +4,25 @@ import Countdown from './countdown';
 import stylesheet from './banner.scss'
 import { getSecondsUntilNextPeriod } from '../constants'
 
+const TOKEN_SALE_DETAILS_BANNER = 2;
+const TOKEN_SALE_NOT_STARTED_BANNER = 1;
+
 class Banner extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      active: this.props.currentDayServer ? 2 : 1,
+      // if the server returns a current day that isn't undefined then the token sale has started
+      active: this.props.currentDayServer ? TOKEN_SALE_DETAILS_BANNER : TOKEN_SALE_NOT_STARTED_BANNER,
     };
   }
 
   componentWillReceiveProps(nextProps){
-    if((nextProps.currentDay > 0 || nextProps.currentDayServer > 0) && this.state.active === 1){
+    // client side currentDay starts at 1
+    // this code handles the case where the token sale starts (we now have a currentDay/period that is defined)
+    // in which case we animate the switch from on banner to the other
+    if((nextProps.currentDay > 0 || nextProps.currentDayServer > 0) && this.state.active === TOKEN_SALE_NOT_STARTED_BANNER){
       this.setState({
-        active: 2,
+        active: TOKEN_SALE_DETAILS_BANNER,
       });
     }
   }
@@ -30,7 +37,7 @@ class Banner extends React.Component {
       price,
     } = this.props;
 
-    let {
+    const {
       active,
     } = this.state;
 

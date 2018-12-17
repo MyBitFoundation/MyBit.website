@@ -1,4 +1,4 @@
-export const industries = [
+export const INDUSTRIES = [
   {
     title: 'Transportation',
     examples: `<p>Delivery Drones + Self Driving Taxis + Transport Trucks</p>`,
