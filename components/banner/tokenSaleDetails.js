@@ -18,8 +18,8 @@ const TokenSaleDetails = ({currentPeriod, secondsUntilNextPeriod, exchangeRate, 
       </p>
       <div className="TokenSaleDetails__group">
         <div>
-          <p className="TokenSaleDetails__title">Exchange Rate</p>
-          <p className="TokenSaleDetails__value">{`1ETH/${exchangeRate.toLocaleString('en-US', {maximumFractionDigits: 0})} MYB`}</p>
+          <p className="TokenSaleDetails__title">Current Exchange Rate</p>
+          <p className="TokenSaleDetails__value">{`1 ETH = ${exchangeRate.toLocaleString('en-US', {maximumFractionDigits: 0})} MYB`}</p>
         </div>
         <div>
           <p className="TokenSaleDetails__title">ETH Received</p>
