@@ -2,7 +2,10 @@ import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import { Button } from 'antd';
 import stylesheet from './countdown.scss'
-import { COUNTDOWN_INFO } from '../constants'
+import {
+  COUNTDOWN_INFO,
+  MYBIT_TOKEN_SALE_WEBSITE
+} from '../constants'
 import { InputForm } from '../inputForm/input-form';
 
 const tokensalePhaseStartDate = COUNTDOWN_INFO.finalDate;//month starts with 0
@@ -107,13 +110,12 @@ const Countdown = ({ renderTokenSaleDetails }) => {
               renderTokenSaleDetails={renderTokenSaleDetails}
             />
             <div className="Countdown__contribute">
-              <span className="Countdown__pre-contributions-txt">Pre contributions now open</span>
-              <a href="/dashboard">
+              <a href={MYBIT_TOKEN_SALE_WEBSITE}>
                <Button
                   type="primary"
                   className="Countdown__btn"
                 >
-                  Contribute
+                  Pre-contribute Now
                 </Button>
               </a>
             </div>

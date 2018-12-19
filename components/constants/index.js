@@ -1,7 +1,7 @@
 import { LINKS } from './links'
 
 export const MYBIT_TOKEN_SALE_API_ENDPOINT = 'https://api.mybit.io';
-export const MYBIT_TOKEN_SALE_WEBSITE = 'http://dev-td-mybit.now.sh';
+export const MYBIT_TOKEN_SALE_WEBSITE = 'https://td.mybit.io';
 export const DAY_IN_SECONDS = 86400;
 export const MINUTE_IN_MILLISECONDS = 60000;
 export const DAY_IN_MILLISECONDS = 86400000;
@@ -77,22 +77,6 @@ export const TEAM_DESCRIPTION = [
     imageSrc: '/static/team/v2/cris.jpg',
     imageAlt: 'Lead Front End Developer',
   },{
-    name: 'Branislav Djuric',
-    job: 'Full Stack Engineer',
-    bio:
-      'An experienced software developer and architect who has worked for numerous international tech brands across Belgrade, Zurich, Amsterdam and Berlin.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/bran.jpg',
-    imageAlt: 'Full Stack Engineer',
-  },{
-    name: 'Hua Li',
-    job: 'Chinese Community Manager',
-    bio:
-      'A community manager who first saw the potential of blockchain in 2013. Since then, he’s been translating for a range of projects as well as following his passion: community management.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Hua_Li.jpg',
-    imageAlt: 'Chinese Community Manager',
-  },{
     name: 'Ivan Ivanov',
     job: 'Front End Engineer',
     bio:
@@ -100,22 +84,6 @@ export const TEAM_DESCRIPTION = [
     linkedin: '',
     imageSrc: '/static/team/v2/Ivan_Ivanov.jpg',
     imageAlt: 'Front End Engineer',
-  },{
-    name: 'Attila Ameer',
-    job: 'UX Consultant',
-    bio:
-      'A UX designer who has extensive experience working on user journeys and interfaces for a wide range of financial products.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Amer_Attila.jpg',
-    imageAlt: 'UX Consultant',
-  },{
-    name: 'Chris Wyatt',
-    job: 'Marketing',
-    bio:
-      'An experienced digital marketing consultant and agency founder with a track record in international financial advisory.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Chris_Wyatt.jpg',
-    imageAlt: 'Marketing',
   },{
     name: 'Dan Engler',
     job: 'North American Community Manager',
