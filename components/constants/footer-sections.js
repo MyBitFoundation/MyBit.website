@@ -1,28 +1,28 @@
-import { links } from './links';
+import { LINKS } from './links';
 import TelegramIcon  from '../../static/svgs/social/telegram-1.svg';
 import MediumIcon  from '../../static/svgs/social/medium.svg';
 import FacebookIcon  from '../../static/svgs/social/facebook-white.svg';
 import RedditIcon  from '../../static/svgs/social/reddit-white.svg';
 import TwitterIcon  from '../../static/svgs/social/twitter-white.svg';
 
-export const footerSections = [
+export const FOOTER_SECTIONS = [
   {
     title: 'Products',
     className: 'products',
     isContentNode: true,
     links:[{
         title: 'SDK',
-        url: links.devs,
+        url: LINKS.devs,
         newTab: true,
       }, {
         title: 'MyBit Go',
         // inactive: true,
-        url: links.mybitGo,
+        url: LINKS.mybitGo,
         newTab: true,
       }, {
         title: 'Other dApps',
         // inactive: true,
-        url: links.applications,
+        url: LINKS.applications,
         newTab: false,
       }
     ]
@@ -34,17 +34,17 @@ export const footerSections = [
     links: [
       {
         title: 'Token Distribution',
-        url: links.tokenSale,
+        url: LINKS.tokenSale,
         newTab: true,
       },
       {
         title: 'Whitepaper',
-        url: links.whitepaper,
+        url: LINKS.whitepaper,
         newTab: true,
       },
       {
         title: 'Github',
-        url: links.github,
+        url: LINKS.github,
         newTab: true,
       },
     ]
@@ -56,22 +56,22 @@ export const footerSections = [
     links: [
       {
         title: 'Company',
-        url: links.aboutPage,
+        url: LINKS.aboutPage,
         newTab: false,
       },
       {
         title: 'Token',
-        url: links.token,
+        url: LINKS.token,
         newTab: false,
       },
       {
         title: 'Blog',
-        url: links.medium,
+        url: LINKS.medium,
         newTab: true,
       },
       {
         title: 'Contact',
-        url: links.contact,
+        url: LINKS.contact,
         newTab: true,
       }]
   },
@@ -82,41 +82,41 @@ export const footerSections = [
     links: [
     {
       title: 'Telegram',
-      url: links.telegram,
+      url: LINKS.telegram,
       newTab: true,
     },
     {
       title: 'Medium',
-      url: links.medium,
+      url: LINKS.medium,
       newTab: true,
     },
     {
      title: 'Facebook',
-     url: links.facebook,
+     url: LINKS.facebook,
      newTab: true,
     },
     {
       title: 'Reddit',
-      url: links.reddit,
+      url: LINKS.reddit,
       newTab: true,
     },
     {
       title: 'Twitter',
-      url: links.twitter,
+      url: LINKS.twitter,
         newTab: true,
     }]
   }
 ];
 
-export const socialsList = [
-  { id: 1, name: 'telegram', url: links.telegram},
-  { id: 2, name: 'medium', url: links.medium},
-  { id: 3, name: 'facebook',  url: links.facebook},
-  { id: 4, name: 'reddit', url: links.reddit},
-  { id: 5, name: 'twitter', url: links.twitter},
+export const SOCIALS_LIST = [
+  { id: 1, name: 'telegram', url: LINKS.telegram},
+  { id: 2, name: 'medium', url: LINKS.medium},
+  { id: 3, name: 'facebook',  url: LINKS.facebook},
+  { id: 4, name: 'reddit', url: LINKS.reddit},
+  { id: 5, name: 'twitter', url: LINKS.twitter},
 ]
 
-export const socialsIcons = {
+export const SOCIALS_ICONS = {
   telegram: <TelegramIcon />,
   medium: <MediumIcon />,
   facebook: <FacebookIcon />,

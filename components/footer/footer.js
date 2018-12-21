@@ -2,7 +2,11 @@ import React from 'react';
 import Link from 'next/link'
 import PropTypes from 'prop-types';
 import stylesheet from './footer.scss';
-import { footerSections, socialsList, socialsIcons } from '../constants/footer-sections';
+import {
+  FOOTER_SECTIONS,
+  SOCIALS_LIST,
+  SOCIALS_ICONS
+} from '../constants/footer-sections';
 
 export const FooterList = ({ links }) => {
   return (
@@ -36,7 +40,7 @@ export const FooterList = ({ links }) => {
 };
 
 export const MyBitFooter = () => {
-  return (<Footer sections={footerSections} copyright='Copyright &copy; MyBit 2018. All Rights Reserved.' />)
+  return (<Footer sections={FOOTER_SECTIONS} copyright='Copyright &copy; MyBit 2018. All Rights Reserved.' />)
 }
 
 export const Footer = ({ copyright, sections }) => {
@@ -47,8 +51,8 @@ export const Footer = ({ copyright, sections }) => {
         <div className="Footer__contentWrapper">
           <ul className="Footer__socialsList">
             {
-              socialsList.map(icon => (
-                <li key={icon.name}><a href={icon.url} target="_blank" rel="noopener noreferrer" className={icon.name}>{socialsIcons[icon.name]}</a></li>
+              SOCIALS_LIST.map(icon => (
+                <li key={icon.name}><a href={icon.url} target="_blank" rel="noopener noreferrer" className={icon.name}>{SOCIALS_ICONS[icon.name]}</a></li>
               ))
             }
           </ul>

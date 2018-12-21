@@ -1,13 +1,13 @@
 import React, {Fragment} from 'react'
 import { Row, Col, Card, Button } from 'antd';
-import { links } from '../constants/links';
+import { LINKS } from '../constants/links';
 import stylesheet from './landing-banner.scss';
 
 const bannerImageUrl = '../../static/svgs/landingGraphic.svg';
 
 const lendingBannerData = {
   title: <h2 className="textCard-header">Leaders in Distributing <br/> Wealth</h2>,
-  button: {text: 'Discover MyBit', url: links.aboutPage},
+  button: {text: 'Discover MyBit', url: LINKS.aboutPage},
   content:
   <Fragment>
     <p>

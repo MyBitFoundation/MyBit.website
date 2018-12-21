@@ -1,6 +1,6 @@
 //{text: 'Get Started', url: 'https://github.com/MyBitFoundation/'}
 import React from 'react'
-export const howDoesItWorkDataFirstRow = [
+export const HOW_DOES_IT_WORK_DATA_FIRST_ROW = [
     {
       title: 'Ecosystem Fund',
       color: 'dark-left',
@@ -43,7 +43,7 @@ export const howDoesItWorkDataFirstRow = [
   ]
 
 
-export const howDoesItWorkDataSecondRow = [
+export const HOW_DOES_IT_WORK_DATA_SECOND_ROW = [
     {
       title: 'Decentralised'+ '\n'
       +' Development Fund',

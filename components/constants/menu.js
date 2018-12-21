@@ -1,58 +1,58 @@
 import { testAlphaUrl } from './';
-import { links } from '../constants/links';
+import { LINKS } from '../constants/links';
 
-export const mobileMenu = [{
+export const MOBILE_MENU = [{
     name: "Developer",
-    path: { url: links.devs },
+    path: { url: LINKS.devs },
     external: true,
   },{
     name: "Fund",
-    path: { url: links.fund }
+    path: { url: LINKS.fund }
   },{
     name: "Applications",
-    path: { url: links.applications }
+    path: { url: LINKS.applications }
   },{
     name: "Resources",
     dropdown: true,
     menuItems: [
-      {name: "Token Distribution", url: links.tokenSale, external:true},
-      {name: "Whitepaper", url: links.whitepaper, external:true},
-      {name: "Github", url: links.github, external:true}
+      {name: "Token Distribution", url: LINKS.tokenSale, external:true},
+      {name: "Whitepaper", url: LINKS.whitepaper, external:true},
+      {name: "Github", url: LINKS.github, external:true}
     ]
   },{
     name: "About",
     dropdown: true,
     menuItems: [
-      {name: "Company", url: links.aboutPage},
-      {name: "Token", url: links.token},
-      {name: "Blog", url: links.medium, external:true}
+      {name: "Company", url: LINKS.aboutPage},
+      {name: "Token", url: LINKS.token},
+      {name: "Blog", url: LINKS.medium, external:true}
     ]
   },
   ,{
-    name: "Contribute",
+    name: "Go to DDF",
     button: true,
-    path: { url: links.ddf, external: true }
+    path: { url: LINKS.ddf, external: true }
     }
 ];
 
 /*TODO: update path*/
-export const headerMenu = [{
+export const HEADER_MENU = [{
     name: "Developer",
     path: "http://developer.mybit.io/",
     external: true,
   },{
     name: "Fund",
-    path: links.fund
+    path: LINKS.fund
   },{
     name: "Applications",
-    path: links.applications
+    path: LINKS.applications
 }];
 
-export const resourcesDropDown = [
+export const RESOURCES_DROPDOWN = [
   {
     name: "Token Distribution",
     external: true,
-    path: links.tokenSale
+    path: LINKS.tokenSale
   },{
     name: "Whitepaper",
     external: true,
@@ -64,15 +64,15 @@ export const resourcesDropDown = [
     external: true
 }];
 
-export const aboutDropDown = [
+export const ABOUT_DROPDOWN = [
   {
     name: "Company",
     external: false,
-    path: links.aboutPage
+    path: LINKS.aboutPage
   },{
     name: "Token",
     external: false,
-    path: links.token
+    path: LINKS.token
   },{
     name: "Blog",
     external: true,
@@ -80,18 +80,18 @@ export const aboutDropDown = [
     external: true
 }];
 
-export const headerMenuDropDown = [{
+export const HEADER_MENU_DROPDOWN = [{
     name: "Resources",
-    path: links.aboutPage,
-    list: resourcesDropDown
+    path: LINKS.aboutPage,
+    list: RESOURCES_DROPDOWN
   },{
     name: "About",
-    path: links.aboutPage,
-    list: aboutDropDown
+    path: LINKS.aboutPage,
+    list: ABOUT_DROPDOWN
 }];
 
 
-export const headerMenuLanguage = {
+export const HEADER_MENU_LANGUAGE = {
   en: {
     name: "Eng",
   },
@@ -100,9 +100,9 @@ export const headerMenuLanguage = {
   }
 }
 
-export const headerMenuButton =
+export const HEADER_MENU_BUTTON =
   {
-    name: "Contribute",
+    name: "Go to DDF",
     url: "https://ddf.mybit.io",
     external: true
   }

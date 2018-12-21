@@ -1,12 +1,26 @@
-import { links } from './links'
+import { LINKS } from './links'
 
-export const countdownInfo = {
+export const MYBIT_TOKEN_SALE_API_ENDPOINT = 'https://api.mybit.io';
+export const MYBIT_TOKEN_SALE_WEBSITE = 'https://td.mybit.io';
+export const DAY_IN_SECONDS = 86400;
+export const MINUTE_IN_MILLISECONDS = 60000;
+export const DAY_IN_MILLISECONDS = 86400000;
+
+export const getSecondsUntilNextPeriod = (timestampStartTokenSale) => {
+  const currentDay = ((Math.floor(Date.now() / 1000) - timestampStartTokenSale) / DAY_IN_SECONDS) + 1;
+  const past = currentDay % 1;
+  const secondsUntilNextPeriod = ((1 - past) * DAY_IN_SECONDS).toFixed(0);
+
+  return secondsUntilNextPeriod;
+}
+
+export const COUNTDOWN_INFO = {
   finalDate: new Date("Jan 01 2019 12:00:00 GMT-0"),
   title: 'Token Distribution Phase 2 Begins Jan 1, 2019',
   parts: {day:'Days', hour: 'Hours', minut: 'Minutes', second: 'Seconds'}
 }
 
-export const teamDesc = [
+export const TEAM_DESCRIPTION = [
   {
     name: 'Ian Worrall',
     job: 'Founder',
@@ -63,22 +77,6 @@ export const teamDesc = [
     imageSrc: '/static/team/v2/cris.jpg',
     imageAlt: 'Lead Front End Developer',
   },{
-    name: 'Branislav Djuric',
-    job: 'Full Stack Engineer',
-    bio:
-      'An experienced software developer and architect who has worked for numerous international tech brands across Belgrade, Zurich, Amsterdam and Berlin.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/bran.jpg',
-    imageAlt: 'Full Stack Engineer',
-  },{
-    name: 'Hua Li',
-    job: 'Chinese Community Manager',
-    bio:
-      'A community manager who first saw the potential of blockchain in 2013. Since then, he’s been translating for a range of projects as well as following his passion: community management.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Hua_Li.jpg',
-    imageAlt: 'Chinese Community Manager',
-  },{
     name: 'Ivan Ivanov',
     job: 'Front End Engineer',
     bio:
@@ -86,22 +84,6 @@ export const teamDesc = [
     linkedin: '',
     imageSrc: '/static/team/v2/Ivan_Ivanov.jpg',
     imageAlt: 'Front End Engineer',
-  },{
-    name: 'Attila Ameer',
-    job: 'UX Consultant',
-    bio:
-      'A UX designer who has extensive experience working on user journeys and interfaces for a wide range of financial products.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Amer_Attila.jpg',
-    imageAlt: 'UX Consultant',
-  },{
-    name: 'Chris Wyatt',
-    job: 'Marketing',
-    bio:
-      'An experienced digital marketing consultant and agency founder with a track record in international financial advisory.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Chris_Wyatt.jpg',
-    imageAlt: 'Marketing',
   },{
     name: 'Dan Engler',
     job: 'North American Community Manager',
@@ -137,99 +119,99 @@ export const teamDesc = [
   }
 ]
 
-export const teamsData = {
+export const TEAMS_DATA = {
   title: 'Empowering Disruptive Teams',
-  button: {text: 'Learn More', url: links.fund},
+  button: {text: 'Learn More', url: LINKS.fund},
   image: '../../static/svgs/mybit_ventures.svg',
   content: `Whether you want to build a project from scratch, contribute to an existing project,
   or hunt for bugs, MyBit Ventures is here to support everyone who’s serious about our
   Network and the broader Ethereum community.`,
 }
 
-export const eventsData = {
+export const EVENTS_DATA = {
   title: 'Upcoming Events',
-  button: {text: 'Find an Event', url: links.events, external: true},
+  button: {text: 'Find an Event', url: LINKS.events, external: true},
   imageUrl: '/static/assets/event-graphic2.png'
 }
 
-export const newsData = {
+export const NEWS_DATA = {
   title: 'Latest News',
-  button: {text: 'Read More', url: links.news, external: true},
+  button: {text: 'Read More', url: LINKS.news, external: true},
   imageUrl: '/static/assets/news-banner.png'
 }
 
-export const developersData = {
+export const DEVELOPERS_DATA = {
   title: 'Developers',
-  button: {text: 'Get Started', url: links.devs, external: true},
+  button: {text: 'Get Started', url: LINKS.devs, external: true},
   image: {url: null, alt: 'Code image' },
   content: `We believe in making development effective, efficient and fun. This is why we have designed the MyBit Software Development Kit (SDK) to streamline development. It enables engineers to quickly get concepts off the ground and focus on building the future.`,
 }
 
-export const myBitAppsHighlights = {
+export const APPS_HIGHLIGHTS = {
 title: 'Applications Powered by MyBit',
 description: 'MyBit’s applications offer a new way of owning and distributing wealth. Our applications include everything from investment platforms to payrolls, wills, trusts, and much more. They’re secure, efficient and cost-effective, letting users avoid middlemen and third party fees.',
-button: {text: 'View More', url: links.applications},
+button: {text: 'View More', url: LINKS.applications},
 applications:[{
   id: 1,
   name: 'myBitGo',
   imageUrl: '/static/svgs/my-bit-apps/my-bit-go.svg',
-  button: {text: 'Try Now', url: links.mybitGo},
+  button: {text: 'Try Now', url: LINKS.mybitGo},
   content:'IoT investment platform '
 },
 {
   id: 10,
   name: 'myBitMobileIOs',
   imageUrl: '/static/svgs/my-bit-apps/my-bit-mobile.svg',
-  button: {text: 'Try Now', url: links.iosMobileWallet},
+  button: {text: 'Try Now', url: LINKS.iosMobileWallet},
   content:'iOS mobile wallet'
 },
 {
   id: 2,
   name: 'myBitMobileAndroid',
   imageUrl: '/static/svgs/my-bit-apps/my-bit-mobile.svg',
-  button: {text: 'Try Now', url: links.androidMobileWallet},
+  button: {text: 'Try Now', url: LINKS.androidMobileWallet},
   content:'Android mobile wallet'
 },
 {
   id: 3,
   name: 'myBitTrust',
   imageUrl: '/static/svgs/my-bit-apps/trust.svg',
-  button: {text: 'Try Now', url: links.mybitTrust},
+  button: {text: 'Try Now', url: LINKS.mybitTrust},
   content:'Trust fund for distributing Blockchain assets'
 },
 {
   id: 4,
   name: 'myBitWill',
   imageUrl: '/static/svgs/my-bit-apps/will.svg',
-  button: {text: 'Try Now', url: links.mybitWill},
+  button: {text: 'Try Now', url: LINKS.mybitWill},
   content:'Blockchain-based wills for distributing assets'
 },
 {
   id: 7,
   name: 'myBitDropzone',
   imageUrl: '/static/svgs/my-bit-apps/drop-zone.svg',
-  button: {text: 'Try Now', url: links.dropzone},
+  button: {text: 'Try Now', url: LINKS.dropzone},
   content:'Simple and efficient crypto airdrops'
 },
 {
   id: 5,
   name: 'myBitOptions',
   imageUrl: '/static/svgs/my-bit-apps/options.svg',
-  button: {text: 'Coming Soon', url: links.mybitOptions, type: 'bordered', disabled:true},
+  button: {text: 'Coming Soon', url: LINKS.mybitOptions, type: 'bordered', disabled:true},
   content:'Automating company token and stock option distributions'
 },
 {
   id: 6,
   name: 'myBitFork',
   imageUrl: '/static/svgs/my-bit-apps/fork.svg',
-  button: {text: 'Coming Soon', url: links.fork, type: 'bordered', disabled:true},
+  button: {text: 'Coming Soon', url: LINKS.fork, type: 'bordered', disabled:true},
   content: 'Decentralised bill-splitting'
 },
 {
   id: 8,
   name: 'myBitMydax',
   imageUrl: '/static/svgs/my-bit-apps/mydax.svg',
-  button: {text: 'Coming Soon', url: links.mydax, type: 'bordered', disabled:true},
+  button: {text: 'Coming Soon', url: LINKS.mydax, type: 'bordered', disabled:true},
   content:'Decentralised IoT asset exchange'
 },
 {
@@ -237,7 +219,7 @@ applications:[{
   name: 'myBitPayroll',
   displayPage: 'aplications',
   imageUrl: '/static/svgs/my-bit-apps/payroll-01.svg',
-  button: {text: 'Coming Soon', url: links.mybitPayroll, type: 'bordered', disabled:true},
+  button: {text: 'Coming Soon', url: LINKS.mybitPayroll, type: 'bordered', disabled:true},
   content: 'Smart contract-based payroll automation'
 },
 {
@@ -267,7 +249,7 @@ applications:[{
 ]
 };
 
-export const latestNews = [{
+export const LATEST_NEWS = [{
   imageSrc: '/static/assets/news-banner.png',
   title: 'Latest news',
   innerTitle: 'Data',
@@ -285,7 +267,7 @@ export const latestNews = [{
   newTab: false,
 }]
 
-export const formProps = {
+export const FORM_PROPS_MAILCHIMP = {
   action: '//mybit.us15.list-manage.com/subscribe/post?u=af48b1fdb5278fd9884338f23&id=dbcac41639',
   messages: {
     inputPlaceholder: "Email",
@@ -310,7 +292,7 @@ export const formProps = {
   }
 }
 
-export const achievements = [{
+export const ACHIEVEMENTS = [{
     title: 'Q1 2017',
     description: 'Idea Conceived'
   }, {
@@ -333,22 +315,18 @@ export const achievements = [{
     description: 'Beta Release'
 }];
 
-export const joinCommunityData = {
+export const JOIN_COMMUNITY_DATA = {
   title: 'Join the Community',
   subheader: 'get involved and get rewarded',
-  url: links.telegram
+  url: LINKS.telegram
 }
 
-export const signUpForUpdatesData = {
+export const SIGN_UP_UPDATES_DATA = {
   title: 'Sign up for Updates',
   subtitle: 'and be the first to get the news',
 }
 
-export const testAlphaUrl = 'https://alpha.mybit.io/';
-
-export const youtubeVideoId = "SGFGfpKn1dg";
-
-export const exchanges = [{
+export const EXCHANGES = [{
   imageSrc: '/static/exchanges/bancor.png',
   url: 'https://www.bancor.network/communities/5b16460462bc740001afa01e/currency'
 }, {
@@ -367,50 +345,10 @@ export const exchanges = [{
   className: "AccessLayer__exchanges-logos--is-ethland"
 }]
 
-export const wallets = [{
-    title: 'Android',
-    status: 'in development',
-    iconClassName: 'android'
-  }, {
-    title: 'iOS',
-    status: 'in development',
-    iconClassName: 'ios'
-  }, {
-    title: 'Mac',
-    status: 'in development',
-    iconClassName: 'mac'
-  }, {
-    title: 'Windows',
-    status: 'in development',
-    iconClassName: 'windows'
-  }, {
-    title: 'MyEtherWallet',
-    status: '<a href="https://www.myetherwallet.com/" target="_blank" rel="noopener noreferrer">Link</a>',
-    iconClassName: 'myetherwallet'
-  }];
-
-  export const media = [{
-    title: 'MyBit Mobile DApp',
-    content: '<p>The MyBit Decentralised Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
-  }, {
-    title: 'IoT Asset Tracker',
-    content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
-  }];
-
-  export const highlights = [
-    {
-      title: 'About Us',
-      content: `
-  <p><b>MyBit is an IoT investment Network powered by Ethereum</b>. Founded in Switzerland by industry veterans, MyBit believes that people should be able to follow their passion instead of having to work to survive.</p>
-  <p>By redefining the way people generate income, MyBit strives to democratise financial services so everyone has equal access to investment opportunities. This becomes critical when the future machine economy automates 800 million jobs by 2030 (Mckinsey, 2017) and the average person, whose job is automated, has no ability to participate in this new economy.</p>
-  <p>MyBit provides an Network for the upcoming Trillion dollar IoT industry (Forbes, 2017), with the belief that everyone should have an equal opportunity to participate in this revolution.</p>`
-    }, {
-      title: 'Our core conviction',
-      content: `
-  <p>Although we all come from different countries, cultures and (professional) backgrounds there is one thing that connects us. We all share a common vision; to improve the life of everyone.</p>
-  <p>While we see the vast potential of IoT and automation, we are aware that it will have major repercussions for the role humans play in the future economy. Instead of fighting this development we have chosen to embrace it.
-  </p>
-  <p>By utilising our shared resources we are building the first decentralised ecosystem that enables humans to play an active role in the economy of tomorrow.</p>
-  <p>MyBit offers everyone to either invest or manage revenue generating machines over the blockchain, resulting in a new way to generate income in an automated world. MyBit lets the machines work for you again so you can enjoy the things that are truly important.</p>`
-    }
-  ];
+export const MEDIA = [{
+  title: 'MyBit Mobile DApp',
+  content: '<p>The MyBit Decentralised Application (DApp) is the backbone of the MyBit Network. It enables anyone to invest directly in IoT assets. All at a fraction of the cost of traditional platforms and investment funds. The MyBit DApp is the future of investing.</p>',
+}, {
+  title: 'IoT Asset Tracker',
+  content: '<p>View all of your MyBit Asset Investments in one place. It’s essentially the blockfolio for IoT assets on the MyBit Platform!</p>'
+}];

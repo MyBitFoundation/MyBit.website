@@ -1,5 +1,5 @@
 
-export const howToUseFirst =
+export const HOW_TO_USE_FIRST =
 {
     title: 'How to use MYB',
     type: 'first',
@@ -10,7 +10,7 @@ export const howToUseFirst =
     </p>
 }
 
-export const howToUseSecond =
+export const HOW_TO_USE_SECOND =
   {
     title: 'Token Utility',
     type: 'second',

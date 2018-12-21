@@ -1,7 +1,10 @@
 import React from 'react';
 import { Row, Col, Card, Button } from 'antd';
 import stylesheet from './news-events-section.scss';
-import { eventsData, newsData } from '../constants'
+import {
+  EVENTS_DATA,
+  NEWS_DATA
+} from '../constants'
 
 export class NewsEventsSection extends React.Component {
   render() {
@@ -11,40 +14,40 @@ export class NewsEventsSection extends React.Component {
         <Row type="flex" className="newsEventsCards" gutter={{ xs:0, md:24 }}>
           <Col xs={24} md={12}>
             <Card bordered={false} className="newsCard" >
-              <h2 className="newsEventsCards-header">{newsData.title}</h2>
+              <h2 className="newsEventsCards-header">{NEWS_DATA.title}</h2>
               <div className="newsEventsCards-imageContainer">
-                <img src={newsData.imageUrl} className="newsCard-image"/>
+                <img src={NEWS_DATA.imageUrl} className="newsCard-image"/>
               </div>
               {
-                newsData.button &&
-                <Button 
-                  type="primary" 
-                  className="newsEventsCards-btn" 
-                  href={newsData.button.url}
-                  rel={newsData.button.external ? 'noopener noreferrer' : null}
-                  target={newsData.button.external ? '_blank' : null}
+                NEWS_DATA.button &&
+                <Button
+                  type="primary"
+                  className="newsEventsCards-btn"
+                  href={NEWS_DATA.button.url}
+                  rel={NEWS_DATA.button.external ? 'noopener noreferrer' : null}
+                  target={NEWS_DATA.button.external ? '_blank' : null}
                 >
-                  {newsData.button.text}
+                  {NEWS_DATA.button.text}
                 </Button>
               }
             </Card>
           </Col>
           <Col xs={24} md={12}>
             <Card bordered={false} className="eventsCard" >
-              <h2 className="newsEventsCards-header">{eventsData.title}</h2>
+              <h2 className="newsEventsCards-header">{EVENTS_DATA.title}</h2>
               <div className="newsEventsCards-imageContainer">
-                <img src={eventsData.imageUrl} className="newsCard-image"/>
+                <img src={EVENTS_DATA.imageUrl} className="newsCard-image"/>
               </div>
               {
-                eventsData.button &&
-                <Button 
-                  type="primary" 
-                  className="newsEventsCards-btn" 
-                  href={eventsData.button.url}
-                  rel={eventsData.button.external ? 'noopener noreferrer' : null}
-                  target={eventsData.button.external ? '_blank' : null}
+                EVENTS_DATA.button &&
+                <Button
+                  type="primary"
+                  className="newsEventsCards-btn"
+                  href={EVENTS_DATA.button.url}
+                  rel={EVENTS_DATA.button.external ? 'noopener noreferrer' : null}
+                  target={EVENTS_DATA.button.external ? '_blank' : null}
                 >
-                  {eventsData.button.text}
+                  {EVENTS_DATA.button.text}
                 </Button>
               }
             </Card>

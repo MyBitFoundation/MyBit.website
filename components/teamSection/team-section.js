@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import TeamMembers from './team-members';
 import stylesheet from './team-section.scss';
-import { teamDesc } from '../constants';
+import { TEAM_DESCRIPTION } from '../constants';
 
 export class TeamSection extends Component {
   render() {
@@ -10,7 +10,7 @@ export class TeamSection extends Component {
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <section className="TeamSection">
           <h2 className="TeamSection__header">Meet the Team</h2>
-          <TeamMembers team={teamDesc} linkedin={false}/>
+          <TeamMembers team={TEAM_DESCRIPTION} linkedin={false}/>
         </section>
       </Fragment>
     );

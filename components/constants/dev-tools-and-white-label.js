@@ -1,5 +1,5 @@
-import {links} from './links';
-export const devToolsData = [
+import { LINKS } from './links';
+export const DEV_TOOLS_DATA = [
   {
     title: 'Developer Tools',
     className: 'first',
@@ -12,7 +12,7 @@ export const devToolsData = [
       decentralised asset management platforms of their own using MyBit
       scripts and API's.
     </p>,
-    button: {text: 'Get Started', url: links.devs, external: true}
+    button: {text: 'Get Started', url: LINKS.devs, external: true}
   },
   {
     title: 'White Label Solutions',

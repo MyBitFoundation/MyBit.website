@@ -2,7 +2,13 @@ import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import HamburgerButton from '../../static/svgs/icons/menu-icon.svg'
-import { mobileMenu, headerMenu, headerMenuDropDown, headerMenuButton, headerMenuLanguage } from '../constants/menu'
+import {
+  MOBILE_MENU,
+  HEADER_MENU,
+  HEADER_MENU_DROPDOWN,
+  HEADER_MENU_BUTTON,
+  HEADER_MENU_LANGUAGE
+} from '../constants/menu'
 import {Link} from '../link';
 import stylesheet from './menu.scss'
 import { Button } from '../button'
@@ -18,7 +24,7 @@ const MenuItem = MenuAnt.Item;
 class CustomMenu extends React.Component {
   constructor(props){
    super(props);
-   this.state = {lang: headerMenuLanguage["en"].name, dropdownItem: null}
+   this.state = {lang: HEADER_MENU_LANGUAGE["en"].name, dropdownItem: null}
   }
 
   toggleMobileDropdown = (evt) => {
@@ -27,13 +33,13 @@ class CustomMenu extends React.Component {
   }
 
   handleLocaleChange = (evt) => {
-    const lang = headerMenuLanguage[evt.key].name;
+    const lang = HEADER_MENU_LANGUAGE[evt.key].name;
     this.setState({lang})
   }
 
   render(){
     const { lang } = this.state;
-    const toRender = headerMenu.map((option) => {
+    const toRender = HEADER_MENU.map((option) => {
       return(
         <Link
           key={option.path}
@@ -51,7 +57,7 @@ class CustomMenu extends React.Component {
       )
     })
 
-    const toRenderDropdowns = headerMenuDropDown.map((option) => {
+    const toRenderDropdowns = HEADER_MENU_DROPDOWN.map((option) => {
       return(
         <DropdownCustom
           key={option.name}
@@ -69,15 +75,15 @@ class CustomMenu extends React.Component {
     toRender.push(toRenderDropdowns);
     /*toRender.push(<Locale key='locale'
                           className={classNames({'Menu__item': true})}
-                          langMenu={headerMenuLanguage}
+                          langMenu={HEADER_MENU_LANGUAGE}
                           lang={lang}
                           onLocaleChanged={this.handleLocaleChange}
                           />);*/
     toRender.push(<Button
       key='button'
-      label={headerMenuButton.name}
-      url={headerMenuButton.url}
-      newTab={headerMenuButton.external}
+      label={HEADER_MENU_BUTTON.name}
+      url={HEADER_MENU_BUTTON.url}
+      newTab={HEADER_MENU_BUTTON.external}
       isSecondary
       isLight
       isLink
@@ -101,7 +107,7 @@ class CustomMenu extends React.Component {
             mode="inline"
             className="MobileMenu"
           >
-            {mobileMenu.map((option => {
+            {MOBILE_MENU.map((option => {
               if (option.dropdown) {
                 const menuItems = option.menuItems.map(item => (
                   <MenuAnt.Item key={item.name}>
