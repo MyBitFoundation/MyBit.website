@@ -1,4 +1,4 @@
-export const roadmapEvents = [
+export const ROADMAP_EVENTS = [
   {
     title: 'Q3 2017',
     description: 'Token Distribution Phase 1',

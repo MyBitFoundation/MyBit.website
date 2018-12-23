@@ -2,7 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import stylesheet from './how-to-use.scss'
 import { Row, Col, Card } from 'antd';
-import { howToUseFirst, howToUseSecond } from '../constants/howToUse';
+import {
+  HOW_TO_USE_FIRST,
+  HOW_TO_USE_SECOND
+} from '../constants/howToUse';
 
 export const HowToUse = ({ graphic }) => {
     return(
@@ -13,11 +16,11 @@ export const HowToUse = ({ graphic }) => {
                     <Row>
                         <Col span={24}>
                         {
-                            howToUseFirst &&
-                            <div className={`howToUse-contentWrapper howToUse-contentWrapper--${howToUseFirst.type}`}>
-                                <h2 className='textCard-header header-top-left'>{howToUseFirst.title}</h2>
-                                <div className={`textCard-content textCard-content--${howToUseFirst.type}`}>
-                                    {howToUseFirst.content}
+                            HOW_TO_USE_FIRST &&
+                            <div className={`howToUse-contentWrapper howToUse-contentWrapper--${HOW_TO_USE_FIRST.type}`}>
+                                <h2 className='textCard-header header-top-left'>{HOW_TO_USE_FIRST.title}</h2>
+                                <div className={`textCard-content textCard-content--${HOW_TO_USE_FIRST.type}`}>
+                                    {HOW_TO_USE_FIRST.content}
                                 </div>
                             </div>
                         }
@@ -38,11 +41,11 @@ export const HowToUse = ({ graphic }) => {
                 </Col>
                 <Col md = {12} xs = {24}>
                     {
-                        howToUseSecond &&
-                        <div className={`howToUse-contentWrapper howToUse-contentWrapper--${howToUseSecond.type}`}>
-                            <h2 className='textCard-header textCard-header--header-top-left'>{howToUseSecond.title}</h2>
-                            <div className={`textCard-content textCard-content--${howToUseSecond.type}`}>
-                                {howToUseSecond.content}
+                        HOW_TO_USE_SECOND &&
+                        <div className={`howToUse-contentWrapper howToUse-contentWrapper--${HOW_TO_USE_SECOND.type}`}>
+                            <h2 className='textCard-header textCard-header--header-top-left'>{HOW_TO_USE_SECOND.title}</h2>
+                            <div className={`textCard-content textCard-content--${HOW_TO_USE_SECOND.type}`}>
+                                {HOW_TO_USE_SECOND.content}
                             </div>
                         </div>
                     }

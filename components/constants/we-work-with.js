@@ -1,6 +1,6 @@
-export const path = '../../static/assets/partners/';
+export const PATH = '../../static/assets/partners/';
 
-export const partners = [
+export const PARTNERS = [
   { name: 'eea', imageAlt: 'EEA', imageName: 'eeea.png', url: 'https://entethalliance.org/'},
   { name: 'cv_lab', imageAlt: 'Cryptovalley Labs', imageName: 'CV_Labs_Logo.svg', url: 'https://cvvc.com/index.php/cv-labs'},
   { name: 'ability', imageAlt: 'Ability', imageName: 'ability.svg', url: 'https://www.abilityconcept.eu/'},

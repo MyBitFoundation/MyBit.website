@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Row, Col, Card, Button } from 'antd';
-import { developersData } from '../constants';
+import { DEVELOPERS_DATA } from '../constants';
 import stylesheet from './developers-cards.scss'
 
 export class DevelopersCards extends React.Component {
@@ -12,19 +12,19 @@ export class DevelopersCards extends React.Component {
         <Row type="flex" className="developersCards">
           <Col xs={24} md={12}>
             <Card bordered={false} className="textCard textCard-text--left">
-              <h2 className="textCard-header">{developersData.title}</h2>
-              <p className="textCard-content">{developersData.content}
+              <h2 className="textCard-header">{DEVELOPERS_DATA.title}</h2>
+              <p className="textCard-content">{DEVELOPERS_DATA.content}
               </p>
               {
-                developersData.button &&
+                DEVELOPERS_DATA.button &&
                 <Button
                   type="primary"
                   className="developersCard-btn"
-                  href={developersData.button.url}
-                  rel={developersData.button.external ? "noopener noreferrer" : null}
-                  target={developersData.button.external ? "_blank" : null}
+                  href={DEVELOPERS_DATA.button.url}
+                  rel={DEVELOPERS_DATA.button.external ? "noopener noreferrer" : null}
+                  target={DEVELOPERS_DATA.button.external ? "_blank" : null}
                 >
-                  {developersData.button.text}
+                  {DEVELOPERS_DATA.button.text}
                 </Button>
               }
             </Card>

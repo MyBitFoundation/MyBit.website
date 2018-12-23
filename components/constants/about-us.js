@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { links } from './links';
 
-export const aboutUsData = [{
+export const ABOUT_US_DATA = [{
   title: 'About us',
   image: null,
   className: 'first',

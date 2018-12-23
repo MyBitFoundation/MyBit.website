@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
-import { graphicInfo } from '../constants/mybit-graphic';
+import { GRAPHIC_INFO } from '../constants/mybit-graphic';
 import stylesheet from './mybit-graphic.scss';
 
 export class MyBitGraphic extends React.Component {
@@ -12,9 +12,9 @@ export class MyBitGraphic extends React.Component {
         <Row type="flex" className='Graphic-row'>
           <Col xs={24} md={11}>
             <Card bordered={false} className="textCard">
-              <h2 className="textCard-header">{graphicInfo.title}</h2>
+              <h2 className="textCard-header">{GRAPHIC_INFO.title}</h2>
               <div className="textCard-content">
-                {graphicInfo.content}
+                {GRAPHIC_INFO.content}
               </div>
             </Card>
           </Col>

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { links } from './links';
+import { LINKS } from './links';
 
-export const myBitToken = {
+export const MYBIT_TOKEN = {
   title: "The MyBit Token",
   content:
   <Fragment>
@@ -16,5 +16,5 @@ export const myBitToken = {
       MyBit Ventures and other developer reward programmes.
     </p>
   </Fragment>,
-  button: {text: 'Learn More', url: links.token}
+  button: {text: 'Learn More', url: LINKS.token}
 }

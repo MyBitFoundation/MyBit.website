@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Card } from 'antd';
-import { aboutUsData } from '../constants/about-us'
+import { ABOUT_US_DATA } from '../constants/about-us'
 import stylesheet from './about-us.scss'
 
 export class AboutUsSection extends React.Component {
@@ -9,7 +9,7 @@ export class AboutUsSection extends React.Component {
       <section className="aboutUs mainContainer">
        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <Row type="flex" className="aboutUs-row" gutter={{ xs:0, md:24 }}>
-          {aboutUsData.map(data => (
+          {ABOUT_US_DATA.map(data => (
             <Col xs={24} md={12} key={data.title}>
               <Card bordered={false} className={`aboutUs-col--${data.className}`}>
                 {

@@ -1,7 +1,11 @@
 import React from 'react'
 import stylesheet from './how-does-it-work.scss'
 import { Col, Card, Button } from 'antd';
-import { howDoesItWorkDataFirstRow, howDoesItWorkDataSecondRow   } from '../constants/how-does-it-work-section';
+import {
+  HOW_DOES_IT_WORK_DATA_FIRST_ROW,
+  HOW_DOES_IT_WORK_DATA_SECOND_ROW
+} from '../constants/how-does-it-work-section';
+
 import {InputForm} from '../inputForm/input-form'
 
 export const HowDoesItWork = () => {
@@ -9,7 +13,7 @@ export const HowDoesItWork = () => {
         <div className="HowDoesItWork">
             <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
             <div className="row-flex">
-                {howDoesItWorkDataFirstRow.map((data, key) => (
+                {HOW_DOES_IT_WORK_DATA_FIRST_ROW.map((data, key) => (
                         <div key={data.title} className={`item item--${data.color}`}>
                             {data.transform &&
                                 <div className="HowDoesItWork-triangle-up">
@@ -23,8 +27,8 @@ export const HowDoesItWork = () => {
                                     </div>
                                     {data.button &&
                                     <div className="HowDoesItWork-btnWrapper">
-                                        <Button 
-                                            type="primary" 
+                                        <Button
+                                            type="primary"
                                             className="HowDoesItWork-btn"
                                             rel={data.button.external ? "noopener noreferrer" : null}
                                             target={data.button.external ? "_blank" : null}
@@ -49,7 +53,7 @@ export const HowDoesItWork = () => {
                 ))}
             </div>
             <div className="row-flex">
-                {howDoesItWorkDataSecondRow.map((data, key) => (
+                {HOW_DOES_IT_WORK_DATA_SECOND_ROW.map((data, key) => (
                     <div key={data.title} className={`item item--${data.color}`}>
                         <Card bordered={false} className={`textCard textCard--${data.color}`}>
                             <div className={`textCard-contentWrapper textCard-contentWrapper--${data.color}`}>
@@ -64,10 +68,10 @@ export const HowDoesItWork = () => {
                                 </div>
                                 {data.button &&
                                 <div className="DevTools-btnWrapper">
-                                    <Button 
-                                        type="primary" 
-                                        className="DevTools-btn" 
-                                        href={data.button.url} 
+                                    <Button
+                                        type="primary"
+                                        className="DevTools-btn"
+                                        href={data.button.url}
                                         rel={data.button.external ? "noopener noreferrer" : null}
                                         target={data.button.external ? "_blank" : null}
                                     >
