@@ -29,7 +29,7 @@ class Timer extends Component {
 
     if(difference < 0){
       clearInterval(this.intervalId);
-      return;
+      return {days: -1, hours: -1, minutes: -1, seconds: -1};
     }
 
     const daysUntil = Math.floor(difference / millisecondsInOneDay);
