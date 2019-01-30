@@ -14,11 +14,18 @@ const millisecondsInOneHour = 1000 * 60 * 60;
 const millisecondsInOneMinute = 1000 * 60;
 const millisecondsInOneSeconds = 1000;
 
+const emptyCountdown = {
+  days: 0, hours: 0, minutes: 0, seconds: 0
+};
+
 class Timer extends Component {
   constructor(){
     super();
-
-    this.state = { currentCountdown: this.getCountdown() }
+    const countdown = this.getCountdown();
+    this.state = {
+      currentCountdown:
+        countdown ? countdown : emptyCountdown
+      }
     this.intervalId = null;
 
   }
@@ -29,7 +36,7 @@ class Timer extends Component {
 
     if(difference < 0){
       clearInterval(this.intervalId);
-      return {days: -1, hours: -1, minutes: -1, seconds: -1};
+      return emptyCountdown;
     }
 
     const daysUntil = Math.floor(difference / millisecondsInOneDay);
