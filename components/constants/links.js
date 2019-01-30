@@ -9,7 +9,7 @@ export const LINKS = {
   ddf: 'https://ddf.mybit.io/',
   //Resources (Header) dropdown
   tokenSale: 'https://medium.com/mybit-dapp/mybit-token-distribution-phase-2-b938ee231496', //(no link yet)
-  whitepaper: 'http://mybit.io/whitepaperv2.0',
+  whitepaper: 'https://whitepaper.mybit.io',
   github: 'https://github.com/MyBitFoundation',
   devs: 'https://developer.mybit.io/portal/',
 
