@@ -56,7 +56,7 @@ export const RESOURCES_DROPDOWN = [
   },{
     name: "Whitepaper",
     external: true,
-    path: "https://mybit.io/whitepaperv2.0"
+    path: "https://whitepaper.mybit.io"
   },{
     name: "Github",
     external: true,
