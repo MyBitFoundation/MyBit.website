@@ -37,30 +37,6 @@ export const TEAM_DESCRIPTION = [
     imageSrc: '/static/team/v2/jose.jpg',
     imageAlt: 'CTO',
   },{
-    name: 'James Halladay',
-    job: 'Creative Consultant',
-    bio:
-      'Creative consultant and Cambridge graduate with experience at some of the UK’s biggest advertising agencies.',
-    linkedin: 'https://www.linkedin.com/in/jameshalladay/',
-    imageSrc: '/static/team/v2/james.jpg',
-    imageAlt: 'Creative Consultant',
-  },{
-    name: 'Ash Halladay',
-    job: 'Creative Lead',
-    bio:
-      'Brings 8 years creative experience working on brand development, digital design and creative consultancy.',
-    linkedin: 'https://www.linkedin.com/in/ashleyhalladay/',
-    imageSrc: '/static/team/v2/ash.jpg',
-    imageAlt: 'Creative Lead',
-  },{
-    name: 'Kyle Dewhurst',
-    job: 'Lead Solidity Developer',
-    bio:
-     'A blockchain engineer with experience developing Ethereum dApps for a range of projects since early 2016. He’s been passionate about the potential of blockchain ever since.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/kyle.jpg',
-    imageAlt: 'Lead Solidity Developer',
-  },{
     name: 'Peter Phillips',
     job: 'Solidity Developer',
     bio:
@@ -77,14 +53,6 @@ export const TEAM_DESCRIPTION = [
     imageSrc: '/static/team/v2/cris.jpg',
     imageAlt: 'Lead Front End Developer',
   },{
-    name: 'Ivan Ivanov',
-    job: 'Front End Engineer',
-    bio:
-      'A React developer with over three years of professional, front end experience. He’s previously led various web development projects and is now applying his skills to MyBit’s UI.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/Ivan_Ivanov.jpg',
-    imageAlt: 'Front End Engineer',
-  },{
     name: 'Dan Engler',
     job: 'North American Community Manager',
     bio:
@@ -100,22 +68,6 @@ export const TEAM_DESCRIPTION = [
     linkedin: '',
     imageSrc: '/static/team/v2/Rory_Davies.jpg',
     imageAlt: 'Asia Pacific Community Manager',
-  },{
-    name: 'Dayan Petrov',
-    job: 'Front End Engineer',
-    bio:
-      'A front end engineer with over two years of software development experience. A recent graduate of Sheffield University, where he received a Google scholarship, he’s now applying his expertise to the MyBit UI.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/dayan.jpg',
-    imageAlt: 'Front End Engineer',
-  },{
-    name: 'Valeriy Tverdohleb',
-    job: 'Front End Engineer',
-    bio:
-      'A front end engineer with eleven years of experience developing a range of web software solutions. His specialisms include JavaScript libraries and tooling, especially React and Webpack.',
-    linkedin: '',
-    imageSrc: '/static/team/v2/valeriy.jpg',
-    imageAlt: 'Front End Engineer',
   }
 ]
 
