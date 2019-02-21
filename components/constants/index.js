@@ -1,6 +1,6 @@
 import { LINKS } from './links'
 
-export const MYBIT_TOKEN_SALE_API_ENDPOINT = 'https://api.mybit.io';
+export const MYBIT_TOKEN_SALE_API_ENDPOINT = 'https://api.mybit.io/token-sale';
 export const MYBIT_TOKEN_SALE_WEBSITE = 'https://td.mybit.io';
 export const DAY_IN_SECONDS = 86400;
 export const MINUTE_IN_MILLISECONDS = 60000;
