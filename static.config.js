@@ -42,7 +42,7 @@ export default {
           <Head>
             <title>MyBit</title>
             <meta charSet="UTF-8" />
-            <link rel="icon"  type="image/png" href="/favicon.png" />
+            <link rel="icon" type="image/png" href="/favicon.png" />
             {renderMeta.styleTags}
             {renderMeta.helmet && renderMeta.helmet.title.toComponent()}
             {renderMeta.helmet && renderMeta.helmet.meta.toComponent()}
@@ -52,10 +52,36 @@ export default {
             />
             <meta httpEquiv="content-language" content="en" />
             <meta itemProp="name" content="MyBit" />
-            <meta itemProp="description" content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone." />
+            <meta
+              itemProp="description"
+              content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone."
+            />
             <meta name="robots" content="index,follow" />
             <meta name="theme-color" content="#1890ff" />
-            <meta name="Description" content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone." />
+            <meta
+              name="Description"
+              content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone."
+            />
+            <meta itemProp="image" content="https://mybit.io/og-preview.png" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@MyBit_DApp" />
+            <meta name="twitter:creator" content="@MyBit_DApp" />
+            <meta
+              name="twitter:image:src"
+              content="https://mybit.io/og-preview.png"
+            />
+            <meta name="language" content="English" />
+            <meta property="og:url" content="https://mybit.io/" />
+            <meta property="og:title" content="MyBit" />
+            <meta
+              property="og:description"
+              content="Powering safe, solvent and trustless trading of any asset."
+            />
+            <meta
+              property="og:image"
+              content="https://mybit.io/og-preview.jpg"
+            />
+            <meta name="robots" content="index,follow" />
           </Head>
           <Body>{children}</Body>
         </Html>
