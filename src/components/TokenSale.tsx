@@ -25,8 +25,8 @@ interface TdData {
   loaded: boolean
   timestampStartTokenSale: number
 }
-export class TokenSale extends React.Component<{}> {
-  tdData: TdData = {
+export class TokenSale extends React.Component<{}, TdData> {
+  state: TdData = {
     currentDayServer: 57,
     currentPeriodTotal: 7.11,
     ethPrice: 136.38564802085827,
@@ -53,17 +53,17 @@ export class TokenSale extends React.Component<{}> {
 
   private getData = async () => {
     const res = await fetch('https://api.mybit.io/token-sale/home')
-    this.tdData = await res.json()
-    console.log(this.tdData)
+    const tdData = await res.json()
+    this.setState(tdData)
   }
   render() {
     return (
       <SBlueBg>
         <SSubHeadlineAlt>
-          {`Period #${this.tdData.currentDayServer} ends in `}
+          {`Period #${this.state.currentDayServer} ends in `}
           <CountdownHours
             time={this.getSecondsUntilNextPeriod(
-              this.tdData.timestampStartTokenSale
+              this.state.timestampStartTokenSale
             )}
           />
         </SSubHeadlineAlt>
@@ -81,12 +81,12 @@ export class TokenSale extends React.Component<{}> {
             <div className="flex-ns flex-row-ns justify-between">
               <div>
                 <STracked>Current Exchange Rate</STracked>
-                <StdInfo>{`1 ETH = ${this.tdData.exchangeRate.toFixed(
+                <StdInfo>{`1 ETH = ${this.state.exchangeRate.toFixed(
                   0
                 )} MYB`}</StdInfo>
               </div>
               <div>            <STracked>Eth Recieved</STracked>
-            <StdInfo>{`${this.tdData.currentPeriodTotal} ETH`}</StdInfo></div>
+            <StdInfo>{`${this.state.currentPeriodTotal.toFixed(2)} ETH`}</StdInfo></div>
             </div>
             <Btn text="contribute" linkTo="https://td.mybit.io/" isWhite={true} />
             <div className="pb4" />
