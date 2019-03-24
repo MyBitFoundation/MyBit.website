@@ -20,7 +20,7 @@ export default class ToolsPanel extends React.Component<{
         <div className="ph2 pb2 w-100-ns">
           <STitle>{this.categoryName}</STitle>
           {tools.filter((e: ToolProps) => e.category === this.props.category).map(e => (
-            <div style={{ opacity: this.props.filter === e.filter || this.props.filter === -1 ? 1 : 0.5 }}><Tool {...e} /></div>
+            <div style={{ opacity: this.props.filter === e.filter || this.props.filter === -1 ? 1 : 0.2 }}><Tool {...e} /></div>
             
           ))}
         </div>

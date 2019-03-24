@@ -17,39 +17,51 @@ export class Tool extends React.Component<ToolProps, {}> {
 
   render() {
     return (
-      <a target="_blank"  rel="noreferrer" className='link' href={this.props.link}>
-      <table onClick={() => 'click'} className="w-100 pv2">
-        <thead>
-          <tr>
-            <th style={{ width: '24px' }}>
-              <img
-                style={{ width: '24px' }}
-                className="tl db"
-                alt="icon"
-                src={this.props.icon}
-              />
-            </th>
-            <STitle>{this.props.title}</STitle>
-          </tr>
-        </thead>
-        <tbody>
-          <td />
-          <SText>{this.props.text}</SText>
-          {this.props.link === '' && <SComingSoon>Coming Soon</SComingSoon>}
-        </tbody>
-      </table>
-      </a>
+      <SLink
+        target="_blank"
+        rel="noreferrer"
+        className="link"
+        href={this.props.link}
+        disabled={this.props.link === ''}
+      >
+        <table onClick={() => 'click'} className="w-100 pv2">
+          <thead>
+            <tr>
+              <th style={{ width: '24px' }}>
+                <img
+                  style={{ width: '24px' }}
+                  className="tl db"
+                  alt="icon"
+                  src={this.props.icon}
+                />
+              </th>
+              <STitle>{this.props.title}</STitle>
+            </tr>
+          </thead>
+          <tbody>
+            <td />
+            <SText>{this.props.text}</SText>
+            {this.props.link === '' && <SComingSoon>Coming Soon</SComingSoon>}
+          </tbody>
+        </table>
+      </SLink>
     )
   }
 }
 
-const SComingSoon = styled.div.attrs({className: 'pt1'})`font-family: Gilroy;
-font-size: 12px;
-line-height: 12px;
-letter-spacing: 1px;
-text-transform: uppercase;
-font-weight: 700;
-color: #0B3F9C;`
+const SLink = styled.a`
+  cursor: ${(props: {disabled: boolean}) => props.disabled ? 'not-allowed' : 'pointer'};
+`
+
+const SComingSoon = styled.div.attrs({ className: 'pt1' })`
+  font-family: Gilroy;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0b3f9c;
+`
 
 const STitle = styled.div`
   font-family: Roboto;

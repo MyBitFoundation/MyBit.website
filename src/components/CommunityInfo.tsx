@@ -23,14 +23,14 @@ export class CommunityInfo extends React.Component<CommunityInfoProps> {
           <a
             target="_blank"
             rel="noreferrer"
-            className="link no-underline"
+            className="link no-underline underline-hover"
             style={{ color: '#1890ff'}}
             href={this.props.link}
           >
             {this.props.blueWord}
           </a>
         ) : (
-          <Link className="link no-underline" style={{ color: '#1890ff'}} to={this.props.link}>
+          <Link className="link no-underline underline-hover" style={{ color: '#1890ff'}} to={this.props.link}>
             {this.props.blueWord}
           </Link>
         )}

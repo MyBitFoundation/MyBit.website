@@ -39,7 +39,7 @@ export default withSiteData(
             into a talent pool of contributors across development, marketing,
             design, security, testing and other operations.
           </SParagraphLead>
-          <div style={{maxWidth: '320px'}} className="ph5 center">
+          <div style={{maxWidth: '320px'}} className="ph5 pv3 center">
             <Btn
               text="learn more"
               linkTo="https://task.market"

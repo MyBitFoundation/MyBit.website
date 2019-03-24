@@ -203,7 +203,7 @@ const STitle = styled.div.attrs({ className: 'black b pb2' })`
 
   color: #111111;
 `
-const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline' })`
+const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -213,7 +213,7 @@ const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline' })`
   color: #6c6c6c;
 7`
 
-const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline' })`
+const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;

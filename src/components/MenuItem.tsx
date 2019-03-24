@@ -32,10 +32,11 @@ export default class MenuItem extends React.Component<
               <SMenuLink
                 key={i}
                 active={i === this.state.activeLink}
+                disabled={e.linkTo === ''}
                 onMouseEnter={() => this.setState({ activeLink: i })}
                 onMouseLeave={() => this.setState({ activeLink: -1})}
                 onClick={() => e.linkTo.substr(0, 4) === 'http' ? window.open(e.linkTo) : navigate(e.linkTo)}
-                className="w-100 pv1"
+                className='w-100 pv1'
               >
                 <thead>
                   <tr>
@@ -83,7 +84,7 @@ const SMenuLink = styled.table`
   background: ${(props: { active: boolean }) =>
     props.active ? 'rgba(26, 144, 255, 0.1)' : '#ffffff'};
   border-radius: 4px;
-  cursor: pointer;
+  cursor: ${(props: any) => props.disabled ? 'not-allowed' : 'pointer'};
 `
 
 const SMenuTitle = styled.div.attrs({

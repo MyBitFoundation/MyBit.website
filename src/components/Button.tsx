@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from '@reach/router'
 
 export const Button = styled.div.attrs({
-  className: 'whover no-underline link tc tracked ma2 ma0-l center mw5 b'
+  className: 'bhover no-underline link tc tracked ma2 ma0-l center mw5 b'
 })`
   font-family: Gilroy;
   line-height: 48px;
@@ -15,12 +15,12 @@ export const Button = styled.div.attrs({
   border-radius: 4px;
   color: white;
   @media screen and (min-width: 30em) {
-    line-height: 36px;
+    line-height: 48px;
   }
 `
 
 const WhiteButton = styled.div.attrs({
-  className: 'bhover no-underline tc tracked mh6 pb3 b mw5 center'
+  className: 'whover no-underline tc tracked mh6 pb3 b mw5 center'
 })`
   font-family: Gilroy;
   line-height: 48px;

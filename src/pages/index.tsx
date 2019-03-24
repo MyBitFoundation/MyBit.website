@@ -62,7 +62,7 @@ export default withSiteData(
                 working. You can explore our progress by visiting our{' '}
                 <a
                   style={{ color: '#1890ff' }}
-                  className="link no-underline"
+                  className="link no-underline underline-hover"
                   href="https://transparency.mybit.io/"
                   target="_blank"
                   rel="noreferrer"
@@ -83,7 +83,7 @@ export default withSiteData(
               explore our progress by visiting our{' '}
               <a
                 style={{ color: '#1890ff' }}
-                className="link no-underline"
+                className="link no-underline underline-hover"
                 href="https://transparency.mybit.io/"
                 target="_blank"
                 rel="noreferrer"
