@@ -20,7 +20,7 @@ export const Button = styled.div.attrs({
 `
 
 const WhiteButton = styled.div.attrs({
-  className: 'whover no-underline tc tracked mh6 pb3 b mw5 center'
+  className: 'bhover no-underline tc tracked mh6 pb3 b mw5 center'
 })`
   font-family: Gilroy;
   line-height: 48px;
