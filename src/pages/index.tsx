@@ -97,7 +97,7 @@ export default withSiteData(
           <div className="pb7" />
           <SSubHeadline>Community In Charge</SSubHeadline>
           <SParagraphLead>
-            MyBit allows anyone to finance and build blockchain-powered products
+            MyBit allows anyone to finance and build the blockchain-powered products
             that will revolutionise and disrupt transaction-based industries.
           </SParagraphLead>
           <div className="flex flex-column center items-top justify-between flex-row-ns pt3">
