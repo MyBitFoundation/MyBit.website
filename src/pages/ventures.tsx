@@ -35,9 +35,9 @@ export default withSiteData(
           <SSubHeadline>Task.Market</SSubHeadline>
           <SParagraphLead>
             Funded projects will have access to the Task.Market, a microtask
-            fund that will allow developers to accelerate and scale by tapping
+            fund that allows developers to accelerate and scale by tapping
             into a talent pool of contributors across development, marketing,
-            design, security, testing and other operations.
+            design, security, testing, and other operations.
           </SParagraphLead>
           <div style={{maxWidth: '320px'}} className="ph5 pv3 center">
             <Btn
