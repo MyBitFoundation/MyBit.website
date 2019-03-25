@@ -88,12 +88,18 @@ export default class Menu extends React.Component {
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
-                href="https.https://learn.mybit.io"
+                href="https://learn.mybit.io"
               >
                 Content Portal
               </SAnchor>
               <SLink to="/about">company</SLink>
-              <SLink to="/about#token">token</SLink>
+              <SAnchor
+                target="_blank"
+                rel="noreferrer"
+                href="https://learn.mybit.io/learn/mybit-token-myb-1"
+              >
+                token
+              </SAnchor>
               <SAnchor
                 target="_blank"
                 rel="noreferrer"

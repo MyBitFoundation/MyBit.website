@@ -3,17 +3,17 @@
 
 // Plugins
 const plugins = [{
-  location: "/mnt/c/Users/Steven/MyBit.website/node_modules/react-static-plugin-styled-components",
+  location: "/Users/jjperezaguinaga/Projects/mybit/MyBit.website/node_modules/react-static-plugin-styled-components",
   plugins: [],
   hooks: {}
 },
 {
-  location: "/mnt/c/Users/Steven/MyBit.website/node_modules/react-static-plugin-typescript",
+  location: "/Users/jjperezaguinaga/Projects/mybit/MyBit.website/node_modules/react-static-plugin-typescript",
   plugins: [],
   hooks: {}
 },
 {
-  location: "/mnt/c/Users/Steven/MyBit.website",
+  location: "/Users/jjperezaguinaga/Projects/mybit/MyBit.website",
   plugins: [],
   hooks: {}
 }]
