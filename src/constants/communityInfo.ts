@@ -22,7 +22,7 @@ export const communityInfoData: CommunityInfoProps[] = [
   {
     icon: contributors,
     title: 'Contributors',
-    textStart: 'Technical and Non-Technical Contributors can both access the ',
+    textStart: 'can both access the ',
     blueWord: 'Task.Market',
     link: 'https://task.market',
     textEnd: ' to get involved and be rewarded financially for contributing to the growth and development of the MyBit Ecosystem.'
