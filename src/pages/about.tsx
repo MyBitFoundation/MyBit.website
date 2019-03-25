@@ -19,7 +19,7 @@ export default withSiteData(
             MyBit was started by a group of industry veterans frustrated by the
             limitations of today’s financial systems. In a global economy where
             trust is invaluable and hard to come by, third party providers like
-            lawyers, managers and deal brokers have created inefficiencies while
+            lawyers, managers, and deal brokers have created inefficiencies while
             taking large percentages as profits.
           </SParagraphLead>
           <div className="pt6" />
@@ -36,7 +36,7 @@ export default withSiteData(
           <SSubHeadline>The Ecosystem</SSubHeadline>
           <SParagraphLead>
             The MyBit Ecosystem consists of four components; Our Community, Our
-            Technology, Our Governance model and the MyBit Token.
+            Technology, Our Governance model, and the MyBit Token.
           </SParagraphLead>
           <div id="token" className="pt6 pb7 dn-ns">
             <img className='pb5' src={ecosystemImage} />

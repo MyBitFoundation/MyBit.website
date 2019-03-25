@@ -11,7 +11,7 @@ export const aboutCards = [
   {
     icon: power,
     title: 'Power of Smart Contracts',
-    text: 'Our vision is to utilise the power of smart contracts to eliminate the need for centralised sources of trust while creating a collaborative company structure that allows us to fund, incubate and scale the technology.'
+    text: 'Our vision is to utilise the power of smart contracts to eliminate the need for centralised sources of trust while creating a collaborative company structure that allows us to fund, incubate, and scale the technology.'
   },
   {
     icon: building,
@@ -22,10 +22,10 @@ export const aboutCards = [
 
 export const ecosystem= [{
   title: 'Community',
-  text: 'The Community drives the ecosystem by funding initiatives, contributing to projects and making collective decisions that drive growth.'
+  text: 'The Community drives the ecosystem by funding initiatives, contributing to projects, and making collective decisions that drive growth.'
 },{
   title: 'Token',
-  text: 'The MyBit Token (MYB) serves as fuel for the network, powering transactional functions, voting and value exchange across the majority of MyBit dApps and products.'
+  text: 'The MyBit Token (MYB) serves as fuel for the network, powering transactional functions, voting, and value exchange across the majority of MyBit dApps and products.'
 },{
   title: 'Technology',
   text: 'Our open-source technology allows the community to build functional tools that create financial opportunities for all in an effort to truly democratise wealth.'
