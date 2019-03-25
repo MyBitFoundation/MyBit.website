@@ -114,7 +114,7 @@ export default withSiteData(
               structure. That means we will be creating one of the first
               self-governing, co-operative tech projects on the web and a
               blueprint for future DAOs. Our community will not only deploy the
-              MYB token to develop and scale projects, but also stake the tokens
+              MyBit token to develop and scale projects, but also stake the tokens
               to vote on major company decisions and operations.
               <div className="pt3">
                 <Btn

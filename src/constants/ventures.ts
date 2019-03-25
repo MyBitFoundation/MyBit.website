@@ -6,7 +6,7 @@ export const ventures = [
   {
     icon: invest,
     title: 'Invest',
-    text: 'Investors, developers and non-technical contributors will invest MYB tokens to create the fund.'
+    text: 'Investors, developers, and non-technical contributors will invest MYB to create the fund.'
   },
   {
     icon: vote,

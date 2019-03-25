@@ -71,7 +71,7 @@ export class TokenSale extends React.Component<{}, TdData> {
           <div className="w-50-ns">
             <SParagraph color="white">
               In 2019, we are excited to conduct our second token distribution
-              to enable user acquisition, scalability and full decentralisation
+              to enable user acquisition, scalability, and full decentralisation
               of the MyBit project. It’s an especially ideal time following last
               year’s market movements, and we are focusing this round to attract
               a truly vested group of early adopters and contributors.
