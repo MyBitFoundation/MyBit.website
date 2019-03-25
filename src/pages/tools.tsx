@@ -24,7 +24,7 @@ export default withSiteData(
             In an industry wrought with hype, building is believing. MyBit
             develops products that enable the decentralised economy and powers
             community projects that simplify frictionless value exchange. Our
-            projects are funded, developed and approved by the community with
+            projects are funded, developed, and approved by the community with
             full transparency and collective consensus every step of the way.
           </SParagraphLead>
           <div />
