@@ -58,7 +58,7 @@ export default withSiteData(
                 scope of our vision and build functional tools to power the new
                 economy. Following a successful initial token distribution in
                 2017 we put our heads down and began developing technology that
-                enables a more open, collaborative and accessible way of
+                enables a more open, collaborative, and accessible way of
                 working. You can explore our progress by visiting our{' '}
                 <a
                   style={{ color: '#1890ff' }}
