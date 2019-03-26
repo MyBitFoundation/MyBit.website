@@ -73,5 +73,5 @@ build
 # Other Editors
 .idea/
 
-tmp
-artifacts
+tmp/
+artifacts/
