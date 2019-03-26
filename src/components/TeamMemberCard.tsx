@@ -28,4 +28,9 @@ const SRole = styled.div.attrs({
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
+  padding: 0px 10px;
+
+  @media(min-width: 480px){
+    padding: 0px 0px;
+  }
 `
