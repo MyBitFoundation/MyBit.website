@@ -46,7 +46,7 @@ export default withSiteData(
               isWhite={false}
             />
           </div>
-          <img className="pb7 center w-100" src={ddfScreen}/>
+          <img style={{ width: '937px', display: 'block' }} className="pb7 center w-100" src={ddfScreen}/>
         </SWrapper>
       )
     }
