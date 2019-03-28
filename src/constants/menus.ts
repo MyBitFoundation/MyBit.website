@@ -66,7 +66,7 @@ export const menuData = [
     ],
     button: {
       text: "Get involved on task.market",
-      linkTo: "https://ddf.mybit.io/"
+      linkTo: "https://task.market/"
     }
   },
   {
@@ -114,7 +114,7 @@ export const menuData = [
     ],
     button: {
       text: "Get involved on task.market",
-      linkTo: "https://ddf.mybit.io"
+      linkTo: "https://task.market"
     }
   },
   {
@@ -135,7 +135,7 @@ export const menuData = [
       {
         title: 'Task.Market',
         text: 'Decentralised workflow and collaboration tool built on Bounties Network',
-        linkTo: 'https://ddf.mybit.io',
+        linkTo: 'https://task.market',
         icon: task
       },
       {
