@@ -1,6 +1,5 @@
 import transparency from '@images/icon/transparency.svg'
 import vote from '@images/icon/vote.svg'
-import community from '@images/icon/community.svg'
 import token from '@images/icon/token.svg'
 import myb from '@images/icon/myb.svg'
 import ventures from '@images/icon/ventures.svg'
@@ -52,17 +51,11 @@ export const menuData = [
         icon: transparency
       },
       {
-        title: 'MyBit DAO (testnet)',
+        title: 'MyBit DAO (v0.2)',
         text: 'Propose and Vote on decisions for the MyBit Ecosystem',
-        linkTo: 'https://rinkeby.aragon.org/#/0x13ab94f2cb92A395D8dD73638c74d27Ae397868B/',
+        linkTo: 'https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/0xf400ea56b2b457213acf47695c2d6000acd954f9',
         icon: vote
       },
-      {
-        title: 'Community Rankings (coming soon)',
-        text: "Help contribute to MyBit's growth and get recognised",
-        linkTo: '',
-        icon: community
-      }
     ],
     button: {
       text: "Get involved on task.market",

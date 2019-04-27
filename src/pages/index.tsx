@@ -118,8 +118,8 @@ export default withSiteData(
               to vote on major company decisions and operations.
               <div className="pt3">
                 <Btn
-                  text="MyBit DAO (testnet)"
-                  linkTo="https://rinkeby.aragon.org/#/0x13ab94f2cb92A395D8dD73638c74d27Ae397868B/"
+                  text="MyBit DAO (v0.2)"
+                  linkTo="https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/0xf400ea56b2b457213acf47695c2d6000acd954f9"
                   isWhite={true}
                 />
               </div>
