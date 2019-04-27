@@ -5,7 +5,6 @@ import sdk from '@images/icon/sdk.svg'
 import ui from '@images/icon/ui.svg'
 import transparency from '@images/icon/transparency.svg'
 import voting from '@images/icon/vote.svg'
-import community from '@images/icon/community.svg'
 import apps from '@images/icon/apps.svg'
 import trust from '@images/icon/trust.svg'
 import will from '@images/icon/will.svg'
@@ -99,24 +98,16 @@ export const tools: Array<ToolProps> = [
     icon: support,
   },
   {
-    title: 'MyBit DAO (testnet)',
+    title: 'MyBit DAO (v0.2)',
     category: Category.TOOLS,
     filter: Filter.DAOS,
     text: 'Propose and Vote on decisions for the MyBit Ecosystem',
-    link: 'https://rinkeby.aragon.org/#/0x13ab94f2cb92A395D8dD73638c74d27Ae397868B/',
+    link: 'https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/0xf400ea56b2b457213acf47695c2d6000acd954f9',
     icon: voting
   },
   {
-    title: 'Community Rankings',
-    category: Category.TOOLS,
-    filter: Filter.DAOS,
-    text: "Help contribute to MyBit's growth and get recognised",
-    link: '',
-    icon: community
-  },
-  {
     title: 'Multi-Signature Wallet Configuration',
-    category: Category.TOOLS, 
+    category: Category.TOOLS,
     filter: Filter.OTHER,
     text: 'Our easy-to-use standard approach to securing funds',
     link: '',
