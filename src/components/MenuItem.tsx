@@ -35,7 +35,10 @@ export default class MenuItem extends React.Component<
                 disabled={e.linkTo === ''}
                 onMouseEnter={() => this.setState({ activeLink: i })}
                 onMouseLeave={() => this.setState({ activeLink: -1})}
-                onClick={() => e.linkTo.substr(0, 4) === 'http' ? window.open(e.linkTo) : navigate(e.linkTo)}
+                onClick={() => {
+                  e.linkTo.substr(0, 4) === 'http' ? window.open(e.linkTo) : navigate(e.linkTo);
+                  this.props.onClick && this.props.onClick();
+                }}
                 className='w-100 pv1'
               >
                 <thead>
