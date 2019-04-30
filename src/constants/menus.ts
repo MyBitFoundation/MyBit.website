@@ -35,6 +35,7 @@ export interface MenuItemProps {
   toggle?: (index: number) => void;
   key?: number;
   index?: number;
+  onClick?: () => void;
 }
 
 export interface MenuProps {
