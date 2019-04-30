@@ -27,7 +27,11 @@ export class Tool extends React.Component<ToolProps, {}> {
         <table onClick={() => 'click'} className="w-100 pv2">
           <thead>
             <tr>
-              <th style={{ width: '24px' }}>
+              <th style={{
+                width: '24px',
+                position: 'relative',
+                left: '-3px',
+              }}>
                 <img
                   style={{ width: '24px' }}
                   className="tl db"

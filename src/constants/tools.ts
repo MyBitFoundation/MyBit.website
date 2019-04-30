@@ -11,6 +11,8 @@ import will from '@images/icon/will.svg'
 import dropzone from '@images/icon/dropzone.svg'
 import kyber from '@images/icon/kyber.svg'
 import support from '@images/icon/support.svg'
+import myid from '@images/icon/myid.svg'
+import mytokens from '@images/icon/mytokens.svg'
 import { ToolProps } from '@components/Tool';
 
 export enum Filter {
@@ -104,6 +106,22 @@ export const tools: Array<ToolProps> = [
     text: 'Propose and Vote on decisions for the MyBit Ecosystem',
     link: 'https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/0xf400ea56b2b457213acf47695c2d6000acd954f9',
     icon: voting
+  },
+  {
+    title: 'MyID',
+    category: Category.CORE,
+    filter: Filter.DAOS,
+    text: 'Identity Solution for DAOs',
+    link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/apps/MyID',
+    icon: myid
+  },
+  {
+    title: 'MyTokens',
+    category: Category.CORE,
+    filter: Filter.DAOS,
+    text: 'Staking tokens for voting weight in DAOs.',
+    link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/apps/MyTokens',
+    icon: mytokens
   },
   {
     title: 'Multi-Signature Wallet Configuration',
