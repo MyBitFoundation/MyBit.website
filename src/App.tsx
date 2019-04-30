@@ -5,10 +5,12 @@ import '../static/css/tachyons-mybit.css'
 import Menu from '@containers/Menu'
 import Foooter from '@containers/Footer'
 import { menuData } from '@constants/menus'
+import BannerDao from '@components/BannerDao'
 
 function App() {
   return (
     <Root>
+      <BannerDao />
       <nav>
         <Menu items={menuData} />
       </nav>
