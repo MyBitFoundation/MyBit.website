@@ -16,6 +16,12 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
     hoverOpen: false
   }
 
+  closeMenu = (): void => {
+    this.setState({
+      open: false,
+    })
+  }
+
   toggleOpen = (): void => {
     this.setState({
       open: !this.state.open
@@ -110,6 +116,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
               active={index === this.state.activeItem}
               toggle={this.toggleItem}
               links={e.links}
+              onClick={this.closeMenu}
             />
           ))}
           <Btn linkTo="https://task.market" text="get involved" />
