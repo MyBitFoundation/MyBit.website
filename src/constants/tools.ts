@@ -38,7 +38,7 @@ export const tools: Array<ToolProps> = [
     category: Category.CORE,
     filter: Filter.FINANCIAL,
     text:
-      'Invest in the machine economy through a decentralised IoT investment platform',
+      'Invest without a bank or broker and receive revenue in real time.',
     link: 'https://go.mybit.io/',
     icon: go
   },
@@ -46,7 +46,7 @@ export const tools: Array<ToolProps> = [
     title: 'MYDAX',
     category: Category.CORE,
     filter: Filter.FINANCIAL,
-    text: 'decentralised exchange optimised for simplicity and ease of use',
+    text: 'Powering safe, solvent and trustless trading of any asset.',
     link: 'https://mydax.io',
     icon: mydax
   },
@@ -55,7 +55,7 @@ export const tools: Array<ToolProps> = [
     category: Category.CORE,
     filter: Filter.WORKFLOW,
     text:
-      'decentralised workflow and collaboration tool built on Bounties Network',
+      'Decentralised workflow and collaboration tool built on Bounties Network.',
     link: 'https://task.market/',
     icon: task
   },
@@ -79,7 +79,7 @@ export const tools: Array<ToolProps> = [
     title: 'Transparency Portal',
     category: Category.TOOLS,
     filter: Filter.WORKFLOW,
-    text: 'View what the MyBit team is working on in real-time',
+    text: 'View what the MyBit team is working on in real-time.',
     link: 'https://transparency.mybit.io/',
     icon: transparency
   },
@@ -87,7 +87,7 @@ export const tools: Array<ToolProps> = [
     title: 'Kyber/Bancor Token Usability',
     category: Category.TOOLS,
     filter: Filter.FINANCIAL,
-    text: 'Easily buy, use and exchange the MyBit token (MYB)',
+    text: 'Easily buy, use and exchange the MyBit token (MYB).',
     link: 'https://github.com/MyBitFoundation/MyBit-Trust.tech/pull/33',
     icon: kyber
   },
@@ -103,7 +103,7 @@ export const tools: Array<ToolProps> = [
     title: 'MyBit DAO (v0.2)',
     category: Category.TOOLS,
     filter: Filter.DAOS,
-    text: 'Propose and Vote on decisions for the MyBit Ecosystem',
+    text: 'Propose and Vote on decisions for the MyBit Ecosystem.',
     link: 'https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/0xf400ea56b2b457213acf47695c2d6000acd954f9',
     icon: voting
   },
@@ -111,7 +111,7 @@ export const tools: Array<ToolProps> = [
     title: 'MyID',
     category: Category.CORE,
     filter: Filter.DAOS,
-    text: 'Identity Solution for DAOs',
+    text: 'Identity Solution for DAOs.',
     link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/tree/master/apps/MyID',
     icon: myid
   },
@@ -127,7 +127,7 @@ export const tools: Array<ToolProps> = [
     title: 'Multi-Signature Wallet Configuration',
     category: Category.TOOLS,
     filter: Filter.OTHER,
-    text: 'Our easy-to-use standard approach to securing funds',
+    text: 'Our easy-to-use standard approach to securing funds.',
     link: '',
     icon: apps
   },
