@@ -169,8 +169,8 @@ export const menuData = [
         icon: blog
       },
       {
-        title: 'Podcasts',
-        text: '"Blockchain: Without the Fluff" is an educational podcast series hosted weekly by MyBit',
+        title: 'Podcast',
+        text: '"Educational Podcast series hosted weekly',
         linkTo: 'https://medium.com/mybit-dapp/tagged/podcast',
         icon: podcasts
       }
