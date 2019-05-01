@@ -39,7 +39,7 @@ export const tools: Array<ToolProps> = [
     filter: Filter.FINANCIAL,
     text:
       'Invest in the machine economy through a decentralised IoT investment platform',
-    link: 'https://app.mybit.io/',
+    link: 'https://go.mybit.io/',
     icon: go
   },
   {
