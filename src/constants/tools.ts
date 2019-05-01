@@ -112,7 +112,7 @@ export const tools: Array<ToolProps> = [
     category: Category.CORE,
     filter: Filter.DAOS,
     text: 'Identity Solution for DAOs',
-    link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/apps/MyID',
+    link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/tree/master/apps/MyID',
     icon: myid
   },
   {
@@ -120,7 +120,7 @@ export const tools: Array<ToolProps> = [
     category: Category.CORE,
     filter: Filter.DAOS,
     text: 'Staking tokens for voting weight in DAOs.',
-    link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/apps/MyTokens',
+    link: 'https://github.com/MyBitFoundation/MyBit-DAO.tech/tree/master/apps/MyTokens',
     icon: mytokens
   },
   {
