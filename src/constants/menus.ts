@@ -118,7 +118,7 @@ export const menuData = [
       {
         title: 'MyBit Go',
         text: 'Invest in the machine economy through a decentralised IoT investment platform',
-        linkTo: 'https://app.mybit.io/',
+        linkTo: 'https://go.mybit.io/',
         icon: go
       },
       {

@@ -114,7 +114,7 @@ export default class Menu extends React.Component {
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
-                href="https://app.mybit.io/"
+                href="https://go.mybit.io/"
               >
                 {' '}
                 MyBit Go
@@ -215,7 +215,7 @@ const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-h
   font-weight: normal;
   line-height: 24px;
   font-size: 16px;
-  
+
   color: #6c6c6c;
 7`
 
