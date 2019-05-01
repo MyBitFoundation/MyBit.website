@@ -117,13 +117,13 @@ export const menuData = [
     links: [
       {
         title: 'MyBit Go',
-        text: 'Invest in the machine economy through a decentralised IoT investment platform',
+        text: 'Invest without a bank or broker and receive revenue in real time',
         linkTo: 'https://go.mybit.io/',
         icon: go
       },
       {
         title: 'MYDAX',
-        text: 'Decentralised exchange optimised for simplicity and ease of use',
+        text: 'Powering safe, solvent and trustless trading of any asset',
         linkTo: 'https://mydax.io',
         icon: mydax
       },

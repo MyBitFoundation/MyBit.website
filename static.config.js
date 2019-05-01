@@ -75,7 +75,7 @@ export default {
             <meta property="og:title" content="MyBit" />
             <meta
               property="og:description"
-              content="Powering safe, solvent and trustless trading of any asset."
+              content="MyBit designs products that open up the world, creating tools that enable freedom and wealth generation for everyone."
             />
             <meta
               property="og:image"
