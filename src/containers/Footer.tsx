@@ -196,7 +196,6 @@ const SButton = styled.a.attrs({
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-
   color: #1890ff;
 `
 
@@ -206,7 +205,6 @@ const STitle = styled.div.attrs({ className: 'black b pb2' })`
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-
   color: #111111;
 `
 const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-hover' })`
@@ -215,7 +213,6 @@ const SAnchor = styled.a.attrs({ className: 'pb1 db ttc no-underline underline-h
   font-weight: normal;
   line-height: 24px;
   font-size: 16px;
-
   color: #6c6c6c;
 7`
 
@@ -225,7 +222,6 @@ const SLink = styled(Link).attrs({ className: 'pb1 db ttc no-underline underline
   font-weight: normal;
   line-height: 24px;
   font-size: 16px;
-
   color: #6c6c6c;
 `
 const SAddress = styled.div.attrs({
