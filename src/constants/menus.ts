@@ -171,7 +171,7 @@ export const menuData = [
       {
         title: 'Podcast',
         text: 'Educational Podcast series hosted weekly',
-        linkTo: 'https://medium.com/mybit-dapp/tagged/podcast',
+        linkTo: 'https://medium.com/mybit-dapp/podcast/home',
         icon: podcasts
       }
     ]
