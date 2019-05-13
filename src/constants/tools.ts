@@ -100,7 +100,7 @@ export const tools: Array<ToolProps> = [
     icon: support,
   },
   {
-    title: 'MyBit DAO (v0.2)',
+    title: 'MyBit DAO',
     category: Category.TOOLS,
     filter: Filter.DAOS,
     text: 'Propose and Vote on decisions for the MyBit Ecosystem.',
