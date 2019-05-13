@@ -53,7 +53,7 @@ export const menuData = [
         icon: transparency
       },
       {
-        title: 'MyBit DAO (v0.2)',
+        title: 'MyBit DAO (v0.3)',
         text: 'Propose and Vote on decisions for the MyBit Ecosystem',
         linkTo: 'https://mainnet.aragon.org/#/0xcD3d9b832BfF15E0a519610372c6AAC651872DdE/0xf400ea56b2b457213acf47695c2d6000acd954f9',
         icon: vote
