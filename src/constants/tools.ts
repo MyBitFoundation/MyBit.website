@@ -8,7 +8,6 @@ import voting from '@images/icon/vote.svg'
 import apps from '@images/icon/apps.svg'
 import trust from '@images/icon/trust.svg'
 import will from '@images/icon/will.svg'
-import dropzone from '@images/icon/dropzone.svg'
 import kyber from '@images/icon/kyber.svg'
 import support from '@images/icon/support.svg'
 import myid from '@images/icon/myid.svg'
@@ -148,15 +147,6 @@ export const tools: Array<ToolProps> = [
       'MyBit Will allows anyone to create a frictionless will and automatically deliver cryptoassets via smart contract in the event of an unforeseen event such as death.',
     link: 'https://will.mybit.io/',
     icon: will
-  },
-  {
-    title: 'Dropzone',
-    category: Category.DAPPS,
-    filter: Filter.OTHER,
-    text:
-      'Dropzone allows anyone to easily airdrop ERC20 compliant tokens to multiple Ethereum addresses in a single go.',
-    link: 'https://dropzone.mybit.io/',
-    icon: dropzone
   },
   {
     title: 'Android Wallet',
