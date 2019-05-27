@@ -2,14 +2,14 @@ import React from 'react'
 import { navigate } from '@reach/router'
 import styled from 'styled-components'
 import MenuItem from '@components/MenuItem'
-import { MenuProps } from '@constants/menus'
 import logo from '../../static/img/logo.svg'
+import logowhite from '../../static/img/logowhite.svg'
 import openmenu from '../../static/img/openmenu.svg'
 import closemenu from '../../static/img/closemenu.svg'
 import hovermenu from '../../static/img/menuhover.svg'
 import Btn from '@components/Button'
 
-export default class Menu extends React.Component<MenuProps, MenuState> {
+export default class Menu extends React.Component<any, MenuState> {
   state: MenuState = {
     activeItem: null,
     open: false,
@@ -62,7 +62,11 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
     return (
       <>
         <SHeader>
-          <SLogo src={logo} alt="myBit" onClick={() => navigate('/')} />
+          <SLogo
+            src={this.props.isWhite ? logowhite : logo}
+            alt="myBit"
+            onClick={() => navigate('/')}
+          />
           <SMenuToggle
             src={
               this.state.open
@@ -79,12 +83,13 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
           <div className="dn db-l tr">
             <SMenuItemsDesktop>
               <div className="flex flex-row items-top pt3 pr3">
-                {this.props.items.map((e, index) => (
+                {this.props.items.map((e: any, index: number) => (
                   <div
                     onMouseEnter={() => this.openItem(index)}
                     onMouseLeave={() => this.closeItem()}
                   >
                     <MenuItem
+                      isWhite={this.props.isWhite}
                       key={index}
                       index={index}
                       title={e.title}
@@ -108,7 +113,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
         </SHeader>
 
         <SMenuItemsMobile open={this.state.open}>
-          {this.props.items.map((e, index) => (
+          {this.props.items.map((e: any, index: number) => (
             <MenuItem
               key={index}
               index={index}
