@@ -94,9 +94,9 @@ export default class Transacation extends React.Component<TransactionProps> {
               </div>
               <Tag>Value: </Tag>
               <Item>
-                {ethers.utils
+                {this.props.value != undefined && this.props.value != "0.0" ? ethers.utils
                   .formatEther(ethers.utils.bigNumberify(this.props.value))
-                  .split('.')[0] + ' MYB'}
+                  .split('.')[0] + ' MYB' : '0 MYB'}
               </Item>
               <Tag>Fee:</Tag>
               <Item>0 MYB</Item>
