@@ -221,10 +221,7 @@ export default class Tracker extends React.Component<
       burnTotal =
         burnTotal +
         parseFloat(
-          ethers.utils.formatUnits(
-            ethers.utils.parseEther(log.p2),
-            'ether'
-          )
+          ethers.utils.formatUnits(ethers.utils.parseEther(log.p2), 'ether')
         )
       return { x: log.timestamp, y: burnTotal }
     })
@@ -236,6 +233,26 @@ export default class Tracker extends React.Component<
 
   handleSizeChange = (e: any) => {
     this.setState({ timePeriod: e.target.value })
+  }
+
+  getMin = () => {
+    let l = []
+
+    if (this.state.showLocked) l.concat(...this.state.lockingLine)
+    if (this.state.showBurnt) l.concat(...this.state.burnLine)
+    const p = l.filter(e => e.x > Date.now() / 1000 - this.state.timePeriod)
+    return p.length > 0 ? p.sort((a, b) => a.y - b.y)[0].y : 0
+  }
+
+  getMax = () => {
+    let l = []
+
+    if (this.state.showLocked) l.push(...this.state.lockingLine)
+    if (this.state.showBurnt) l.push(...this.state.burnLine)
+    if (this.state.showTotalSupply)
+      l.push({ x: Date.now() / 1000, y: this.state.totalSupply })
+    const p = l.filter(e => e.x > Date.now() / 1000 - this.state.timePeriod)
+    return p.length > 0 ? p.sort((a, b) => b.y - a.y)[0].y : 100000
   }
 
   render() {
@@ -282,7 +299,12 @@ export default class Tracker extends React.Component<
       data: this.state.burnLine.map((el, i) => {
         return {
           y: 180000000 - el.y,
-          x: i == this.state.burnLine.length - 1 ? Date.now() / 1000 : el.x
+          x:
+            i == this.state.burnLine.length - 1
+              ? Date.now() / 1000
+              : i == 0
+              ? Date.now() / 1000 - this.state.timePeriod
+              : el.x
         }
       }),
       fill: false,
@@ -379,26 +401,10 @@ export default class Tracker extends React.Component<
                         mirror: true,
                         labelOffset: -9,
                         padding: -5,
-                        min: this.state.lockingLine.length
-                          ? this.state.lockingLine
-                              .concat(this.state.burnLine)
-                              .filter(
-                                e =>
-                                  e.x >
-                                  Date.now() / 1000 - this.state.timePeriod
-                              )
-                              .sort((a, b) => a.y - b.y)[0].y
-                          : 0,
-                        max: this.state.lockingLine.length
-                          ? this.state.lockingLine
-                              .concat(this.state.burnLine)
-                              .filter(
-                                e =>
-                                  e.x >
-                                  Date.now() / 1000 - this.state.timePeriod
-                              )
-                              .sort((a, b) => b.y - a.y)[0].y
-                          : 0,
+                        min:
+                          this.state.lockingLine.length > 0 ? this.getMin() : 0,
+                        max:
+                          this.state.lockingLine.length > 0 ? this.getMax() : 0,
                         maxTicksLimit: 4
                       },
                       gridLines: {

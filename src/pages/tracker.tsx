@@ -14,7 +14,10 @@ import 'antd/lib/radio/style/index.css'
 import { withRouteData } from 'react-static'
 
 export default withRouteData(
-  class Tracker extends React.Component<any, { transaction: any, blockNumber: number }> {
+  class Tracker extends React.Component<
+    any,
+    { transaction: any; blockNumber: number }
+  > {
     provider: ethers.providers.BaseProvider = ethers.getDefaultProvider()
     contract: MyBitToken = new ethers.Contract(
       '0x5d60d8d7ef6d37e16ebabc324de3be57f135e0bc',
@@ -40,17 +43,13 @@ export default withRouteData(
     }
     render() {
       return (
-        <div
-          style={{
-            background: `url(${trackerbg}) no-repeat`,
-            backgroundSize: 'contain'
-          }}
-        >
+        <Bg>
           <nav>
             <Menu items={menuData} isWhite={true} />
           </nav>
           <div className="center" style={{ maxWidth: 1128 }}>
             <Title>MyBit Token (MYB) Tracker</Title>
+            <MobileTitle>MyBit Tracker</MobileTitle>
             {this.state.transaction ? (
               <Transaction
                 {...this.state.transaction}
@@ -72,14 +71,21 @@ export default withRouteData(
               </div>
             )}
           </div>
-        </div>
+        </Bg>
       )
     }
   }
 )
 
+const Bg = styled.div.attrs({})`
+  background: url(${trackerbg}) no-repeat;
+  @media screen and (min-width: 30em) {
+    background-size: 'contain';
+  }
+`;
+
 const Title = styled.div.attrs({
-  className: 'pt6 pb3'
+  className: 'pt6 pb3 dn db-ns'
 })`
   font-family: Gilroy;
   font-size: 48px;
@@ -87,4 +93,17 @@ const Title = styled.div.attrs({
   line-height: 48px;
   text-align: center;
   color: #ffffff;
+`
+
+const MobileTitle = styled.div.attrs({
+  className: 'pt5 pb3 db dn-ns'
+})`
+  font-family: Gilroy;
+  font-weight: 900;
+  text-align: center;
+  color: #ffffff;
+  font-family: Gilroy;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
 `

@@ -39,7 +39,7 @@ export default class Transacation extends React.Component<TransactionProps> {
                   {this.props.hash}{' '}
                   <Copy
                     onClick={() =>
-                      navigator.clipboard.writeText(this.props.hash)
+                      (navigator as any).clipboard.writeText(this.props.hash)
                     }
                   >{` Copy`}</Copy>
                 </TxHash>
@@ -62,7 +62,7 @@ export default class Transacation extends React.Component<TransactionProps> {
               <div style={{ paddingBottom: '24px' }}>
                 <EtherscanAddress shorten={false} address={this.props.from} />
                 <Copy
-                  onClick={() => navigator.clipboard.writeText(this.props.from)}
+                  onClick={() => (navigator as any).clipboard.writeText(this.props.from)}
                 >{` Copy`}</Copy>
               </div>
               <Tag>To:</Tag>
@@ -72,7 +72,7 @@ export default class Transacation extends React.Component<TransactionProps> {
                 </span>
                 <EtherscanAddress shorten={false} address={this.props.to} />
                 <Copy
-                  onClick={() => navigator.clipboard.writeText(this.props.to)}
+                  onClick={() => (navigator as any).clipboard.writeText(this.props.to)}
                 >{` Copy`}</Copy>
                 {this.props.events
                   .filter(e => e.name === 'Transfer')

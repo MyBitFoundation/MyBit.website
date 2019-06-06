@@ -32,7 +32,6 @@ const Address = styled.a.attrs({ className: 'no-underline' })`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   line-height: 24px;
   color: #1890ff;
 `
@@ -40,7 +39,6 @@ const AddressB = styled.div.attrs({ className: 'no-underline' })`
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   line-height: 24px;
   color: #1890ff;
 `
