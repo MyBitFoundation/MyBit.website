@@ -32,11 +32,11 @@ export default {
       path: 'tracker',
       component: 'src/pages/tracker',
       getData: async () => {
-        const url = `https://5oinynwi06.execute-api.us-east-1.amazonaws.com/prod`
+        const url = `https://d9fy3qvcol.execute-api.us-east-1.amazonaws.com/prod/`
         const response = await axios.get(url)
         const chartData = response.data
         const responseB = await axios.get(
-          `https://ahcosq5bz8.execute-api.us-east-1.amazonaws.com/prod?skip=0&take=10`
+          `https://3ijzx6eejh.execute-api.us-east-1.amazonaws.com/prod?skip=0&take=10`
         )
         const tableData = responseB.data
         return { chartData, tableData }
