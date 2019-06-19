@@ -29,6 +29,20 @@ export default {
       component: 'src/pages/tools'
     },
     {
+      path: 'tracker',
+      component: 'src/pages/tracker',
+      getData: async () => {
+        const url = `https://y63yt6hph4.execute-api.us-east-1.amazonaws.com/prod/`
+        const response = await axios.get(url)
+        const chartData = response.data
+        const responseB = await axios.get(
+          `https://w06a9ojvmg.execute-api.us-east-1.amazonaws.com/prod?skip=0&take=10`
+        )
+        const tableData = responseB.data
+        return { chartData, tableData }
+      }
+    },
+    {
       path: '404',
       component: 'src/pages/404'
     }

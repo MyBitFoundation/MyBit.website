@@ -76,3 +76,4 @@ build
 artifacts/
 
 tmp/
+dist

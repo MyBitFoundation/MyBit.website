@@ -76,7 +76,7 @@ export const menuData = [
       {
         title: 'MyBit Token (MYB)',
         text: 'The native token that powers the MyBit Ecosystem',
-        linkTo: 'https://learn.mybit.io/learn/mybit-token-myb-1',
+        linkTo: '/tracker',
         icon: myb
       },
       {

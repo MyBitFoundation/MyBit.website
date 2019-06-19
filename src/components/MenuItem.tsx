@@ -1,4 +1,4 @@
-import { MenuItemProps } from '@constants/menus'
+
 import React from 'react'
 import { navigate } from '@reach/router'
 import styled from 'styled-components'
@@ -6,7 +6,7 @@ import arrowUp from '../../static/img/icon/arrowup.svg'
 import arrowDown from '../../static/img/icon/arrowdown.svg'
 
 export default class MenuItem extends React.Component<
-  MenuItemProps,
+  any,
   { activeLink: number }
 > {
   state = {
@@ -24,7 +24,7 @@ export default class MenuItem extends React.Component<
             src={this.props.active ? arrowUp : arrowDown}
             alt="expand"
           />
-          <div>{this.props.title}</div>
+          <div className={`${this.props.isWhite ? 'white' : ''}`}>{this.props.title}</div>
         </SMenuTitle>
         {this.props.active && (
           <SMenuCard index={this.props.index}>
