@@ -8,46 +8,60 @@ import { ventures } from '@constants/ventures'
 import { VentureCard } from '@components/VentureCard'
 import Btn from '@components/Button'
 import ddfScreen from '../../static/img/ddf-screen.svg'
-
+import { menuData } from '@constants/menus'
+import Menu from '@containers/Menu'
 export default withSiteData(
   class HomePage extends React.Component<{}> {
     render() {
       return (
-        <SWrapper>
-          <SHeadline>MyBit Ventures</SHeadline>
-          <SParagraphLead>
-            We believe in a future where new products are developed collectively
-            by a group of passionate, like-minded contributors, self-governed
-            and scaled organically without the need for a big corporate
-            structure.
-          </SParagraphLead>
-          <div className="pt6" />
-          <SSubHeadline>
-            MyBit Ventures is a fund set up to realise that vision
-          </SSubHeadline>
-          <div className="pt6 pb7 flex-ns flex-row-ns">
-          {ventures.map((e, i, l) => (
-            <div className={`${i === l.length - 1 ? '' : 'pb3-ns'} w-33-ns`}>
-              <VentureCard {...e} />
-            </div>
-          ))}
+        <>
+          <nav>
+            <Menu items={menuData} />
+          </nav>
+          <div className="center" style={{ maxWidth: 1128 }}>
+            <SWrapper>
+              <SHeadline>MyBit Ventures</SHeadline>
+              <SParagraphLead>
+                We believe in a future where new products are developed
+                collectively by a group of passionate, like-minded contributors,
+                self-governed and scaled organically without the need for a big
+                corporate structure.
+              </SParagraphLead>
+              <div className="pt6" />
+              <SSubHeadline>
+                MyBit Ventures is a fund set up to realise that vision
+              </SSubHeadline>
+              <div className="pt6 pb7 flex-ns flex-row-ns">
+                {ventures.map((e, i, l) => (
+                  <div
+                    className={`${i === l.length - 1 ? '' : 'pb3-ns'} w-33-ns`}
+                  >
+                    <VentureCard {...e} />
+                  </div>
+                ))}
+              </div>
+              <SSubHeadline>Task.Market</SSubHeadline>
+              <SParagraphLead>
+                Funded projects will have access to the Task.Market, a microtask
+                fund that allows developers to accelerate and scale by tapping
+                into a talent pool of contributors across development,
+                marketing, design, security, testing, and other operations.
+              </SParagraphLead>
+              <div style={{ maxWidth: '320px' }} className="ph5 pv3 center">
+                <Btn
+                  text="learn more"
+                  linkTo="https://task.market"
+                  isWhite={false}
+                />
+              </div>
+              <img
+                style={{ width: '937px', display: 'block' }}
+                className="pb7 center w-100"
+                src={ddfScreen}
+              />
+            </SWrapper>
           </div>
-          <SSubHeadline>Task.Market</SSubHeadline>
-          <SParagraphLead>
-            Funded projects will have access to the Task.Market, a microtask
-            fund that allows developers to accelerate and scale by tapping
-            into a talent pool of contributors across development, marketing,
-            design, security, testing, and other operations.
-          </SParagraphLead>
-          <div style={{maxWidth: '320px'}} className="ph5 pv3 center">
-            <Btn
-              text="learn more"
-              linkTo="https://task.market"
-              isWhite={false}
-            />
-          </div>
-          <img style={{ width: '937px', display: 'block' }} className="pb7 center w-100" src={ddfScreen}/>
-        </SWrapper>
+        </>
       )
     }
   }

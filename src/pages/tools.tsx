@@ -7,6 +7,8 @@ import { SParagraphLead } from '@components/SParagraphLead'
 import styled from 'styled-components'
 import { Category, Filter, filterNames } from '@constants/tools'
 import ToolsPanel from '@containers/ToolsPanel'
+import { menuData } from '@constants/menus'
+import Menu from '@containers/Menu'
 export default withSiteData(
   class ToolsPage extends React.Component<
     {},
@@ -18,66 +20,83 @@ export default withSiteData(
     }
     render() {
       return (
-        <SWrapper>
-          <SHeadline>Tools & Dapps</SHeadline>
-          <SParagraphLead>
-            In an industry wrought with hype, building is believing. MyBit
-            develops products that enable the decentralised economy and powers
-            community projects that simplify frictionless value exchange. Our
-            projects are funded, developed, and approved by the community with
-            full transparency and collective consensus every step of the way.
-          </SParagraphLead>
-          <div />
-          <SWrapperFilter>
-            {[0, 1, 2, 3].map(el => (
-              <div className="pl1 pb1">
-                <SFilter
-                  onClick={() => this.setState({ filter: el })}
-                  active={this.state.filter === el}
+        <>
+          <nav>
+            <Menu items={menuData} />
+          </nav>
+          <div className="center" style={{ maxWidth: 1128 }}>
+            <SWrapper>
+              <SHeadline>Tools & Dapps</SHeadline>
+              <SParagraphLead>
+                In an industry wrought with hype, building is believing. MyBit
+                develops products that enable the decentralised economy and
+                powers community projects that simplify frictionless value
+                exchange. Our projects are funded, developed, and approved by
+                the community with full transparency and collective consensus
+                every step of the way.
+              </SParagraphLead>
+              <div />
+              <SWrapperFilter>
+                {[0, 1, 2, 3].map(el => (
+                  <div className="pl1 pb1">
+                    <SFilter
+                      onClick={() => this.setState({ filter: el })}
+                      active={this.state.filter === el}
+                    >
+                      {filterNames.get(el)}
+                    </SFilter>
+                  </div>
+                ))}
+              </SWrapperFilter>
+              <div className="dn-ns pa2">
+                <SCategory
+                  onClick={() => {
+                    this.setState({ category: Category.CORE })
+                  }}
+                  active={this.state.category === Category.CORE}
+                  index={0}
                 >
-                  {filterNames.get(el)}
-                </SFilter>
+                  CORE PRODUCTS
+                </SCategory>
+                <SCategory
+                  onClick={() => this.setState({ category: Category.TOOLS })}
+                  active={this.state.category === Category.TOOLS}
+                  index={1}
+                >
+                  TOOLS
+                </SCategory>
+                <SCategory
+                  onClick={() => this.setState({ category: Category.DAPPS })}
+                  active={this.state.category === Category.DAPPS}
+                  index={2}
+                >
+                  Community dApps
+                </SCategory>
               </div>
-            ))}
-          </SWrapperFilter>
-          <div className="dn-ns pa2">
-            <SCategory
-              onClick={() => {
-                this.setState({ category: Category.CORE })
-              }}
-              active={this.state.category === Category.CORE}
-              index={0}
-            >
-              CORE PRODUCTS
-            </SCategory>
-            <SCategory
-              onClick={() => this.setState({ category: Category.TOOLS })}
-              active={this.state.category === Category.TOOLS}
-              index={1}
-            >
-              TOOLS
-            </SCategory>
-            <SCategory
-              onClick={() => this.setState({ category: Category.DAPPS })}
-              active={this.state.category === Category.DAPPS}
-              index={2}
-            >
-              Community dApps
-            </SCategory>
+              <div className="dn db-ns flex-ns flex-row-ns">
+                <ToolsPanel
+                  category={Category.CORE}
+                  filter={this.state.filter}
+                />
+                <ToolsPanel
+                  category={Category.TOOLS}
+                  filter={this.state.filter}
+                />
+                <ToolsPanel
+                  category={Category.DAPPS}
+                  filter={this.state.filter}
+                />
+              </div>
+              <div className={'dn-ns'}>
+                <ToolsPanel
+                  category={this.state.category}
+                  filter={this.state.filter}
+                />
+              </div>
+              <div className="pb7" />
+            </SWrapper>
           </div>
-          <div className="dn db-ns flex-ns flex-row-ns">
-            <ToolsPanel category={Category.CORE} filter={this.state.filter} />
-            <ToolsPanel category={Category.TOOLS} filter={this.state.filter} />
-            <ToolsPanel category={Category.DAPPS} filter={this.state.filter} />
-          </div>
-          <div className={'dn-ns'}>
-            <ToolsPanel
-              category={this.state.category}
-              filter={this.state.filter}
-            />
-          </div>
-          <div className="pb7" />
-        </SWrapper>
+        </>
       )
     }
   }
@@ -123,6 +142,5 @@ border-bottom-right-radius: ${(props: SCategoryProps) =>
   props.index === 2 ? '4px' : '0px'}
 border-left: ${(props: SCategoryProps) => (props.index === 1 ? '1px' : '0px')}
 border-right: ${(props: SCategoryProps) => (props.index === 1 ? '1px' : '0px')};
-color: ${(props: SCategoryProps) =>
-  props.active ? '#1890FF' : '#D9D9D9'};
+color: ${(props: SCategoryProps) => (props.active ? '#1890FF' : '#D9D9D9')};
 `

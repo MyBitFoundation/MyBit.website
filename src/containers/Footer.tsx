@@ -146,6 +146,7 @@ export default class Menu extends React.Component {
               >
                 Token Distribution
               </SAnchor>
+              <SLink to="/tracker">Token Tracker</SLink>
               <SAnchor
                 target="_blank"
                 rel="noreferrer"
