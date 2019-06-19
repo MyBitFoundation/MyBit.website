@@ -237,16 +237,18 @@ export default class Tracker extends React.Component<
 
   getMin = () => {
     let l = []
-
-    if (this.state.showLocked) l.concat(...this.state.lockingLine)
-    if (this.state.showBurnt) l.concat(...this.state.burnLine)
+    if (this.state.lockingLine.length == 0) return 0
+    if (this.state.showLocked) l.push(...this.state.lockingLine)
+    if (this.state.showBurnt) l.push(...this.state.burnLine)
+    if (this.state.showTotalSupply)
+      l.push({ x: Date.now() / 1000, y: this.state.totalSupply })
     const p = l.filter(e => e.x > Date.now() / 1000 - this.state.timePeriod)
     return p.length > 0 ? p.sort((a, b) => a.y - b.y)[0].y : 0
   }
 
   getMax = () => {
     let l = []
-
+    if (this.state.lockingLine.length == 0) return 0
     if (this.state.showLocked) l.push(...this.state.lockingLine)
     if (this.state.showBurnt) l.push(...this.state.burnLine)
     if (this.state.showTotalSupply)
@@ -402,9 +404,9 @@ export default class Tracker extends React.Component<
                         labelOffset: -9,
                         padding: -5,
                         min:
-                          this.state.lockingLine.length > 0 ? this.getMin() : 0,
+                        this.getMin(),
                         max:
-                          this.state.lockingLine.length > 0 ? this.getMax() : 0,
+                        this.getMax(),
                         maxTicksLimit: 4
                       },
                       gridLines: {
