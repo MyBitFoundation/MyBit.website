@@ -80,7 +80,7 @@ export default withRouteData(
 const Bg = styled.div.attrs({})`
   background: url(${trackerbg}) no-repeat;
   @media screen and (min-width: 30em) {
-    background-size: 'contain';
+    background-size: auto;
   }
 `;
 
