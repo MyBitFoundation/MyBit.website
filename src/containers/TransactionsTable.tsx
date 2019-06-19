@@ -103,7 +103,7 @@ export default class TransactionsTable extends React.Component<
       render: (from: any, data: any) =>
         from ? (
           <div
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', fontSize: '14px' }}
             onClick={() => this.props.showTransaction(data)}
           >
             <EtherscanAddress notEtherscan shorten={true} address={from} />
@@ -148,8 +148,9 @@ export default class TransactionsTable extends React.Component<
       )
     },
     {
-      title: 'Value',
+      title: 'Value MYB',
       dataIndex: 'value',
+      align: "right" as any,
       render: (value: any) =>
         value != undefined && value != "0.0"
           ? parseFloat(ethers.utils.formatEther(
@@ -158,8 +159,9 @@ export default class TransactionsTable extends React.Component<
           : '0'
     },
     {
-      title: 'Fee',
+      title: 'Fee MYB',
       dataIndex: 'fee',
+      align: "right" as any,
       render: () => 0
     }
   ]
@@ -202,6 +204,11 @@ export default class TransactionsTable extends React.Component<
             dataSource={this.state.data}
             pagination={false}
             loading={this.state.loading}
+            onRow={record => {
+              return {
+                onClick: (event) => this.props.showTransaction(record)
+              };
+            }}
           />
         </Desktop>
         <Mobile>
@@ -304,6 +311,10 @@ const Desktop = styled.div.attrs({ className: 'dn db-ns' })`
   .ant-table-pagination.ant-pagination {
     float: none;
     margin: 0;
+  }
+  .ant-table-row {
+    cursor: pointer;
+  }
 `
 
 const Mobile = styled.div.attrs({ className: 'dn-ns db' })`

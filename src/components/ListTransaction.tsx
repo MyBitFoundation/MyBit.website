@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { shorten } from '../utils'
 import EtherscanAddress from '@components/EtherscanAddress'
-
+import { ethers } from 'ethers'
 interface TransactionProps {
   Time: number
   relativeTime: string
@@ -17,7 +17,7 @@ interface TransactionProps {
 
 export default (props: TransactionProps): JSX.Element => {
   return (
-    <TxCard>
+    <TxCard onClick={() => props.showTransaction(props)}>
       <div className="w-50 tl">
         <div className="pb1">{props.relativeTime}</div>
         <div className="pb1">
@@ -25,8 +25,11 @@ export default (props: TransactionProps): JSX.Element => {
           <EtherscanAddress shorten={true} address={props.from} />
         </div>
         <div>
-          {props.value ? props.value + ' MYB'
-            : ''}
+          {(props.value != undefined && props.value != "0.0"
+          ? parseFloat(ethers.utils.formatEther(
+            props.value
+          )).toFixed(3)
+          : '0' ) + ' MYB'}
         </div>
       </div>
       <div className="w-50 tr">
@@ -55,4 +58,6 @@ export default (props: TransactionProps): JSX.Element => {
 
 const TxCard = styled.div.attrs({
   className: 'pa2 flex flex-row'
-})``
+})`
+cursor: pointer;
+`
