@@ -52,7 +52,7 @@ export default class TransactionsTable extends React.Component<
       pagination: pager
     })
     const response = await axios.get(
-      `https://ih9op4cnf9.execute-api.us-east-1.amazonaws.com/prod?skip=${pageNum *
+      `https://y63yt6hph4.execute-api.us-east-1.amazonaws.com/prod?skip=${pageNum *
         10}&take=${pageSize}${this.state.dAppFilter.key !== '_' ? '&to=' : ''}${
         this.state.dAppFilter
       }`
@@ -73,7 +73,7 @@ export default class TransactionsTable extends React.Component<
 
   handleFilterChange = async (value: LabeledValue) => {
     const response = await axios.get(
-      `https://ih9op4cnf9.execute-api.us-east-1.amazonaws.com/prod?skip=${
+      `https://y63yt6hph4.execute-api.us-east-1.amazonaws.com/prod?skip=${
         this.state.pagination.current ? this.state.pagination.current : 0 * 10
       }&take=10${value.key !== '_' ? '&to=' : ''}${value.key}`
     )
