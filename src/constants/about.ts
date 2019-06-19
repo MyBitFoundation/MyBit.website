@@ -1,7 +1,6 @@
 import power from '@images/icon-power.svg'
 import building from '@images/icon-building.svg'
 import dan from '@images/face-dan.svg'
-import ian from '@images/face-ian.svg'
 import jose from '@images/face-jose.svg'
 import peter from '@images/face-peter.svg'
 import chris from '@images/face-cris.svg'
@@ -35,10 +34,6 @@ export const ecosystem= [{
 }]
 
 export const team = [{
-  art: ian,
-  name: 'Ian Worrall',
-  role: 'Founder',
-},{
   art: jose,
   name: 'Jose Aguinaga',
   role: 'CTO',
