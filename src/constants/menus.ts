@@ -13,7 +13,6 @@ import company from '@images/icon/company.svg'
 import content from '@images/icon/content.svg'
 import whitepaper from '@images/icon/whitepaper.svg'
 import blog from '@images/icon/blog.svg'
-import podcasts from '@images/icon/podcasts.svg'
 
 export interface MenuLinkProps {
   title: string;
@@ -167,12 +166,6 @@ export const menuData = [
         text: 'Stay up to date on the latest news and announcements',
         linkTo: 'https://medium.com/mybit-dapp',
         icon: blog
-      },
-      {
-        title: 'Podcast',
-        text: 'Educational Podcast series hosted weekly',
-        linkTo: 'https://medium.com/mybit-dapp/podcast/home',
-        icon: podcasts
       }
     ]
   }
