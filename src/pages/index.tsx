@@ -10,7 +10,9 @@ import { SParagraph } from '@components/SParagraph'
 import { CommunityInfo } from '@components/CommunityInfo'
 import { communityInfoData } from '@constants/communityInfo'
 import { communityLinks } from '@constants/communityLinks'
+import { exchanges } from '@constants/exchanges'
 import { CommunityLink } from '@components/CommunityLink'
+import { ExchangeLink } from '@components/ExchangeLink'
 import { TokenSale } from '@components/TokenSale'
 import Btn from '@components/Button'
 import leftperson from '@images/il-left-person.svg'
@@ -143,6 +145,18 @@ export default withSiteData(
                     } w-50 w-33-ns`}
                   >
                     <CommunityLink {...link} />
+                  </div>
+                ))}
+              </div>
+              <SSubHeadline>Our Tokens On Exchanges</SSubHeadline>
+              <div className="flex justify-center items-center flex-wrap pv7 ph2 exchanges" style={{paddingTop: '30px'}}>
+                {exchanges.map((exchange, index, items) => (
+                  <div
+                    className={`${
+                      index === items.length - 1 ? 'pt4 pt0-ns' : ''
+                    } pt4 w-50 w-33-ns`}
+                  >
+                    <ExchangeLink {...exchange} />
                   </div>
                 ))}
               </div>
