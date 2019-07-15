@@ -192,6 +192,14 @@ label {
   transition: 0.5s;
 }
 
+
+@media only screen and (max-width: 480px) {
+  .exchanges{
+    flex-direction: column;
+    padding-top: 20px;
+  }
+}
+
 /* roboto-100 - latin */
 @font-face {
   font-family: 'Roboto';
