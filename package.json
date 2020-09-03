@@ -37,7 +37,7 @@
     "@types/webpack-env": "^1.13.6",
     "babel-plugin-styled-components": "^1.10.0",
     "react-static-plugin-typescript": "^3.1.0",
-    "serve": "10.1.1",
+    "serve": "10.1.2",
     "tslint-config-prettier": "^1.18.0"
   },
   "resolutions": {
